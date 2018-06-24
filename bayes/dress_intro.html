@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="dress_slider.css">
+
+<style>
+.container
+{
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.neutral
+{
+	position: relative;
+	top: 0;
+	left: 0;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 1.0;
+}
+
+.black_blue
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	opacity: 0.0;
+}
+
+.white_gold
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	opacity: 0.0;
+}
+</style>
+
+</head>
+<body>
+	<p>In 2015 the image below went viral. The reason it caught so many people's attention was that some people saw the dress as black and blue, while others saw it as white and gold. To help you see the two possible interpretations of the image, use the slider below it to manipulate the lighting in the image to skew it toward one interpretation or the other.</p>
+<div class="container">
+	<img src="neutral.jpg" alt="Image of the dress" max-width="100%" class="neutral" id="neutral_image">
+	<img src="black_and_blue.jpg" alt="Black and blue image of the dress" max-width="100%" class="black_blue" id="bb_image">
+	<img src="white_and_gold.jpg" alt="White and gold image of the dress" max-width="100%" class="white_gold" id="wg_image">
+</div>
+
+<br>
+
+<div class="slidecontainer">
+	<input type="range" min="0" max="100" value="50" class="slider" id="blue_yellow_range">
+</div>
+
+
+<div id="slider_reset"><button onclick="resetSlider()" width="100%">Reset</button></div>
+
+<p>It's easy to see different colors for the dress when you manipulate the image using this slider, but why do different people see different colors even when looking at the exact same unaltered image (the image you see when you click "Reset")?</p>
+
+<p>The answer seems to be that different people make different assumptions about the lighting in the image. The colors in the image could have arisen from a black and blue dress illuminated by yellowish light or by a white and gold dress illuminated by bluish light. Therefore, if you assume that the picture was taken under yellowish light, you will probably see the dress as black and blue, while if you assume it was taken under bluish light you will probably see it as white and gold.</p>
+
+<p>This conclusion is supported by several scientific studies (e.g. <a href="https://jov.arvojournals.org/article.aspx?articleid=2598922">Toscani et al. 2017</a> "Differences in illumination estimation in #thedress", <a href="http://jov.arvojournals.org/article.aspx?articleid=2600950">Witzel et al. 2017</a> "The most reasonable explanation of "the dress": Implicit assumptions about illumination").</p>
+
+<p>One study (<a href="http://jov.arvojournals.org/article.aspx?articleid=2617976&mbid=synd_msnlife#163158730">Wallisch 2017</a>) even found that night owls (people who usually stay up late) are significantly more likely to see the dress as black and blue than early birds (people who usually wake up early). The author's argument is that those who wake up early spend more time in daylight, while those who stay up late spend more time in artificial light. Sunlight generally has a longer wavelength (i.e. is more bluish) than artificial light, so the fact that night owls see the dress as black and blue might be because they are more accustomed to yellowish light and thus assume that the lighting in the image is yellowish.</p>
+
+<p>The influence of background lighting on assumptions about the dress color can be clearly seen in the XKCD comic below (from <a href="https://xkcd.com/1492/">https://xkcd.com/1492/</a>). Even though the dress is the same color in both halves of the image, the two instances probably look different to you due to their different backgrounds:</p>
+
+<img src="https://imgs.xkcd.com/comics/dress_color.png"></img>
+
+<p>In the simulation that follows, we will explore how to model the effect of experience on leading different people to interpret the image differently.</p>
+
+<p>References</p>
+
+<p>Toscani, M., Gegenfurtner, K. R., &amp; Doerschner, K. (2017). Differences in illumination estimation in# thedress. <i>Journal of Vision, 17</i>(1), 22-22.</p>
+
+<p>Witzel, C., Racey, C., &amp; O'Regan, J. K. (2017). The most reasonable explanation of “the dress”: Implicit assumptions about illumination. <i>Journal of Vision, 17</i>(2), 1-1.</p>
+
+<p>Wallisch, P. (2017). Illumination assumptions account for individual differences in the perceptual interpretation of a profoundly ambiguous stimulus in the color domain:“The dress”. <i>Journal of Vision, 17</i>(4), 5-5.</p>
+
+<form action="dress_just_man.html">
+	<input type="submit" value="Next" />
+</form>
+
+<p>Slider implementation influenced by Matt Mastracci: https://github.com/mmastrac/dress-simulator</p>
+
+<script>
+var sim_started = 0;
+var blue_counter = 1;
+var gold_counter = 1;
+var slider = document.getElementById("blue_yellow_range");
+var total_blue = 0;
+var total_gold = 0;
+
+
+slider.oninput = function() {
+	if (this.value >= 50) {
+		document.getElementById("neutral_image").style.opacity = 1 - ((this.value - 50) / 50);
+		document.getElementById("bb_image").style.opacity = (this.value - 50) / 50;
+		document.getElementById("wg_image").style.opacity = 0.0;
+	} else {
+		document.getElementById("neutral_image").style.opacity = 1 - ((50 - this.value) / 50);
+		document.getElementById("bb_image").style.opacity = 0.0;
+		document.getElementById("wg_image").style.opacity = (50 - this.value) / 50;
+	}	
+}
+
+function resetSlider() {
+	slider.value = 50;
+	document.getElementById("neutral_image").style.opacity = 1;
+	document.getElementById("bb_image").style.opacity = 0;
+	document.getElementById("wg_image").style.opacity = 0;
+}
+
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
