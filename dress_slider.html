@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="dress_slider.css">
+
+<style>
+.container
+{
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.neutral
+{
+	position: relative;
+	top: 0;
+	left: 0;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 1.0;
+}
+
+.black_blue
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	opacity: 0.0;
+}
+
+.white_gold
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	opacity: 0.0;
+}
+</style>
+
+</head>
+<body>
+	<p> Here is a friendly little paragraph</p>
+<div class="container">
+	<img src="neutral.jpg" alt="Image of the dress" max-width="100%" class="neutral" id="neutral_image">
+	<img src="black_and_blue.jpg" alt="Black and blue image of the dress" max-width="100%" class="black_blue" id="bb_image">
+	<img src="white_and_gold.jpg" alt="White and gold image of the dress" max-width="100%" class="white_gold" id="wg_image">
+</div>
+
+<br>
+
+<div class="slidecontainer">
+	<input type="range" min="0" max="100" value="50" class="slider" id="blue_yellow_range">
+</div>
+
+<p> Value: <span id="demo"></span></p>
+
+<button id="light_btn" onclick="light()">Toggle Light</button>
+<button id="blue_btn" onclick="myMove(0)">Show Blue</button>
+<button id="gold_btn" onclick="myMove(1)">Show Gold</button>
+<button id="sim_btn" onclick="start_simulation()">Start Simulation</button>
+
+
+<div id="animate_container">
+
+
+	<div id="blue_pentagon"><img src="blue_pentagon.png" width="100%" height="100%"></div>
+
+	<div id="yellow_pentagon"><img src="yellow_pentagon.png" width=100%" height="100%"></div>
+
+	<div id="blue_timer"><p><span id="seconds_b" style="font-family: 'Courier'">000</span></p></div>	
+	<div id="yellow_timer"><p><span id="seconds_y" style="font-family: 'Courier'">000</span></p></div>
+
+	<div id="light_fixture_y"><img src="light_fixture.png" width=100%"></div>
+
+
+	<div id="light_fixture_b"><img src="light_fixture.png" width=100%"></div>
+
+	<div id="blue_box"></div>
+	<div id="trapdoors_left"><img src="trapdoor_1.png" width="100%" class="trapdoor_left" id="tl_1"><img src="trapdoor_2.png" width="100%" class="trapdoor_left" id="tl_2"><img src="trapdoor_3.png" width="100%" class="trapdoor_left" id="tl_3"><img src="trapdoor_4.png" width="100%" class="trapdoor_left" id="tl_4"><img src="trapdoor_5.png" width="100%" class="trapdoor_left" id="tl_5"></div>
+	<div id="animate_blue_1" class="animate_blue"><img src="blue_dress_drawing.png" alt="Blue and black dress" width="100%"></div>
+	<div id="animate_blue_2" class="animate_blue"><img src="blue_dress_drawing.png" alt="Blue and black dress" width="100%"></div>
+	<div id="animate_blue_3" class="animate_blue"><img src="blue_dress_drawing.png" alt="Blue and black dress" width="100%"></div>
+	<div id="animate_blue_4" class="animate_blue"><img src="blue_dress_drawing.png" alt="Blue and black dress" width="100%"></div>
+	<div id="animate_blue_5" class="animate_blue"><img src="blue_dress_drawing.png" alt="Blue and black dress" width="100%"></div>
+	<div id="blue_catcher">0</div>
+
+
+	<div id="gold_box"></div>
+	<div id="trapdoors_right"><img src="trapdoor_1.png" width="100%" class="trapdoor_right" id="tr_1"><img src="trapdoor_2.png" width="100%" class="trapdoor_right" id="tr_2"><img src="trapdoor_3.png" width="100%" class="trapdoor_right" id="tr_3"><img src="trapdoor_4.png" width="100%" class="trapdoor_right" id="tr_4"><img src="trapdoor_5.png" width="100%" class="trapdoor_right" id="tr_5"></div>
+	<div id="animate_gold_1" class="animate_gold"><img src="gold_dress_drawing.png" alt="Gold and white dress" width="100%"></div>
+	<div id="animate_gold_2" class="animate_gold"><img src="gold_dress_drawing.png" alt="Gold and white dress" width="100%"></div>
+	<div id="animate_gold_3" class="animate_gold"><img src="gold_dress_drawing.png" alt="Gold and white dress" width="100%"></div>
+	<div id="animate_gold_4" class="animate_gold"><img src="gold_dress_drawing.png" alt="Gold and white dress" width="100%"></div>
+	<div id="animate_gold_5" class="animate_gold"><img src="gold_dress_drawing.png" alt="Gold and white dress" width="100%"></div>
+	<div id="gold_catcher">0</div>
+	
+	<div id="man"><img src="man.png" width="100%"></div>
+
+	<div id="dress_pic"><img src="the_dress.jpeg" width="100%"></div>
+	<div id="frame"><img src="frame.png" width="100%" height=100%></div>
+	<div id="curtain">
+		<div id="l_curtain"><img src="curtain_left.png" width="100%" height="100%"></div>
+		<div id="r_curtain"><img src="curtain_right.png" width=100%" height="100%"></div>
+	</div>
+</div>
+
+<div id="bayes_box">
+<div id="lhs" onmouseover="changeColor(this);reveal(posterior_explain)" onmouseout="normalColor(this);hide(posterior_explain)">
+<p>p(A|B)</p>
+</div>
+
+<div id="eq_sign">
+<p>=</p>
+</div>
+
+<div id="rhs">
+<div id="likelihood" onmouseover="changeColor(this);reveal(likelihood_explain)" onmouseout="normalColor(this);hide(likelihood_explain)">
+<p>p(B|A)</p>
+</div>
+
+<div id="prior" onmouseover="changeColor(this);reveal(prior_explain)" onmouseout="normalColor(this);hide(prior_explain)">
+<p>p(A)</p>
+</div>
+<div id="z" onmouseover="changeColor(this);reveal(z_explain)" onmouseout="normalColor(this);hide(z_explain)">
+<p>p(B)</p>
+</div>
+
+<div id="fraction_line">
+	<img src="black_line.png" width="100%" height="100%">
+</div>
+
+</div>
+</div>
+
+<div id="explain_boxes">
+<div id="posterior_explain" class="explain_box">
+	<p>This is the posterior</p>
+</div>
+
+
+<div id="likelihood_explain" class="explain_box">
+	<p>This is the likelihood</p>
+</div>
+
+
+<div id="prior_explain" class="explain_box">
+	<p>This is the prior</p>
+</div>
+
+
+<div id="z_explain" class="explain_box">
+	<p>This is the z</p>
+</div>
+</div>
+
+<div class="wrapper">
+<h1>Stopwatch</h1>
+<h2>Vanilla JavaScript Stopwatch</h2>
+<button id="button-start_y">Start</button>
+<button id="button-stop_y">Stop</button>
+<button id="button-reset_y">Reset</button>
+</div> 
+
+
+<div class="wrapper">
+<h1>Stopwatch</h1>
+<h2>Vanilla JavaScript Stopwatch</h2>
+<button id="button-start_b">Start</button>
+<button id="button-stop_b">Stop</button>
+<button id="button-reset_b">Reset</button>
+</div> 
+
+
+
+<script>
+var sim_started = 0;
+var blue_counter = 1;
+var gold_counter = 1;
+var slider = document.getElementById("blue_yellow_range");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+var total_blue = 0;
+var total_gold = 0;
+
+document.getElementById("blue_catcher").innerHTML = "";
+document.getElementById("gold_catcher").innerHTML = "";
+document.getElementById("seconds_b").innerHTML = "";
+document.getElementById("seconds_y").innerHTML = "";
+
+
+
+tl_1.style.opacity = 1.0;
+animate_blue_1.style.top = 0;
+animate_blue_2.style.top = 0;
+animate_blue_3.style.top = 0;
+animate_blue_4.style.top = 0;
+animate_blue_5.style.top = 0;
+
+tr_1.style.opacity = 1.0;
+animate_gold_1.style.top = 0;
+animate_gold_2.style.top = 0;
+animate_gold_3.style.top = 0;
+animate_gold_4.style.top = 0;
+animate_gold_5.style.top = 0;
+
+
+slider.oninput = function() {
+	output.innerHTML = this.value;
+	if (this.value >= 50) {
+		document.getElementById("neutral_image").style.opacity = 1 - ((this.value - 50) / 50);
+		document.getElementById("bb_image").style.opacity = (this.value - 50) / 50;
+		document.getElementById("wg_image").style.opacity = 0.0;
+	} else {
+		document.getElementById("neutral_image").style.opacity = 1 - ((50 - this.value) / 50);
+		document.getElementById("bb_image").style.opacity = 0.0;
+		document.getElementById("wg_image").style.opacity = (50 - this.value) / 50;
+	}	
+}
+
+yellow_pentagon.style.opacity = 0.3;
+blue_pentagon.style.opacity = 0.0;
+
+function start_simulation() {
+
+	sim_started = 1;
+
+	setTimeout(end_simulation, 11000)	
+	document.getElementById("blue_catcher").innerHTML = 0;
+	document.getElementById("gold_catcher").innerHTML = 0;
+	document.getElementById("seconds_b").innerHTML = "000";
+	document.getElementById("seconds_y").innerHTML = "000";
+
+
+
+	if (yellow_pentagon.style.opacity == 0.0) {
+		blue_start();
+	} else {
+		yellow_start();
+	}
+}
+
+function end_simulation() {
+	blue_stop();
+	yellow_stop();
+	document.getElementById("light_btn").disabled = true;
+	document.getElementById("sim_btn").disabled = true;
+	document.getElementById("blue_btn").disabled = true;
+	document.getElementById("gold_btn").disabled = true;
+	yellow_pentagon.style.opacity = 0.0;
+	blue_pentagon.style.opacity = 0.0;
+
+	var interv = setInterval(open_curtain, 30);
+	width_curtain = 45;
+
+	function open_curtain() {
+		if (width_curtain == 10) {
+			clearInterval(interv);
+		} else {
+			width_curtain--;
+			l_curtain.style.width = width_curtain + "px";
+			r_curtain.style.width = width_curtain + "px";
+		}
+	}	
+
+
+}
+
+function light() {
+	if (yellow_pentagon.style.opacity == 0.0) {
+		yellow_pentagon.style.opacity = 0.3;
+		blue_pentagon.style.opacity = 0.0;
+		if (sim_started == 1) {
+			yellow_start();
+			blue_stop();
+		}
+	} else {
+		yellow_pentagon.style.opacity = 0.0;
+		blue_pentagon.style.opacity = 0.3;
+		if (sim_started == 1) {
+			yellow_stop();
+			blue_start();
+		}
+	}
+}
+
+function changeColor(elt) {
+	elt.style.color = "blue";
+}
+
+function normalColor(elt) {
+	elt.style.color = "black";
+}
+
+function reveal(elt) {
+	elt.style.opacity = 1.0;
+}
+
+function hide(elt) {
+	elt.style.opacity = 0.0;
+}
+
+function myMove(elt) {
+
+	if (elt == 0) {
+		var elem = document.getElementById("animate_blue_" + blue_counter);
+		blue_counter ++;
+		if (blue_counter == 6) {
+			blue_counter = 1
+		}
+		//tl_1.style.opacity = 0.0;
+		//tl_4.style.opacity = 1.0;
+		if (tl_1.style.opacity == 1.0) {
+			tl_1.style.opacity = 0.0;
+			tl_4.style.opacity = 1.0;
+		}
+	} else {
+		var elem = document.getElementById("animate_gold_" + gold_counter);
+		gold_counter ++;
+		if (gold_counter == 6) {
+			gold_counter = 1
+		}
+		if (tr_1.style.opacity == 1.0) {
+			tr_1.style.opacity = 0.0;
+			tr_4.style.opacity = 1.0;
+		}
+
+	}
+	elem.style.opacity = 1.0;
+	var pos = 0;
+	var id = setInterval(frame, 5);
+	function frame() {
+		if (pos == 325) {
+			clearInterval(id);
+			elem.style.opacity = 0.0;
+			if (sim_started == 1) {
+				if (elt == 0) {
+					total_blue ++;
+					document.getElementById("blue_catcher").innerHTML = total_blue;
+				} else {
+					total_gold ++;
+					document.getElementById("gold_catcher").innerHTML = total_gold;
+				}
+			}
+
+		} else {
+			pos ++;
+			
+
+			elem.style.top = pos + 'px';
+
+	if (((parseInt(animate_blue_1.style.top, 10) >= 30 || parseInt(animate_blue_1.style.top, 10) <= 10) && (parseInt(animate_blue_2.style.top, 10) >= 30 || parseInt(animate_blue_2.style.top, 10) <= 10)  && (parseInt(animate_blue_3.style.top, 10) >= 30 || parseInt(animate_blue_3.style.top, 10) <= 10) && (parseInt(animate_blue_4.style.top, 10) >= 30 || parseInt(animate_blue_4.style.top, 10) <= 10) && (parseInt(animate_blue_5.style.top, 10) >= 30 || parseInt(animate_blue_5.style.top, 10) <= 10)) && (parseInt(animate_blue_1.style.top, 10) == 10 || parseInt(animate_blue_2.style.top, 10) == 10 || parseInt(animate_blue_3.style.top, 10) == 10 || parseInt(animate_blue_4.style.top, 10) == 10 || parseInt(animate_blue_5.style.top, 10) == 10)) {
+				tl_1.style.opacity = 0.0;
+				tl_2.style.opacity = 0.0;
+				tl_3.style.opacity = 0.0;
+				tl_4.style.opacity = 0.0;
+				tl_5.style.opacity = 1.0;
+			}
+	
+	if (((parseInt(animate_blue_1.style.top, 10) >= 30 || parseInt(animate_blue_1.style.top, 10) <= 20) && (parseInt(animate_blue_2.style.top, 10) >= 30 || parseInt(animate_blue_2.style.top, 10) <= 20)  && (parseInt(animate_blue_3.style.top, 10) >= 30 || parseInt(animate_blue_3.style.top, 10) <= 20) && (parseInt(animate_blue_4.style.top, 10) >= 30 || parseInt(animate_blue_4.style.top, 10) <= 20) && (parseInt(animate_blue_5.style.top, 10) >= 30 || parseInt(animate_blue_5.style.top, 10) <= 20)) && (parseInt(animate_blue_1.style.top, 10) == 20 || parseInt(animate_blue_2.style.top, 10) == 20 || parseInt(animate_blue_3.style.top, 10) == 20 || parseInt(animate_blue_4.style.top, 10) == 20 || parseInt(animate_blue_5.style.top, 10) == 20)) {
+				tl_1.style.opacity = 0.0;
+				tl_2.style.opacity = 1.0;
+				tl_3.style.opacity = 0.0;
+				tl_4.style.opacity = 0.0;
+				tl_5.style.opacity = 0.0;
+			}
+			
+	if ((parseInt(animate_blue_1.style.top, 10) >= 120 || parseInt(animate_blue_1.style.top, 10) == 0) && (parseInt(animate_blue_2.style.top, 10) >= 120 || parseInt(animate_blue_2.style.top, 10) == 0)  && (parseInt(animate_blue_3.style.top, 10) >= 120 || parseInt(animate_blue_3.style.top, 10) == 0) && (parseInt(animate_blue_4.style.top, 10) >= 120 || parseInt(animate_blue_4.style.top, 10) == 0) && (parseInt(animate_blue_5.style.top, 10) >= 120 || parseInt(animate_blue_5.style.top, 10) == 0)  ) {
+				tl_1.style.opacity = 1.0;
+				tl_2.style.opacity = 0.0;
+				tl_3.style.opacity = 0.0;
+				tl_4.style.opacity = 0.0;
+				tl_5.style.opacity = 0.0;
+			}
+			
+	if ((parseInt(animate_blue_1.style.top, 10) >= 110 || parseInt(animate_blue_1.style.top, 10) == 0) && (parseInt(animate_blue_2.style.top, 10) >= 110 || parseInt(animate_blue_2.style.top, 10) == 0)  && (parseInt(animate_blue_3.style.top, 10) >= 110 || parseInt(animate_blue_3.style.top, 10) == 0) && (parseInt(animate_blue_4.style.top, 10) >= 110 || parseInt(animate_blue_4.style.top, 10) == 0) && (parseInt(animate_blue_5.style.top, 10) >= 110 || parseInt(animate_blue_5.style.top, 10) == 0) && (parseInt(animate_blue_1.style.top, 10) == 110 || parseInt(animate_blue_2.style.top, 10) == 110 || parseInt(animate_blue_3.style.top, 10) == 110 || parseInt(animate_blue_4.style.top, 10) == 110 || parseInt(animate_blue_5.style.top, 10) == 110) ) {
+				tl_1.style.opacity = 0.0;
+				tl_2.style.opacity = 0.0;
+				tl_3.style.opacity = 0.0;
+				tl_4.style.opacity = 1.0;
+				tl_5.style.opacity = 0.0;
+			}
+			
+	if ((parseInt(animate_blue_1.style.top, 10) >= 100 || parseInt(animate_blue_1.style.top, 10) == 0) && (parseInt(animate_blue_2.style.top, 10) >= 100 || parseInt(animate_blue_2.style.top, 10) == 0)  && (parseInt(animate_blue_3.style.top, 10) >= 100 || parseInt(animate_blue_3.style.top, 10) == 0) && (parseInt(animate_blue_4.style.top, 10) >= 100 || parseInt(animate_blue_4.style.top, 10) == 0) && (parseInt(animate_blue_5.style.top, 10) >= 100 || parseInt(animate_blue_5.style.top, 10) == 0) &&  (parseInt(animate_blue_1.style.top, 10) == 100 || parseInt(animate_blue_2.style.top, 10) == 100 || parseInt(animate_blue_3.style.top, 10) == 100 || parseInt(animate_blue_4.style.top, 10) == 100 || parseInt(animate_blue_5.style.top, 10) == 100)) {
+				tl_1.style.opacity = 0.0;
+				tl_2.style.opacity = 0.0;
+				tl_3.style.opacity = 0.0;
+				tl_4.style.opacity = 0.0;
+				tl_5.style.opacity = 1.0;
+			}
+
+
+	if (((parseInt(animate_gold_1.style.top, 10) >= 30 || parseInt(animate_gold_1.style.top, 10) <= 10) && (parseInt(animate_gold_2.style.top, 10) >= 30 || parseInt(animate_gold_2.style.top, 10) <= 10)  && (parseInt(animate_gold_3.style.top, 10) >= 30 || parseInt(animate_gold_3.style.top, 10) <= 10) && (parseInt(animate_gold_4.style.top, 10) >= 30 || parseInt(animate_gold_4.style.top, 10) <= 10) && (parseInt(animate_gold_5.style.top, 10) >= 30 || parseInt(animate_gold_5.style.top, 10) <= 10)) && (parseInt(animate_gold_1.style.top, 10) == 10 || parseInt(animate_gold_2.style.top, 10) == 10 || parseInt(animate_gold_3.style.top, 10) == 10 || parseInt(animate_gold_4.style.top, 10) == 10 || parseInt(animate_gold_5.style.top, 10) == 10)) {
+				tr_1.style.opacity = 0.0;
+				tr_2.style.opacity = 0.0;
+				tr_3.style.opacity = 0.0;
+				tr_4.style.opacity = 0.0;
+				tr_5.style.opacity = 1.0;
+			}
+	
+	if (((parseInt(animate_gold_1.style.top, 10) >= 30 || parseInt(animate_gold_1.style.top, 10) <= 20) && (parseInt(animate_gold_2.style.top, 10) >= 30 || parseInt(animate_gold_2.style.top, 10) <= 20)  && (parseInt(animate_gold_3.style.top, 10) >= 30 || parseInt(animate_gold_3.style.top, 10) <= 20) && (parseInt(animate_gold_4.style.top, 10) >= 30 || parseInt(animate_gold_4.style.top, 10) <= 20) && (parseInt(animate_gold_5.style.top, 10) >= 30 || parseInt(animate_gold_5.style.top, 10) <= 20)) && (parseInt(animate_gold_1.style.top, 10) == 20 || parseInt(animate_gold_2.style.top, 10) == 20 || parseInt(animate_gold_3.style.top, 10) == 20 || parseInt(animate_gold_4.style.top, 10) == 20 || parseInt(animate_gold_5.style.top, 10) == 20)) {
+				tr_1.style.opacity = 0.0;
+				tr_2.style.opacity = 1.0;
+				tr_3.style.opacity = 0.0;
+				tr_4.style.opacity = 0.0;
+				tr_5.style.opacity = 0.0;
+			}
+			
+	if ((parseInt(animate_gold_1.style.top, 10) >= 120 || parseInt(animate_gold_1.style.top, 10) == 0) && (parseInt(animate_gold_2.style.top, 10) >= 120 || parseInt(animate_gold_2.style.top, 10) == 0)  && (parseInt(animate_gold_3.style.top, 10) >= 120 || parseInt(animate_gold_3.style.top, 10) == 0) && (parseInt(animate_gold_4.style.top, 10) >= 120 || parseInt(animate_gold_4.style.top, 10) == 0) && (parseInt(animate_gold_5.style.top, 10) >= 120 || parseInt(animate_gold_5.style.top, 10) == 0)  ) {
+				tr_1.style.opacity = 1.0;
+				tr_2.style.opacity = 0.0;
+				tr_3.style.opacity = 0.0;
+				tr_4.style.opacity = 0.0;
+				tr_5.style.opacity = 0.0;
+			}
+			
+	if ((parseInt(animate_gold_1.style.top, 10) >= 110 || parseInt(animate_gold_1.style.top, 10) == 0) && (parseInt(animate_gold_2.style.top, 10) >= 110 || parseInt(animate_gold_2.style.top, 10) == 0)  && (parseInt(animate_gold_3.style.top, 10) >= 110 || parseInt(animate_gold_3.style.top, 10) == 0) && (parseInt(animate_gold_4.style.top, 10) >= 110 || parseInt(animate_gold_4.style.top, 10) == 0) && (parseInt(animate_gold_5.style.top, 10) >= 110 || parseInt(animate_gold_5.style.top, 10) == 0) && (parseInt(animate_gold_1.style.top, 10) == 110 || parseInt(animate_gold_2.style.top, 10) == 110 || parseInt(animate_gold_3.style.top, 10) == 110 || parseInt(animate_gold_4.style.top, 10) == 110 || parseInt(animate_gold_5.style.top, 10) == 110) ) {
+				tr_1.style.opacity = 0.0;
+				tr_2.style.opacity = 0.0;
+				tr_3.style.opacity = 0.0;
+				tr_4.style.opacity = 1.0;
+				tr_5.style.opacity = 0.0;
+			}
+			
+	if ((parseInt(animate_gold_1.style.top, 10) >= 100 || parseInt(animate_gold_1.style.top, 10) == 0) && (parseInt(animate_gold_2.style.top, 10) >= 100 || parseInt(animate_gold_2.style.top, 10) == 0)  && (parseInt(animate_gold_3.style.top, 10) >= 100 || parseInt(animate_gold_3.style.top, 10) == 0) && (parseInt(animate_gold_4.style.top, 10) >= 100 || parseInt(animate_gold_4.style.top, 10) == 0) && (parseInt(animate_gold_5.style.top, 10) >= 100 || parseInt(animate_gold_5.style.top, 10) == 0) &&  (parseInt(animate_gold_1.style.top, 10) == 100 || parseInt(animate_gold_2.style.top, 10) == 100 || parseInt(animate_gold_3.style.top, 10) == 100 || parseInt(animate_gold_4.style.top, 10) == 100 || parseInt(animate_gold_5.style.top, 10) == 100)) {
+				tr_1.style.opacity = 0.0;
+				tr_2.style.opacity = 0.0;
+				tr_3.style.opacity = 0.0;
+				tr_4.style.opacity = 0.0;
+				tr_5.style.opacity = 1.0;
+			}
+
+
+
+
+
+
+		}
+	}
+}
+
+
+   
+  var seconds_y = 000; 
+  var tens_y = 00; 
+  var appendTens_y = 0;
+  var appendSeconds_y = document.getElementById("seconds_y")
+  var buttonStart_y = document.getElementById('button-start_y');
+  var buttonStop_y = document.getElementById('button-stop_y');
+  var buttonReset_y = document.getElementById('button-reset_y');
+  var Interval_y ;
+
+  function yellow_start() {
+    
+     clearInterval(Interval_y);
+     Interval_y = setInterval(startTimer_y, 10);
+  }
+  
+  function yellow_stop() {
+       clearInterval(Interval_y);
+  }
+  
+
+  function yellow_reset() {
+     clearInterval(Interval_y);
+    tens_y = "00";
+  	seconds_y = "000";
+    appendTens_y.innerHTML = tens_y;
+  	appendSeconds_y.innerHTML = seconds_y;
+  }
+  
+   
+  
+  function startTimer_y () {
+    tens_y++; 
+    
+    if (tens_y > 99) {
+      console.log("seconds");
+      seconds_y++;
+      appendSeconds_y.innerHTML = "00" + seconds_y;
+      tens_y = 0;
+    }
+    
+    if (seconds_y > 9){
+      appendSeconds_y.innerHTML = "0" + seconds_y;
+    }
+
+    if (seconds_y > 99){
+	appendSeconds_y.innerHTML = seconds_y;
+	}
+  
+  }
+
+  var seconds_b = 000; 
+  var tens_b = 00; 
+  var appendTens_b = 0;
+  var appendSeconds_b = document.getElementById("seconds_b")
+  var buttonStart_b = document.getElementById('button-start_b');
+  var buttonStop_b = document.getElementById('button-stop_b');
+  var buttonReset_b = document.getElementById('button-reset_b');
+  var Interval_b ;
+
+  function blue_start() {
+    
+     clearInterval(Interval_b);
+     Interval_b = setInterval(startTimer_b, 10);
+  }
+  
+  function blue_stop() {
+       clearInterval(Interval_b);
+  }
+  
+
+  function blue_reset() {
+     clearInterval(Interval_b);
+    tens_b = "00";
+  	seconds_b = "000";
+    appendTens_b.innerHTML = tens_b;
+  	appendSeconds_b.innerHTML = seconds_b;
+  }
+  
+   
+  
+  function startTimer_b () {
+    tens_b++; 
+    
+    if (tens_b > 99) {
+      console.log("seconds");
+      seconds_b++;
+      appendSeconds_b.innerHTML = "00" + seconds_b;
+      tens_b = 0;
+    }
+    
+    if (seconds_b > 9){
+      appendSeconds_b.innerHTML = "0" + seconds_b;
+    }
+
+    if (seconds_b > 99){
+	appendSeconds_b.innerHTML = seconds_b;
+	}
+  
+  }
+  
+
+
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+

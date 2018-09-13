@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="dress_slider.css">
+
+<style>
+.container
+{
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.neutral
+{
+	position: relative;
+	top: 0;
+	left: 0;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 1.0;
+}
+
+.black_blue
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	opacity: 0.0;
+}
+
+.white_gold
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	opacity: 0.0;
+}
+</style>
+
+</head>
+<body>
+
+<button id="light_btn" onclick="light()">Toggle Light</button>
+
+
+<div id="animate_container">
+
+
+	<div id="blue_pentagon"><img src="blue_pentagon.png" width="100%" height="100%"></div>
+
+	<div id="yellow_pentagon"><img src="yellow_pentagon.png" width=100%" height="100%"></div>
+
+
+	<div id="light_fixture_y"><img src="light_fixture.png" width=100%"></div>
+
+
+	<div id="light_fixture_b"><img src="light_fixture.png" width=100%"></div>
+
+	
+	<div id="man"><img src="man.png" width="100%"></div>
+
+	<div id="dress_pic"><img src="the_dress.jpeg" width="100%"></div>
+	<div id="frame"><img src="frame.png" width="100%" height=100%></div>
+	<div id="curtain">
+		<div id="l_curtain"><img src="curtain_left.png" width="100%" height="100%"></div>
+		<div id="r_curtain"><img src="curtain_right.png" width=100%" height="100%"></div>
+	</div>
+</div>
+
+
+<p>There are two aspects of the man's experience that we will focus on. First is the lighting that he has been exposed to. Recall from earlier that an important factor in interpreting the dress image is whether the viewer assumes the lighting when the picture was taken was yellowish or bluish. Therefore, we have added two light fixtures to the room, a yellow one and a blue one. Click "Add Lights" to insert the light fixtures into the room.</p>
+
+<button onclick="show_lights()">Add Lights</button>
+
+</p>Click "Toggle Light" to try changing the man's lighting color.</p>
+<form action="dress_just_man.html">
+    <input type="submit" value="Previous" />
+</form>
+
+
+<form action="dress_show.html">
+    <input type="submit" value="Next" />
+</form>
+
+<p>Image sources: The image of the man is from Microsoft PowerPoint's free image gallery. The curtain image and the frame image are from openclipart.com, whose images are all free for commercial use: https://openclipart.org/detail/267170/curtains-2 https://openclipart.org/detail/183498/cool-asian-frame</p>
+
+<script>
+var sim_started = 0;
+var blue_counter = 1;
+var gold_counter = 1;
+var total_blue = 0;
+var total_gold = 0;
+
+
+light_btn.disabled = true;
+
+yellow_pentagon.style.opacity = 0.0;
+blue_pentagon.style.opacity = 0.0;
+light_fixture_y.style.opacity = 0.0;
+light_fixture_b.style.opacity = 0.0;
+
+
+function light() {
+	if (yellow_pentagon.style.opacity == 0.0) {
+		yellow_pentagon.style.opacity = 0.3;
+		blue_pentagon.style.opacity = 0.0;
+		if (sim_started == 1) {
+			yellow_start();
+			blue_stop();
+		}
+	} else {
+		yellow_pentagon.style.opacity = 0.0;
+		blue_pentagon.style.opacity = 0.3;
+		if (sim_started == 1) {
+			yellow_stop();
+			blue_start();
+		}
+	}
+}
+
+
+function show_lights() {
+	yellow_pentagon.style.opacity = 0.3;
+	blue_pentagon.style.opacity = 0.0;
+	light_fixture_y.style.opacity = 1;
+	light_fixture_b.style.opacity = 1;
+	light_btn.disabled = false;
+}
+
+function changeColor(elt) {
+	elt.style.color = "blue";
+}
+
+function normalColor(elt) {
+	elt.style.color = "black";
+}
+
+function reveal(elt) {
+	elt.style.opacity = 1.0;
+}
+
+function hide(elt) {
+	elt.style.opacity = 0.0;
+}
+  
+
+
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+

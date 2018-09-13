@@ -1,0 +1,1318 @@
+
+
+.slidecontainer {
+    position: relative;
+    margin: auto;
+    width: 20%;
+}
+
+#prior_sliders {
+	position: relative;
+	width: 100%;
+	height: 117px;
+	margin: auto;
+	border-style: solid;
+}
+
+#lik_sliders {
+	position: relative;
+	width: 100%;
+	height: 117px;
+	margin: auto;
+	border-style: solid;
+}
+
+
+#norm_slider {
+	position: relative;
+	width: 100%;
+	height: 117px;
+	margin: auto;
+	border-style: solid;
+}
+
+
+
+.left_slider {
+	position: absolute;
+	left: 10px;
+	width: 40%;
+}
+
+
+.right_slider {
+	position: absolute;
+	right: 10px;
+	width: 40%;
+}
+
+.center_slider {
+	margin: auto;
+	width: 50%;
+}
+
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+
+#animate_container {
+	width: 600px;
+	height: 400px;
+	position: relative;
+	border-style: solid;
+}
+
+#pair_container {
+	width: 100%;
+	height: 400px;
+	margin: auto;
+}
+
+#dress_lady_container {
+	width: 300px;
+	height: 400px;
+	position: relative;
+	border-style: solid;
+	float: left;
+}
+
+#all_sliders {
+	float: left;
+	height: 400px;
+	width: 500px;
+}
+
+#piechart {
+	height:400px;
+	width:300px;
+	float: left;
+	border-style: solid;
+}
+
+
+#dress_lady {
+	position: absolute;
+
+}
+
+#explanatory_text {
+	position: relative;
+	height: 400px;
+}
+
+#p1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 1.0;
+	z-index: 100;
+}
+
+#p2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.0;
+	z-index: 90;
+}
+
+#p3 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.0;
+	z-index: 90;
+}
+
+#p4 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.0;
+	z-index: 90;
+}
+
+
+#p5 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.0;
+	z-index: 90;
+}
+
+
+#p6 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.0;
+	z-index: 90;
+}
+
+
+#p7 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.0;
+	z-index: 90;
+}
+
+
+
+#slider_reset {
+	width: 10%;
+	position: relative;
+	margin: auto;
+	left: 0;
+	right: 0;
+}
+
+#blue_box {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 50px;
+	top: 0px;
+	z-index: 30;
+	background: black;
+}
+
+#blue_catcher {
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	left: 40px;
+	bottom: 0px;
+	z-index: 27;
+	background: blue;
+	font-size: 40px;
+	line-height: 70px;;
+	text-align: center;
+}
+
+
+#gold_box {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	right: 50px;
+	top: 0px;
+	z-index: 30;
+	background: black;
+}
+
+#gold_catcher {
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	right: 40px;
+	bottom: 0px;
+	z-index: 27;
+	background: gold;
+	font-size: 40px;
+	text-align: center;
+	line-height: 70px;
+}
+
+#dress_pic {
+	position: absolute;
+	width: 70px;
+	top: 200px;
+	left: 150px;
+}
+
+#frame {
+	position: absolute;
+	width: 85px;
+	height: 110px;
+	top: 195px;
+	left: 145px;
+}
+
+#curtain {
+	position: absolute;
+	width: 90px;
+	height: 110px;
+	top: 190px;
+	left: 143px;
+}
+
+#l_curtain {
+	position: absolute;
+	width: 45px;
+	height: 110px;
+	top: 0px;
+	left: 0px;
+}
+
+#r_curtain {
+	position: absolute;
+	width: 45px;
+	height: 110px;
+	top: 0px;
+	right: 0px;
+}
+
+
+#dress_pic_2 {
+	position: absolute;
+	width: 70px;
+	top: 200px;
+	left: 7px;
+}
+
+#frame_2 {
+	position: absolute;
+	width: 85px;
+	height: 110px;
+	top: 195px;
+	left: 2px;
+}
+
+#curtain_2 {
+	position: absolute;
+	width: 90px;
+	height: 110px;
+	top: 190px;
+	left: 0px;
+}
+
+#l_curtain_2 {
+	position: absolute;
+	width: 45px;
+	height: 110px;
+	top: 0px;
+	left: 0px;
+}
+
+#r_curtain_2 {
+	position: absolute;
+	width: 45px;
+	height: 110px;
+	top: 0px;
+	right: 0px;
+}
+
+
+#bubble {
+	position: absolute;
+	width: 135px;
+	height: 150px;
+	top: 45px;
+	left: 160px;
+}
+
+#thought {
+	position: absolute;
+	width: 100px;
+	top: 80px;
+	left: 182px;
+	background: white;
+}
+
+
+
+#blue_bubble {
+	position: absolute;
+	width: 50px;
+	height: 150px;
+	top: 65px;
+	left: 202px;
+}
+
+
+#white_bubble {
+	position: absolute;
+	width: 50px;
+	height: 150px;
+	top: 65px;
+	left: 202px;
+}
+
+
+
+
+
+
+
+#man {
+	margin: auto;
+	position: absolute;
+	width: 70px;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+}
+
+#yellow_timer {
+	position: absolute;
+	top: 20px;
+	left: 230px;
+	z-index: 40;	
+}
+
+#blue_timer {
+	position: absolute;
+	top: 20px;
+	right: 230px;
+	z-index: 40;	
+}
+
+#light_fixture_b {
+	position: absolute;
+	top: 57px;
+	right: 225px;
+	width: 40px;
+	z-index: 30;
+}
+
+#light_fixture_y {
+	position: absolute;
+	top: 57px;
+	left: 225px;
+	width: 40px;
+	z-index: 30;
+}
+
+#blue_pentagon {
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 315px;
+	z-index: 28;
+	opacity: 0.0;
+}
+
+#yellow_pentagon {
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 315px;
+	z-index: 28;
+	opacity: 0.3;
+}
+
+
+.animate_blue {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0px;
+	left: 50px;
+	opacity: 0.0;
+	z-index: 24;
+}
+
+#trapdoors_left {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 50px;
+	top: 50px;
+	z-index: 25;
+}
+
+.trapdoor_left {
+	position: absolute;
+	opacity: 0.0;
+	z-index: 25;
+}
+
+#tl_1 {
+	opacity: 1.0;
+}
+
+
+#trapdoors_right {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	right: 50px;
+	top: 50px;
+	z-index: 25;
+}
+
+.trapdoor_right {
+	position: absolute;
+	opacity: 0.0;
+	z-index: 25;
+}
+
+#tr_1 {
+	opacity: 1.0;
+}
+
+
+.animate_gold {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	right: 50px;
+	opacity: 0.0;
+	z-index: 24;
+}
+
+
+#bayes_box_2 {
+	width: 200px;
+	height: 100px;
+	position: relative;
+	border-style: solid;
+	border-color: black;
+	margin: 0 auto;
+}
+
+
+#bayes_box {
+	width: 200px;
+	height: 100px;
+	position: relative;
+	border-style: solid;
+	border-color: black;
+	margin: 0 auto;
+}
+
+#bayes_bb {
+	width: 550px;
+	height: 100px;
+	border-style: solid;
+	border-color: black;
+	position: relative;
+	margin: 0 auto;
+}
+
+
+
+#bayes_wg {
+	width: 550px;
+	height: 100px;
+	border-style: solid;
+	border-color: black;
+	position: relative;
+	margin: 0 auto;
+}
+
+
+
+#explain_boxes, #explain_boxes_2 {
+	width: 30%;
+	height: 200px;
+	position: relative;
+	margin: 0 auto;
+}
+
+
+.explain_box, .explain_box_2 {
+	width: 100%;
+	height: 200px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border-style: solid;
+	border-color: black;
+	opacity: 0.0;
+	z-index: -10;
+}
+
+
+#lhs_2 {
+	position: absolute;
+	left: 2px;
+	top: 25px;
+	z-index: 10;
+}
+
+
+#lhs {
+	position: absolute;
+	left: 2px;
+	top: 25px;
+	z-index: 10;
+}
+
+#lhs_bb {
+	position: absolute;
+	left: 2px;
+	top: 25px;
+}
+
+#lhs_wg {
+	position: absolute;
+	left: 2px;
+	top: 25px;
+}
+
+#lhs:hover, #lhs_2:hover {
+	font-weight: bold;
+}
+
+#likelihood:hover, #likelihood_2:hover {
+	font-weight: bold;
+}
+
+
+#prior:hover, #prior_2:hover {
+	font-weight: bold;
+}
+
+#z:hover, #eq_sign_2:hover {
+	font-weight: bold;
+}
+
+#eq_sign, #eq_sign_2{
+	position: absolute;
+	left: 55px;
+	top: 25px;
+}
+
+#rhs, #rhs_2 {
+	position: absolute;
+	left: 70px;
+}
+
+#likelihood {
+	position: absolute;
+	left: 0px;
+	top: 10px;
+	z-index: 10;
+}
+
+
+#likelihood_2 {
+	position: absolute;
+	left: 0px;
+	top: 25px;
+	z-index: 10;
+}
+
+#prior {
+	position: absolute;
+	left: 50px;
+	top: 10px;
+	z-index: 10;
+}
+
+
+#prior_2 {
+	position: absolute;
+	left: 50px;
+	top: 25px;
+	z-index: 10;
+}
+
+#z {
+	position: absolute;
+	left: 25px;
+	top: 40px;
+	z-index: 10;
+}
+
+#fraction_line {
+	position: absolute;
+	left: 0px;
+	top: 37px;
+	height: 2px;
+	width: 80px;
+}
+
+#bayes_wg_eq_final {
+	position: relative;
+	height: 100px;
+	width: 650px;
+	border-style: solid;
+}
+
+#wgef_lhs {
+	position: absolute;
+	left: 2px;
+	top: 40px;
+}
+
+
+
+#wgef_eq {
+	position: absolute;
+	left: 170px;
+	top: 40px;
+}
+
+#wgef_eq_2 {
+	position: absolute;
+	left: 480px;
+	top: 40px;
+	opacity: 0.0;
+}
+
+#wgef_eq_3 {
+	position: absolute;
+	left: 580px;
+	top: 40px;
+	opacity: 0.0;
+}
+
+
+#wgef_rhs {
+	position: absolute;
+	left: 190px;
+}
+
+#wgef_rhs_2 {
+	position: absolute;
+	left: 500px;
+	opacity: 0.0;
+}
+
+#wgef_rhs_3 {
+	position: absolute;
+	left: 600px;
+	top: 40px;
+	opacity: 0.0;
+}
+
+
+#wgef_lik {
+	position: absolute;
+	left: 0px;
+	top: 30px;
+	width: 200px;
+	height: 40px;
+	border-width: 1px;
+}
+
+
+
+#wgef_num_2 {
+	position: absolute;
+	left: 0px;
+	top: 30px;
+	width: 100px;
+	height: 40px;
+	border-width: 1px;
+}
+
+#wgef_prior {
+	position: absolute;
+	left: 170px;
+	top: 30px;
+	width: 120px;
+	height: 40px;
+	border-width: 1px;
+}
+
+#wgef_z {
+	position: absolute;
+	left: 125px;
+	top: 50px;
+	width: 50px;
+	height: 40px;
+	border-width: 1px;
+}
+
+
+#wgef_denom_2 {
+	position: absolute;
+	left: 30px;
+	top: 50px;
+	width: 50px;
+	height: 40px;
+	border-width: 1px;
+}
+
+#wgef_line {
+	position: absolute;
+	left: 0px;
+	top: 37px;
+	height: 2px;
+	width: 280px;
+}
+
+
+#wgef_line_2 {
+	position: absolute;
+	left: 0px;
+	top: 37px;
+	height: 2px;
+	width: 70px;
+}
+
+
+#bayes_bb_eq_final {
+	position: relative;
+	height: 100px;
+	width: 650px;
+	border-style: solid;
+}
+
+
+
+#bbef_lhs {
+	position: absolute;
+	left: 2px;
+	top: 40px;
+}
+
+
+
+#bbef_eq {
+	position: absolute;
+	left: 170px;
+	top: 40px;
+}
+
+#bbef_eq_2 {
+	position: absolute;
+	left: 480px;
+	top: 40px;
+	opacity: 0.0;
+}
+
+#bbef_eq_3 {
+	position: absolute;
+	left: 580px;
+	top: 40px;
+	opacity: 0.0;
+}
+
+
+#bbef_rhs {
+	position: absolute;
+	left: 190px;
+}
+
+#bbef_rhs_2 {
+	position: absolute;
+	left: 500px;
+	opacity: 0.0;
+}
+
+#bbef_rhs_3 {
+	position: absolute;
+	left: 600px;
+	top: 40px;
+	opacity: 0.0;
+}
+
+
+#bbef_lik {
+	position: absolute;
+	left: 0px;
+	top: 30px;
+	width: 200px;
+	height: 40px;
+	border-width: 1px;
+}
+
+
+
+#bbef_num_2 {
+	position: absolute;
+	left: 0px;
+	top: 30px;
+	width: 100px;
+	height: 40px;
+	border-width: 1px;
+}
+
+#bbef_prior {
+	position: absolute;
+	left: 170px;
+	top: 30px;
+	width: 120px;
+	height: 40px;
+	border-width: 1px;
+}
+
+#bbef_z {
+	position: absolute;
+	left: 125px;
+	top: 50px;
+	width: 50px;
+	height: 40px;
+	border-width: 1px;
+}
+
+
+#bbef_denom_2 {
+	position: absolute;
+	left: 30px;
+	top: 50px;
+	width: 50px;
+	height: 40px;
+	border-width: 1px;
+}
+
+#bbef_line {
+	position: absolute;
+	left: 0px;
+	top: 37px;
+	height: 2px;
+	width: 280px;
+}
+
+#wgef_button {
+	position: absolute;
+	left: 520px;
+	top: 37px;
+	width: 100px;
+	z-index: 0;
+}
+
+#bbef_button {
+	position: absolute;
+	left: 520px;
+	top: 37px;
+	width: 100px;
+	z-index: 0;
+}
+
+#bbef_line_2 {
+	position: absolute;
+	left: 0px;
+	top: 37px;
+	height: 2px;
+	width: 70px;
+}
+
+
+#bayes_box_dress_2 {
+	width: 500px;
+	height: 100px;
+	position: relative;
+	border-style: solid;
+	border-color: black;
+	margin: 0 auto;
+}
+
+
+#lhs_dress_2 {
+	position: absolute;
+	left: 2px;
+	top: 25px;
+	z-index: 10;
+}
+
+
+
+
+#eq_sign_dress_2 {
+	position: absolute;
+	left: 170px;
+	top: 25px;
+}
+
+#rhs_dress_2 {
+	position: absolute;
+	left: 190px;
+}
+
+#likelihood_dress_2 {
+	position: absolute;
+	left: 0px;
+	top: 10px;
+	width: 170px;
+	height: 40px;
+}
+
+#prior_dress_2 {
+	position: absolute;
+	left: 175px;
+	top: 10px;
+	width: 170px;
+	height: 40px;
+}
+
+#z_dress_2 {
+	position: absolute;
+	left: 100px;
+	top: 40px;
+	width: 170px;
+	height: 40px;
+}
+
+#fraction_line_dress_2 {
+	position: absolute;
+	left: 0px;
+	top: 37px;
+	height: 2px;
+	width: 285px;
+}
+
+
+#bayes_box_dress {
+	width: 500px;
+	height: 100px;
+	position: relative;
+	border-style: solid;
+	border-color: black;
+	margin: 0 auto;
+}
+
+
+#lhs_dress {
+	position: absolute;
+	left: 2px;
+	top: 25px;
+	z-index: 10;
+}
+
+
+
+
+#eq_sign_dress {
+	position: absolute;
+	left: 170px;
+	top: 25px;
+}
+
+#rhs_dress {
+	position: absolute;
+	left: 190px;
+}
+
+#likelihood_dress {
+	position: absolute;
+	left: 0px;
+	top: 10px;
+	width: 170px;
+	height: 40px;
+}
+
+#prior_dress {
+	position: absolute;
+	left: 175px;
+	top: 10px;
+	width: 170px;
+	height: 40px;
+}
+
+#z_dress {
+	position: absolute;
+	left: 100px;
+	top: 40px;
+	width: 170px;
+	height: 40px;
+}
+
+#fraction_line_dress {
+	position: absolute;
+	left: 0px;
+	top: 37px;
+	height: 2px;
+	width: 285px;
+}
+
+
+#eq_sign_bb {
+	position: absolute;
+	left: 175px;
+	top: 25px;
+}
+
+#rhs_bb {
+	position: absolute;
+	left: 190px;
+}
+
+#likelihood_bb {
+	position: absolute;
+	left: 0px;
+	top: 10px;
+	width: 170px;
+	height: 40px;
+}
+
+#prior_bb {
+	position: absolute;
+	left: 180px;
+	top: 10px;
+	width: 170px;
+	height: 40px;
+}
+
+#z_bb {
+	position: absolute;
+	left: 100px;
+	top: 50px;
+	width: 170px;
+	height: 40px;
+}
+
+#fraction_line_bb {
+	position: absolute;
+	left: 0px;
+	top: 37px;
+	height: 2px;
+	width: 350px;
+}
+
+
+#eq_sign_wg {
+	position: absolute;
+	left: 175px;
+	top: 25px;
+}
+
+#rhs_wg {
+	position: absolute;
+	left: 190px;
+}
+
+
+
+
+#likelihood_wg {
+	position: absolute;
+	left: 0px;
+	top: 10px;
+	width: 170px;
+	height: 40px;
+}
+
+#prior_wg {
+	position: absolute;
+	left: 180px;
+	top: 10px;
+	width: 170px;
+	height: 40px;
+}
+
+#z_wg {
+	position: absolute;
+	left: 100px;
+	top: 50px;
+	width: 170px;
+	height: 40px;
+}
+
+#fraction_line_wg {
+	position: absolute;
+	left: 0px;
+	top: 37px;
+	height: 2px;
+	width: 350px;
+}
+
+#drag_options {
+	height: 100px;
+	width: 100%;
+	border-style: solid;
+}
+
+#choice1_box {
+	height: 300px;
+	width: 300px;
+	border-style: solid;
+	border-width: 1px;
+	opacity: 0.0;
+	z-index: -1000;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: white;
+}
+
+#choice2_box {
+	height: 300px;
+	width: 300px;
+	border-style: solid;
+	border-width: 1px;
+	opacity: 0.0;
+	z-index: -1000;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	background: white;
+}
+
+#choice3_box {
+	height: 300px;
+	width: 300px;
+	border-style: solid;
+	border-width: 1px;
+	opacity: 0.0;
+	z-index: -1000;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: white;
+}
+
+#choice4_box {
+	height: 300px;
+	width: 300px;
+	border-style: solid;
+	border-width: 1px;
+	opacity: 0.0;
+	z-index: -1000;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	background: white;
+}
+
+#all_choice_boxes {
+	position: relative;
+	height: 300px;
+	width: 300px;
+}
+
+#choice_container {
+	position: relative;
+	height: 200px;
+	width: 200px;
+}
+
+#right_choice {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border-style: solid;
+}
+
+#wrong_choice {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border-style: solid;
+}
+
+#all_hints {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -50px;
+	width: 500px;
+	height: 500px;
+}
+
+#hint1b {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-style: solid;
+	background: white;
+}
+
+
+
+#hint2b {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-style: solid;
+	background: white;
+}
+
+
+
+#hint3b {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-style: solid;
+	background: white;
+}
+
+#hint4b {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-style: solid;
+	background: white;
+}
+
+#hint5b {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-style: solid;
+	background: white;
+}
+
+#all_checked {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-style: solid;
+	background: white;
+}
+
+
+#a1_check {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-style: solid;
+	background: white;
+}
+
+
+#a2_check {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-style: solid;
+	background: white;
+}
+
+
+#a3_check {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-style: solid;
+	background: white;
+}
+
+
+#a4_check {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-style: solid;
+	background: white;
+}
+
+
+#a5_check {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-style: solid;
+	background: white;
+}
+
+

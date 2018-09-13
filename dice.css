@@ -1,0 +1,273 @@
+
+#text_block {
+	height: 500px;
+	position: absolute;
+	left: 620px;
+}
+
+#grid_container {
+	position: fixed;
+	top: 0;
+	height: 400px;
+	width: 600px;
+	z-index: 100;
+}
+
+#dice_grid {
+	width: 492px;
+	height: 492px;
+	border-style: solid;
+	display: inline-block;
+}
+
+.die {
+	position: relative;
+	float: left;
+	width: 80px;
+	height: 80px;
+	border-style: solid;
+	border-width: 1px;
+	z-index: 10;
+}
+
+.die_box {
+	margin: 0 auto;
+	height: 50%;
+	width: 100%;
+	top: 25px;
+}
+
+.die_box_2 {
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+.die_img {
+	height: 90%;
+	width: 90%;
+	margin: auto 0;
+}
+
+.left_die {
+	height: 32px;
+	width: 32px;
+	top: 24px;
+	left: 4px;
+	position: absolute;
+	z-index: 10;
+}
+
+.right_die {
+	height: 32px;
+	width: 32px;
+	top: 24px;
+	right: 4px;
+	position: absolute;
+	z-index: 10;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+    position: relative;
+    display: inline-block;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    width: 360px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    z-index: 100;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd; z-index: 100;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.button_group {
+	display: inline-block;
+	width: 400px;
+	height: 400px;
+}
+
+.blue_box {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	opacity: 0.0;
+	top: 0px;
+	left: 0px;
+	z-index: 5;
+}
+
+.yellow_box {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	opacity: 0.0;
+	top: 0px;
+	left: 0px;
+	z-index: 4;
+}
+
+#prob_choices {
+	position: absolute;
+	display: inline-block;
+	height: 500px;
+	width: 100px;
+	margin-left: 10px;
+}
+
+#prob_num {
+	position: absolute;
+	top: 0px;
+	left: 90px;
+
+}
+
+
+
+#prob_denom {
+	position: absolute;
+	top: 20px;
+	left: 125px;
+
+}
+
+
+#prob_left {
+	position: absolute;
+	top: 10px;
+	left: 0px;
+
+}
+
+#prob_eq {
+	position: relative;
+	height: 50px;
+}
+
+#fraction_line {
+	position: absolute;
+	width: 270px;
+	height: 2px;
+	left: 85px;
+	top: 7px;
+}
+
+
+#cond_num {
+	position: absolute;
+	top: 0px;
+	left: 65px;
+
+}
+
+
+
+#cond_denom {
+	position: absolute;
+	top: 20px;
+	left: 75px;
+
+}
+
+
+#cond_left {
+	position: absolute;
+	top: 10px;
+	left: 0px;
+
+}
+
+#cond_eq {
+	position: relative;
+	height: 50px;
+}
+
+#cond_line {
+	position: absolute;
+	width: 50px;
+	height: 2px;
+	left: 65px;
+	top: 7px;
+}
+
+
+#bayes_num {
+	position: absolute;
+	top: 0px;
+	left: 65px;
+
+}
+
+
+
+#bayes_denom {
+	position: absolute;
+	top: 20px;
+	left: 90px;
+
+}
+
+
+#bayes_left {
+	position: absolute;
+	top: 10px;
+	left: 0px;
+
+}
+
+#bayes_eq {
+	position: relative;
+	height: 50px;
+}
+
+#bayes_line {
+	position: absolute;
+	width: 80px;
+	height: 2px;
+	left: 65px;
+	top: 7px;
+}
+
+#title {
+	position: relative;
+}
+
+#tutorial_body{
+	position: relative;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="birds.css">
+
+<style>
+</style>
+
+</head>
+<body>
+
+
+<div id="bird_grid">
+
+<div id="penguin_1" class="penguin"><img height="100%" width="100%" src="penguin_1.jpg"></div>
+<div id="penguin_2" class="penguin"><img height="100%" width="100%" src="penguin_2.jpg"></div>
+<div id="penguin_3" class="penguin"><img height="100%" width="100%" src="penguin_3.jpg"></div>
+<div id="penguin_4" class="penguin"><img height="100%" width="100%" src="penguin_4.jpg"></div>
+<div id="penguin_5" class="penguin"><img height="100%" width="100%" src="penguin_5.jpg"></div>
+</div>
+
+<div id="hello">Some text</div>
+
+<script>
+
+document.getElementById("hello").innerHTML = "replaced";
+
+//penguin_2.style.opacity = 1;
+
+//function show(class) {
+//	penguin_1.style.opacity = 0.5;
+//}
+
+
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,153 @@
+
+
+#bird_grid, #demo_container {
+	width: 600px;
+	height: 600px;
+	border-style: solid;
+	float: left;
+	position: relative;
+}
+
+.horse, .wolf, .rhino, .roadrunner, .owl, .goldfinch, .raven, .clownfish, .shark, .tuna, .snake, .tortoise, .frog, .spider, .ant, .beetle, .grasshopper, .octopus, .clam {
+	width: 10%;
+	height: 10%;
+	float: left;
+}
+
+
+#word_learning_demo, #taxonomy, #be_the_learner, #home_screen, #tutorial_1, #tutorial_2, #tutorial_3, #tutorial_4 {
+	height: 600px;
+	width: 600px;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+
+#tutorial_1, #tutorial_2, #tutorial_3, #tutorial_4 {
+	opacity: 0.0;
+	z-index: -10;
+}
+
+
+#home_screen {
+	opacity: 1.0;
+	z-index: 100;
+}
+
+#taxonomy {
+	opacity: 0.0;
+	z-index: -1000;
+}
+
+#word_learning_demo {
+	opacity: 0.0;
+	z-index: -10;
+}
+
+#be_the_learner {
+	opacity: 0.0;
+	z-index: 10000;
+}
+
+#images, #possibilities, #learner_words, #learner_images, #learner_possibilities {
+	width: 100%;
+}
+
+.image_choice, .possibility {
+	width: 120px;
+	height: 120px;
+	float: left;
+	opacity: 0.0;
+}
+
+.math_sub {
+	width: 100px;
+	height: 120px;
+	float: left;
+	opacity: 1.0;
+}
+
+.math_value, .head {
+	opacity: 0.0;
+}
+
+#explanations {
+	opacity: 0.0;
+}
+
+#math_2, #math_3 {
+	width: 50px;
+}
+
+#math_4, #math_6 {
+	width: 150px;
+}
+
+.learner_word {
+	width: 120px;
+	height: 30px;
+       	float: left;	
+}
+
+
+.learner_image_choice, .learner_possibility {
+	width: 120px;
+	height: 100px;
+	float: left;
+	opacity: 1.0;
+}
+
+.learner_possibility {
+	width: 110px;
+	padding-right: 10px;
+	font-size: 10pt;
+}
+
+#poss, #prior, #lik, #post {
+	width: 120px;
+	float: left;
+	opacity: 0.0;
+}
+
+#possibility_1 {
+	opacity: 1.0;
+}
+
+#pos_1_1, #pos_1_2, #pos_1_3, #pos_1_4, #pos_1_5 {
+	opacity: 0.0;
+}
+
+#teacher_preface, #learner_preface {
+	width: 100%;
+	height: 200px;
+	opacity: 1.0;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+}
+
+#choice_buttons {
+	width: 100%;
+	height: 120px;
+	overflow: scroll;
+}
+
+#preface_container {
+	width: 100%;
+	height: 200px;
+	float: left;
+}
+
+
+#table_box {
+	width: 100%;
+	height: 140px;
+	float: left;
+}
+
+#word_display {
+	font-size: 20px;
+}
+
+

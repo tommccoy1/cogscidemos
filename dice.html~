@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="dice.css">
+
+<style>
+</style>
+
+</head>
+<body>
+
+
+
+
+	<div id="tutorial body">
+
+<div id="grid_container">
+
+	<div id="dice_grid">
+
+		<div id="die11" class="die"><img class="left_die" src="die1.png"><img class="right_die" src="die1.png"><img class="blue_box" id="blue11" src="blue_square.png"><img class="yellow_box" id="yellow11" src="yellow_square.png"></div>
+		<div id="die12" class="die"><img class="left_die" src="die1.png"><img class="right_die" src="die2.png"><img class="blue_box" id="blue12" src="blue_square.png"><img class="yellow_box" id="yellow12" src="yellow_square.png"></div>
+		<div id="die13" class="die"><img class="left_die" src="die1.png"><img class="right_die" src="die3.png"><img class="blue_box" id="blue13" src="blue_square.png"><img class="yellow_box" id="yellow13" src="yellow_square.png"></div>
+		<div id="die14" class="die"><img class="left_die" src="die1.png"><img class="right_die" src="die4.png"><img class="blue_box" id="blue14" src="blue_square.png"><img class="yellow_box" id="yellow14" src="yellow_square.png"></div>
+		<div id="die15" class="die"><img class="left_die" src="die1.png"><img class="right_die" src="die5.png"><img class="blue_box" id="blue15" src="blue_square.png"><img class="yellow_box" id="yellow15" src="yellow_square.png"></div>
+		<div id="die16" class="die"><img class="left_die" src="die1.png"><img class="right_die" src="die6.png"><img class="blue_box" id="blue16" src="blue_square.png"><img class="yellow_box" id="yellow16" src="yellow_square.png"></div>
+
+
+		<div id="die21" class="die"><img class="left_die" src="die2.png"><img class="right_die" src="die1.png"><img class="blue_box" id="blue21" src="blue_square.png"><img class="yellow_box" id="yellow21" src="yellow_square.png"></div>
+		<div id="die22" class="die"><img class="left_die" src="die2.png"><img class="right_die" src="die2.png"><img class="blue_box" id="blue22" src="blue_square.png"><img class="yellow_box" id="yellow22" src="yellow_square.png"></div>
+		<div id="die23" class="die"><img class="left_die" src="die2.png"><img class="right_die" src="die3.png"><img class="blue_box" id="blue23" src="blue_square.png"><img class="yellow_box" id="yellow23" src="yellow_square.png"></div>
+		<div id="die24" class="die"><img class="left_die" src="die2.png"><img class="right_die" src="die4.png"><img class="blue_box" id="blue24" src="blue_square.png"><img class="yellow_box" id="yellow24" src="yellow_square.png"></div>
+		<div id="die25" class="die"><img class="left_die" src="die2.png"><img class="right_die" src="die5.png"><img class="blue_box" id="blue25" src="blue_square.png"><img class="yellow_box" id="yellow25" src="yellow_square.png"></div>
+		<div id="die26" class="die"><img class="left_die" src="die2.png"><img class="right_die" src="die6.png"><img class="blue_box" id="blue26" src="blue_square.png"><img class="yellow_box" id="yellow26" src="yellow_square.png"></div>
+	
+
+		<div id="die31" class="die"><img class="left_die" src="die3.png"><img class="right_die" src="die1.png"><img class="blue_box" id="blue31" src="blue_square.png"><img class="yellow_box" id="yellow31" src="yellow_square.png"></div>
+		<div id="die32" class="die"><img class="left_die" src="die3.png"><img class="right_die" src="die2.png"><img class="blue_box" id="blue32" src="blue_square.png"><img class="yellow_box" id="yellow32" src="yellow_square.png"></div>
+		<div id="die33" class="die"><img class="left_die" src="die3.png"><img class="right_die" src="die3.png"><img class="blue_box" id="blue33" src="blue_square.png"><img class="yellow_box" id="yellow33" src="yellow_square.png"></div>
+		<div id="die34" class="die"><img class="left_die" src="die3.png"><img class="right_die" src="die4.png"><img class="blue_box" id="blue34" src="blue_square.png"><img class="yellow_box" id="yellow34" src="yellow_square.png"></div>
+		<div id="die35" class="die"><img class="left_die" src="die3.png"><img class="right_die" src="die5.png"><img class="blue_box" id="blue35" src="blue_square.png"><img class="yellow_box" id="yellow35" src="yellow_square.png"></div>
+		<div id="die36" class="die"><img class="left_die" src="die3.png"><img class="right_die" src="die6.png"><img class="blue_box" id="blue36" src="blue_square.png"><img class="yellow_box" id="yellow36" src="yellow_square.png"></div>
+	
+
+		<div id="die41" class="die"><img class="left_die" src="die4.png"><img class="right_die" src="die1.png"><img class="blue_box" id="blue41" src="blue_square.png"><img class="yellow_box" id="yellow41" src="yellow_square.png"></div>
+		<div id="die42" class="die"><img class="left_die" src="die4.png"><img class="right_die" src="die2.png"><img class="blue_box" id="blue42" src="blue_square.png"><img class="yellow_box" id="yellow42" src="yellow_square.png"></div>
+		<div id="die43" class="die"><img class="left_die" src="die4.png"><img class="right_die" src="die3.png"><img class="blue_box" id="blue43" src="blue_square.png"><img class="yellow_box" id="yellow43" src="yellow_square.png"></div>
+		<div id="die44" class="die"><img class="left_die" src="die4.png"><img class="right_die" src="die4.png"><img class="blue_box" id="blue44" src="blue_square.png"><img class="yellow_box" id="yellow44" src="yellow_square.png"></div>
+		<div id="die45" class="die"><img class="left_die" src="die4.png"><img class="right_die" src="die5.png"><img class="blue_box" id="blue45" src="blue_square.png"><img class="yellow_box" id="yellow45" src="yellow_square.png"></div>
+		<div id="die46" class="die"><img class="left_die" src="die4.png"><img class="right_die" src="die6.png"><img class="blue_box" id="blue46" src="blue_square.png"><img class="yellow_box" id="yellow46" src="yellow_square.png"></div>
+	
+
+		<div id="die51" class="die"><img class="left_die" src="die5.png"><img class="right_die" src="die1.png"><img class="blue_box" id="blue51" src="blue_square.png"><img class="yellow_box" id="yellow51" src="yellow_square.png"></div>
+		<div id="die52" class="die"><img class="left_die" src="die5.png"><img class="right_die" src="die2.png"><img class="blue_box" id="blue52" src="blue_square.png"><img class="yellow_box" id="yellow52" src="yellow_square.png"></div>
+		<div id="die53" class="die"><img class="left_die" src="die5.png"><img class="right_die" src="die3.png"><img class="blue_box" id="blue53" src="blue_square.png"><img class="yellow_box" id="yellow53" src="yellow_square.png"></div>
+		<div id="die54" class="die"><img class="left_die" src="die5.png"><img class="right_die" src="die4.png"><img class="blue_box" id="blue54" src="blue_square.png"><img class="yellow_box" id="yellow54" src="yellow_square.png"></div>
+		<div id="die55" class="die"><img class="left_die" src="die5.png"><img class="right_die" src="die5.png"><img class="blue_box" id="blue55" src="blue_square.png"><img class="yellow_box" id="yellow55" src="yellow_square.png"></div>
+		<div id="die56" class="die"><img class="left_die" src="die5.png"><img class="right_die" src="die6.png"><img class="blue_box" id="blue56" src="blue_square.png"><img class="yellow_box" id="yellow56" src="yellow_square.png"></div>
+	
+
+		<div id="die61" class="die"><img class="left_die" src="die6.png"><img class="right_die" src="die1.png"><img class="blue_box" id="blue61" src="blue_square.png"><img class="yellow_box" id="yellow61" src="yellow_square.png"></div>
+		<div id="die62" class="die"><img class="left_die" src="die6.png"><img class="right_die" src="die2.png"><img class="blue_box" id="blue62" src="blue_square.png"><img class="yellow_box" id="yellow62" src="yellow_square.png"></div>
+		<div id="die63" class="die"><img class="left_die" src="die6.png"><img class="right_die" src="die3.png"><img class="blue_box" id="blue63" src="blue_square.png"><img class="yellow_box" id="yellow63" src="yellow_square.png"></div>
+		<div id="die64" class="die"><img class="left_die" src="die6.png"><img class="right_die" src="die4.png"><img class="blue_box" id="blue64" src="blue_square.png"><img class="yellow_box" id="yellow64" src="yellow_square.png"></div>
+		<div id="die65" class="die"><img class="left_die" src="die6.png"><img class="right_die" src="die5.png"><img class="blue_box" id="blue65" src="blue_square.png"><img class="yellow_box" id="yellow65" src="yellow_square.png"></div>
+		<div id="die66" class="die"><img class="left_die" src="die6.png"><img class="right_die" src="die6.png"><img class="blue_box" id="blue66" src="blue_square.png"><img class="yellow_box" id="yellow66" src="yellow_square.png"></div>
+
+
+	</div>
+
+	<div id="prob_choices">
+
+		<div class="dropdown">
+			<span>Event 1:&nbsp;</span><br><span id="event1">None</span>
+			<button onclick="myFunction('myDropdown_b')" class="dropbtn">Choose</button>
+			<div id="myDropdown_b" class="dropdown-content">
+			<input type="radio" name="roll" id="roll11">1,1
+			<input type="radio" name="roll" id="roll12">1,2
+			<input type="radio" name="roll" id="roll13">1,3
+			<input type="radio" name="roll" id="roll14">1,4
+			<input type="radio" name="roll" id="roll15">1,5
+			<input type="radio" name="roll" id="roll16">1,6<br>
+	
+			<input type="radio" name="roll" id="roll21">2,1
+			<input type="radio" name="roll" id="roll22">2,2
+			<input type="radio" name="roll" id="roll23">2,3
+			<input type="radio" name="roll" id="roll24">2,4
+			<input type="radio" name="roll" id="roll25">2,5
+			<input type="radio" name="roll" id="roll26">2,6<br>
+	
+			<input type="radio" name="roll" id="roll31">3,1
+			<input type="radio" name="roll" id="roll32">3,2
+			<input type="radio" name="roll" id="roll33">3,3
+			<input type="radio" name="roll" id="roll34">3,4
+			<input type="radio" name="roll" id="roll35">3,5
+			<input type="radio" name="roll" id="roll36">3,6<br>
+	
+			<input type="radio" name="roll" id="roll41">4,1
+			<input type="radio" name="roll" id="roll42">4,2
+			<input type="radio" name="roll" id="roll43">4,3
+			<input type="radio" name="roll" id="roll44">4,4
+			<input type="radio" name="roll" id="roll45">4,5
+			<input type="radio" name="roll" id="roll46">4,6<br>
+	
+			<input type="radio" name="roll" id="roll51">5,1
+			<input type="radio" name="roll" id="roll52">5,2
+			<input type="radio" name="roll" id="roll53">5,3
+			<input type="radio" name="roll" id="roll54">5,4
+			<input type="radio" name="roll" id="roll55">5,5
+			<input type="radio" name="roll" id="roll56">5,6<br>
+	
+			<input type="radio" name="roll" id="roll61">6,1
+			<input type="radio" name="roll" id="roll62">6,2
+			<input type="radio" name="roll" id="roll63">6,3
+			<input type="radio" name="roll" id="roll64">6,4
+			<input type="radio" name="roll" id="roll65">6,5
+			<input type="radio" name="roll" id="roll66">6,6<br>
+	
+			Contains...<br>
+			<input type="radio" name="roll" id="rollc1">1
+			<input type="radio" name="roll" id="rollc2">2
+			<input type="radio" name="roll" id="rollc3">3
+			<input type="radio" name="roll" id="rollc4">4
+			<input type="radio" name="roll" id="rollc5">5
+			<input type="radio" name="roll" id="rollc6">6<br>
+	
+			Dice sum to...<br>
+			<input type="radio" name="roll" id="rolls2">2
+			<input type="radio" name="roll" id="rolls3">3
+			<input type="radio" name="roll" id="rolls4">4
+			<input type="radio" name="roll" id="rolls5">5
+			<input type="radio" name="roll" id="rolls6">6
+			<input type="radio" name="roll" id="rolls7">7
+			<input type="radio" name="roll" id="rolls8">8
+			<input type="radio" name="roll" id="rolls9">9
+			<input type="radio" name="roll" id="rolls10">10
+			<input type="radio" name="roll" id="rolls11">11
+			<input type="radio" name="roll" id="rolls12">12<br>
+	
+	
+			Sum is less than...<br>
+			<input type="radio" name="roll" id="rolll3">3
+			<input type="radio" name="roll" id="rolll4">4
+			<input type="radio" name="roll" id="rolll5">5
+			<input type="radio" name="roll" id="rolll6">6
+			<input type="radio" name="roll" id="rolll7">7
+			<input type="radio" name="roll" id="rolll8">8
+			<input type="radio" name="roll" id="rolll9">9
+			<input type="radio" name="roll" id="rolll10">10
+			<input type="radio" name="roll" id="rolll11">11
+			<input type="radio" name="roll" id="rolll12">12
+			<input type="radio" name="roll" id="rolll13">13<br>
+	
+			Sum is greater than...<br>
+			<input type="radio" name="roll" id="rollg1">1
+			<input type="radio" name="roll" id="rollg2">2
+			<input type="radio" name="roll" id="rollg3">3
+			<input type="radio" name="roll" id="rollg4">4
+			<input type="radio" name="roll" id="rollg5">5
+			<input type="radio" name="roll" id="rollg6">6
+			<input type="radio" name="roll" id="rollg7">7
+			<input type="radio" name="roll" id="rollg8">8
+			<input type="radio" name="roll" id="rollg9">9
+			<input type="radio" name="roll" id="rollg10">10
+			<input type="radio" name="roll" id="rollg11">11<br>
+	
+			<input type="radio" name="roll" id="rolleven">Sum is even
+			<input type="radio" name="roll" id="rollodd">Sum is odd<br>
+			</div>
+		</div>
+	
+		<div class="dropdown">
+			<br><span>Event 2: &nbsp;</span><br><span id="event2">None</span>
+			<button onclick="myFunction('myDropdown_y')" class="dropbtn">Choose</button>
+			<div id="myDropdown_y" class="dropdown-content">
+			<input type="radio" name="rollb" id="roll11b">1,1
+			<input type="radio" name="rollb" id="roll12b">1,2
+			<input type="radio" name="rollb" id="roll13b">1,3
+			<input type="radio" name="rollb" id="roll14b">1,4
+			<input type="radio" name="rollb" id="roll15b">1,5
+			<input type="radio" name="rollb" id="roll16b">1,6<br>
+	
+			<input type="radio" name="rollb" id="roll21b">2,1
+			<input type="radio" name="rollb" id="roll22b">2,2
+			<input type="radio" name="rollb" id="roll23b">2,3
+			<input type="radio" name="rollb" id="roll24b">2,4
+			<input type="radio" name="rollb" id="roll25b">2,5
+			<input type="radio" name="rollb" id="roll26b">2,6<br>
+	
+			<input type="radio" name="rollb" id="roll31b">3,1
+			<input type="radio" name="rollb" id="roll32b">3,2
+			<input type="radio" name="rollb" id="roll33b">3,3
+			<input type="radio" name="rollb" id="roll34b">3,4
+			<input type="radio" name="rollb" id="roll35b">3,5
+			<input type="radio" name="rollb" id="roll36b">3,6<br>
+	
+			<input type="radio" name="rollb" id="roll41b">4,1
+			<input type="radio" name="rollb" id="roll42b">4,2
+			<input type="radio" name="rollb" id="roll43b">4,3
+			<input type="radio" name="rollb" id="roll44b">4,4
+			<input type="radio" name="rollb" id="roll45b">4,5
+			<input type="radio" name="rollb" id="roll46b">4,6<br>
+	
+			<input type="radio" name="rollb" id="roll51b">5,1
+			<input type="radio" name="rollb" id="roll52b">5,2
+			<input type="radio" name="rollb" id="roll53b">5,3
+			<input type="radio" name="rollb" id="roll54b">5,4
+			<input type="radio" name="rollb" id="roll55b">5,5
+			<input type="radio" name="rollb" id="roll56b">5,6<br>
+	
+			<input type="radio" name="rollb" id="roll61b">6,1
+			<input type="radio" name="rollb" id="roll62b">6,2
+			<input type="radio" name="rollb" id="roll63b">6,3
+			<input type="radio" name="rollb" id="roll64b">6,4
+			<input type="radio" name="rollb" id="roll65b">6,5
+			<input type="radio" name="rollb" id="roll66b">6,6<br>
+	
+			Contains...<br>
+			<input type="radio" name="rollb" id="rollc1b">1
+			<input type="radio" name="rollb" id="rollc2b">2
+			<input type="radio" name="rollb" id="rollc3b">3
+			<input type="radio" name="rollb" id="rollc4b">4
+			<input type="radio" name="rollb" id="rollc5b">5
+			<input type="radio" name="rollb" id="rollc6b">6<br>
+	
+			Dice sum to...<br>
+			<input type="radio" name="rollb" id="rolls2b">2
+			<input type="radio" name="rollb" id="rolls3b">3
+			<input type="radio" name="rollb" id="rolls4b">4
+			<input type="radio" name="rollb" id="rolls5b">5
+			<input type="radio" name="rollb" id="rolls6b">6
+			<input type="radio" name="rollb" id="rolls7b">7
+			<input type="radio" name="rollb" id="rolls8b">8
+			<input type="radio" name="rollb" id="rolls9b">9
+			<input type="radio" name="rollb" id="rolls10b">10
+			<input type="radio" name="rollb" id="rolls11b">11
+			<input type="radio" name="rollb" id="rolls12b">12<br>
+	
+	
+			Sum is less than...<br>
+			<input type="radio" name="rollb" id="rolll3b">3
+			<input type="radio" name="rollb" id="rolll4b">4
+			<input type="radio" name="rollb" id="rolll5b">5
+			<input type="radio" name="rollb" id="rolll6b">6
+			<input type="radio" name="rollb" id="rolll7b">7
+			<input type="radio" name="rollb" id="rolll8b">8
+			<input type="radio" name="rollb" id="rolll9b">9
+			<input type="radio" name="rollb" id="rolll10b">10
+			<input type="radio" name="rollb" id="rolll11b">11
+			<input type="radio" name="rollb" id="rolll12b">12
+			<input type="radio" name="rollb" id="rolll13b">13<br>
+	
+			Sum is greater than...<br>
+			<input type="radio" name="rollb" id="rollg1b">1
+			<input type="radio" name="rollb" id="rollg2b">2
+			<input type="radio" name="rollb" id="rollg3b">3
+			<input type="radio" name="rollb" id="rollg4b">4
+			<input type="radio" name="rollb" id="rollg5b">5
+			<input type="radio" name="rollb" id="rollg6b">6
+			<input type="radio" name="rollb" id="rollg7b">7
+			<input type="radio" name="rollb" id="rollg8b">8
+			<input type="radio" name="rollb" id="rollg9b">9
+			<input type="radio" name="rollb" id="rollg10b">10
+			<input type="radio" name="rollb" id="rollg11b">11<br>
+	
+			<input type="radio" name="rollb" id="rollevenb">Sum is even
+			<input type="radio" name="rollb" id="rolloddb">Sum is odd<br>
+			</div>
+		</div>
+	
+		<div class="dropdown">
+			<br><span>Condition:&nbsp;</span><br><span id="condition">None</span>
+			<button onclick="myFunction('myDropdown_c')" class="dropbtn">Choose</button>
+			<div id="myDropdown_c" class="dropdown-content">
+			<input type="radio" name="rollc" id="roll11c">1,1
+			<input type="radio" name="rollc" id="roll12c">1,2
+			<input type="radio" name="rollc" id="roll13c">1,3
+			<input type="radio" name="rollc" id="roll14c">1,4
+			<input type="radio" name="rollc" id="roll15c">1,5
+			<input type="radio" name="rollc" id="roll16c">1,6<br>
+	
+			<input type="radio" name="rollc" id="roll21c">2,1
+			<input type="radio" name="rollc" id="roll22c">2,2
+			<input type="radio" name="rollc" id="roll23c">2,3
+			<input type="radio" name="rollc" id="roll24c">2,4
+			<input type="radio" name="rollc" id="roll25c">2,5
+			<input type="radio" name="rollc" id="roll26c">2,6<br>
+	
+			<input type="radio" name="rollc" id="roll31c">3,1
+			<input type="radio" name="rollc" id="roll32c">3,2
+			<input type="radio" name="rollc" id="roll33c">3,3
+			<input type="radio" name="rollc" id="roll34c">3,4
+			<input type="radio" name="rollc" id="roll35c">3,5
+			<input type="radio" name="rollc" id="roll36c">3,6<br>
+	
+			<input type="radio" name="rollc" id="roll41c">4,1
+			<input type="radio" name="rollc" id="roll42c">4,2
+			<input type="radio" name="rollc" id="roll43c">4,3
+			<input type="radio" name="rollc" id="roll44c">4,4
+			<input type="radio" name="rollc" id="roll45c">4,5
+			<input type="radio" name="rollc" id="roll46c">4,6<br>
+	
+			<input type="radio" name="rollc" id="roll51c">5,1
+			<input type="radio" name="rollc" id="roll52c">5,2
+			<input type="radio" name="rollc" id="roll53c">5,3
+			<input type="radio" name="rollc" id="roll54c">5,4
+			<input type="radio" name="rollc" id="roll55c">5,5
+			<input type="radio" name="rollc" id="roll56c">5,6<br>
+	
+			<input type="radio" name="rollc" id="roll61c">6,1
+			<input type="radio" name="rollc" id="roll62c">6,2
+			<input type="radio" name="rollc" id="roll63c">6,3
+			<input type="radio" name="rollc" id="roll64c">6,4
+			<input type="radio" name="rollc" id="roll65c">6,5
+			<input type="radio" name="rollc" id="roll66c">6,6<br>
+	
+			Contains...<br>
+			<input type="radio" name="rollc" id="rollc1c">1
+			<input type="radio" name="rollc" id="rollc2c">2
+			<input type="radio" name="rollc" id="rollc3c">3
+			<input type="radio" name="rollc" id="rollc4c">4
+			<input type="radio" name="rollc" id="rollc5c">5
+			<input type="radio" name="rollc" id="rollc6c">6<br>
+	
+			Dice sum to...<br>
+			<input type="radio" name="rollc" id="rolls2c">2
+			<input type="radio" name="rollc" id="rolls3c">3
+			<input type="radio" name="rollc" id="rolls4c">4
+			<input type="radio" name="rollc" id="rolls5c">5
+			<input type="radio" name="rollc" id="rolls6c">6
+			<input type="radio" name="rollc" id="rolls7c">7
+			<input type="radio" name="rollc" id="rolls8c">8
+			<input type="radio" name="rollc" id="rolls9c">9
+			<input type="radio" name="rollc" id="rolls10c">10
+			<input type="radio" name="rollc" id="rolls11c">11
+			<input type="radio" name="rollc" id="rolls12c">12<br>
+	
+	
+			Sum is less than...<br>
+			<input type="radio" name="rollc" id="rolll3c">3
+			<input type="radio" name="rollc" id="rolll4c">4
+			<input type="radio" name="rollc" id="rolll5c">5
+			<input type="radio" name="rollc" id="rolll6c">6
+			<input type="radio" name="rollc" id="rolll7c">7
+			<input type="radio" name="rollc" id="rolll8c">8
+			<input type="radio" name="rollc" id="rolll9c">9
+			<input type="radio" name="rollc" id="rolll10c">10
+			<input type="radio" name="rollc" id="rolll11c">11
+			<input type="radio" name="rollc" id="rolll12c">12
+			<input type="radio" name="rollc" id="rolll13c">13<br>
+	
+			Sum is greater than...<br>
+			<input type="radio" name="rollc" id="rollg1c">1
+			<input type="radio" name="rollc" id="rollg2c">2
+			<input type="radio" name="rollc" id="rollg3c">3
+			<input type="radio" name="rollc" id="rollg4c">4
+			<input type="radio" name="rollc" id="rollg5c">5
+			<input type="radio" name="rollc" id="rollg6c">6
+			<input type="radio" name="rollc" id="rollg7c">7
+			<input type="radio" name="rollc" id="rollg8c">8
+			<input type="radio" name="rollc" id="rollg9c">9
+			<input type="radio" name="rollc" id="rollg10c">10
+			<input type="radio" name="rollc" id="rollg11c">11<br>
+	
+			<input type="radio" name="rollc" id="rollevenc">Sum is even
+			<input type="radio" name="rollc" id="rolloddc">Sum is odd<br>
+			</div>
+		</div>
+		<br><br>
+		<div># blue:&nbsp;<span id="blue_count">0</span></div><br>
+
+		<div># yellow:&nbsp;<span id="yellow_count">0</span></div><br>
+
+		<div># green:&nbsp;<span id="green_count">0</span></div><br>
+
+		<div>Total #:&nbsp;<span id="total_count">36</span></div><br>
+
+
+		<button onclick="select('none'); select_y('none'); select_c('none'); reset_buttons();" class="dropbtn">Reset</button>
+
+	</div>
+</div>
+
+
+<div id="text_block">
+
+	<h2>Events</h2>
+
+	<p>We will illustrate the core concepts of probability using the scenario of rolling a pair of dice.</p>
+
+	<p>Probabilities are defined with respect to some <b>event space</b>, which is the set of all possible outcomes. In our case, there are 36 possible ways of rolling two dice, so the event space consists of the 36 outcomes in the grid.</p>
+
+	<p>An <b>event</b> is any subset of the event space. Here are some possible events (hover over any of the descriptions to see the event illustrated in the grid):<p>
+	<ul>
+		<li><span onmouseover="select('d32')" onmouseout="select('none')">You roll (3,2).</span></li>
+		<li><span onmouseover="select('dc5')" onmouseout="select('none')">Your roll contains a 5.</span></li>
+		<li><span onmouseover="select('dg8')" onmouseout="select('none')">Your total roll is greater than 8.</span></li>
+	</ul>
+
+
+	<p>For this simulation, we will represent these events more concisely as 56, 32, contains a 5, > 8.</p>
+
+	<p>To see an event of your choice illustrated in the grid, choose the relevant event by clicking the "choose" button for Event 1 or Event 2.</p>
+
+	<h2>Basic Probability</h2>
+
+	<p>We will denote the probability of an event with p(event). The probability of an event is defined as follows:</p> 
+	
+	<div id="prob_eq">
+		<div id="prob_left">p(event)  =</div>
+		<div id="fraction_line">
+			        <img src="black_line.png" width="100%" height="100%">
+		</div>
+		<div id="prob_num"># of outcomes where the event happens</div> 
+		<div id="prob_denom">total # of possible outcomes</div> 
+	</div>
+	
+	<p>For example, the probability of 56 is 1/36, because there is only one outcome where the roll is 56 (specifically, that outcome is the one where you roll 5 and 6!), while there are 36 total possible outcomes. Using the notation where p(e) means the probability of e, a shorter way of saying "the probability of rolling 5,6 is 1/36" would be p(56) = 1/36.</p>
+
+	<p>Based on this definition, fill in values for the following probabilities. You can use the grid to help; once you have selected a value for Event 1 using "Choose", you should be able to compute the probability of that event from observing "# blue" and "Total #" next to the grid:</p>
+
+	<ul>
+		<li> p(41) = <input type="text"></input></li>
+		<li> p(even) = <input type="text"></input></li>
+		<li> p(>5) = <input type="text"></input></li>
+	</ul>
+
+	<h2>Joint Probability</h2>
+
+	<p>The probability of two events occurring together is called the <b>joint probability</b> of those two events (with "joint" being used as in a joint business venture). The joint probability of A and B is denoted as p(A, B). For example, the probability that your roll will be both even and greater than 7 is written p(even, >7).</p>
+
+	<p>To view a joint probability in the grid, choose your two events as Event 1 and Event 2. The instances where they both occur will then show up as green in the grid. Since the joint probability of two events is the probability of both of them occurring, you can compute the joint probability by dividing the number of green squares by the total number of squares.</p>
+
+	<p>Determine the following joint probabilities:</p>
+	<ul>
+		<li> p(odd, contains a 3) = <input type="text"></input></li>
+		<li> p(>4, <9) = <input type="text"></input></li>
+		<li> p(26, contains a 5) = <input type="text"></input></li>
+	</ul>
+
+	<h2>Conditional Probability</h2>
+
+	<p>The probability of an event A occurring <i>given</i> that some event B occurred is written p(A|B) (which you can read as "the probability of A given B"). Such a probability is known as a <b>conditional probability</b> because there has been some condition, B, placed on the event space. Another way you can think of p(A|B) is as denoting "assuming that B has occurred, what is the probability that A also occurred?"</p>
+
+	<p>In the grid to the left, you can impose a condition on the grid by selecting it from the Choose button under "Condition." The effect of doing this is to reduce the total number of squares because the condition in a conditional probability effectively reduces the size of the event space. In other words, you don't even consider the outcomes that do not fulfill the condition.</p>
+
+	<p>As with any other probability, a conditional probability is defined as the number of outcomes in which our event occurs divided by the total number of outcomes. The only difference is that the condition reduces the denominator (the total number of outcomes) and possibly also the numerator.</p>
+
+	<p>Determine the following conditional probabilities:</p>
+	<ul>
+		<li> p(odd | contains a 3) = <input type="text"></input></li>
+		<li> p(>4 | <9) = <input type="text"></input></li>
+		<li> p(26 | contains a 5) = <input type="text"></input></li>
+		<li> p(odd, >5 | contains a 3) = <input type="text"></input></li>
+	</ul>
+
+	<p>Conditional probability can also be defined with the following equation:</p>
+ 
+	<div id="cond_eq">
+		<div id="cond_left">p(A|B) =</div>
+		<div id="cond_line">
+			        <img src="black_line.png" width="100%" height="100%">
+		</div>
+		<div id="cond_num">p(A,B)</div> 
+		<div id="cond_denom">p(B)</div> 
+	</div>
+	      
+
+	<p>For the three expressions above, confirm that this equation holds true.</p>
+
+	<h2>Bayes' Theorem</h2>
+	<p>Bayes' Theorem is an important and influential equation written as follows:</p>
+
+
+	<div id="bayes_eq">
+		<div id="bayes_left">p(A|B) =</div>
+		<div id="bayes_line">
+			        <img src="black_line.png" width="100%" height="100%">
+		</div>
+		<div id="bayes_num">p(B|A) p(A)</div> 
+		<div id="bayes_denom">p(B)</div> 
+	</div>
+	
+	<p>The remaining components of this tutorial will focus on this equation and how it is used; but for now just confirm that this equation holds true for all three conditional probabilities from the previous section.</p>
+
+
+
+</div>
+
+	</div>
+
+<script>
+
+var d11 = [die11];
+var d12 = [die12];
+var d13 = [die13];
+var d14 = [die14];
+var d15 = [die15];
+var d16 = [die16];
+var d21 = [die21];
+var d22 = [die22];
+var d23 = [die23];
+var d24 = [die24];
+var d25 = [die25];
+var d26 = [die26];
+var d31 = [die31];
+var d32 = [die32];
+var d33 = [die33];
+var d34 = [die34];
+var d35 = [die35];
+var d36 = [die36];
+var d41 = [die41];
+var d42 = [die42];
+var d43 = [die43];
+var d44 = [die44];
+var d45 = [die45];
+var d46 = [die46];
+var d51 = [die51];
+var d52 = [die52];
+var d53 = [die53];
+var d54 = [die54];
+var d55 = [die55];
+var d56 = [die56];
+var d61 = [die61];
+var d62 = [die62];
+var d63 = [die63];
+var d64 = [die64];
+var d65 = [die65];
+var d66 = [die66];
+var ds2 = d11;
+var ds3 = d12.concat(d21); 
+var ds4 = d13.concat(d22, d31); 
+var ds5 = d14.concat(d23, d32, d41);
+var ds6 = d15.concat(d24, d33, d42, d51);
+var ds7 = d16.concat(d25, d34, d43, d52, d61);
+var ds8 = d26.concat(d35, d44, d53, d62);
+var ds9 = d36.concat(d45, d54, d63);
+var ds10 = d46.concat(d55, d64);
+var ds11 = d56.concat(d65);
+var ds12 = d66;
+var deven = ds2.concat(ds4, ds6, ds8, ds10, ds12);
+var dodd = ds3.concat(ds5, ds7, ds9, ds11);
+var dc1 = d11.concat(d12, d13, d14, d15, d16, d21, d31, d41, d51, d61); 
+var dc2 = d21.concat(d22, d23, d24, d25, d26, d12, d32, d42, d52, d62);
+var dc3 = d31.concat(d32, d33, d34, d35, d36, d13, d23, d43, d53, d63);
+var dc4 = d41.concat(d42, d43, d44, d45, d46, d14, d24, d34, d54, d64);
+var dc5 = d51.concat(d52, d53, d54, d55, d56, d15, d25, d35, d45, d65);
+var dc6 = d61.concat(d62, d63, d64, d65, d66, d16, d26, d36, d46, d56);
+var dl3 = d11;
+var dl4 = ds3.concat(dl3);
+var dl5 = ds4.concat(dl4);
+var dl6 = ds5.concat(dl5);
+var dl7 = ds6.concat(dl6);
+var dl8 = ds7.concat(dl7);
+var dl9 = ds8.concat(dl8);
+var dl10 = ds9.concat(dl9);
+var dl11 = ds10.concat(dl10);
+var dl12 = ds11.concat(dl11);
+var dg11 = d66;
+var dg10 = ds11.concat(dg11);
+var dg9 = ds10.concat(dg10);
+var dg8 = ds9.concat(dg9);
+var dg7 = ds8.concat(dg8);
+var dg6 = ds7.concat(dg7);
+var dg5 = ds6.concat(dg6);
+var dg4 = ds5.concat(dg5);
+var dg3 = ds4.concat(dg4);
+var dg2 = ds3.concat(dg3);
+
+
+
+var id_to_string = {
+	"d11": "Roll (1,1)",
+	"d12": "Roll (1,2)",
+	"d13": "Roll (1,3)",
+	"d14": "Roll (1,4)",
+	"d15": "Roll (1,5)",
+	"d16": "Roll (1,6)",
+	"d21": "Roll (2,1)",
+	"d22": "Roll (2,2)",
+	"d23": "Roll (2,3)",
+	"d24": "Roll (2,4)",
+	"d25": "Roll (2,5)",
+	"d26": "Roll (2,6)",
+	"d31": "Roll (3,1)",
+	"d32": "Roll (3,2)",
+	"d33": "Roll (3,3)",
+	"d34": "Roll (3,4)",
+	"d35": "Roll (3,5)",
+	"d36": "Roll (3,6)",
+	"d41": "Roll (4,1)",
+	"d42": "Roll (4,2)",
+	"d43": "Roll (4,3)",
+	"d44": "Roll (4,4)",
+	"d45": "Roll (4,5)",
+	"d46": "Roll (4,6)",
+	"d51": "Roll (5,1)",
+	"d52": "Roll (5,2)",
+	"d53": "Roll (5,3)",
+	"d54": "Roll (5,4)",
+	"d55": "Roll (5,5)",
+	"d56": "Roll (5,6)",
+	"d61": "Roll (6,1)",
+	"d62": "Roll (6,2)",
+	"d63": "Roll (6,3)",
+	"d64": "Roll (6,4)",
+	"d65": "Roll (6,5)",
+	"d66": "Roll (6,6)",
+	"ds2": "Sum = 2",
+	"ds3": "Sum = 3",
+	"ds4": "Sum = 4",
+	"ds5": "Sum = 5",
+	"ds6": "Sum = 6",
+	"ds7": "Sum = 7",
+	"ds8": "Sum = 8",
+	"ds9": "Sum = 9",
+	"ds10": "Sum = 10",
+	"ds11": "Sum = 11",
+	"ds12": "Sum = 12",	
+	"even": "Sum is even",
+	"odd": "Sum is odd",
+	"dc1": "Roll includes 1",
+	"dc2": "Roll includes 2",
+	"dc3": "Roll includes 3",
+	"dc4": "Roll includes 4",
+	"dc5": "Roll includes 5",
+	"dc6": "Roll includes 6",
+	"dl3": "Sum < 3",
+	"dl4": "Sum < 4",
+	"dl5": "Sum < 5",
+	"dl6": "Sum < 6",
+	"dl7": "Sum < 7",
+	"dl8": "Sum < 8",
+	"dl9": "Sum < 9",
+	"dl10": "Sum < 10",
+	"dl11": "Sum < 11",
+	"dl12": "Sum < 12",
+	"dg11": "Sum > 11",
+	"dg10": "Sum > 10",
+	"dg9": "Sum > 9",
+	"dg8": "Sum > 8",
+	"dg7": "Sum > 7",
+	"dg6": "Sum > 6",
+	"dg5": "Sum > 5",
+	"dg4": "Sum > 4",
+	"dg3": "Sum > 3",
+	"dg2": "Sum > 2"
+}
+
+
+
+var id_to_var = {
+	"d11": d11,
+	"d12": d12,
+	"d13": d13,
+	"d14": d14,
+	"d15": d15,
+	"d16": d16,
+	"d21": d21,
+	"d22": d22,
+	"d23": d23,
+	"d24": d24,
+	"d25": d25,
+	"d26": d26,
+	"d31": d31,
+	"d32": d32,
+	"d33": d33,
+	"d34": d34,
+	"d35": d35,
+	"d36": d36,
+	"d41": d41,
+	"d42": d42,
+	"d43": d43,
+	"d44": d44,
+	"d45": d45,
+	"d46": d46,
+	"d51": d51,
+	"d52": d52,
+	"d53": d53,
+	"d54": d54,
+	"d55": d55,
+	"d56": d56,
+	"d61": d61,
+	"d62": d62,
+	"d63": d63,
+	"d64": d64,
+	"d65": d65,
+	"d66": d66,
+	"ds2": ds2,
+	"ds3": ds3,
+	"ds4": ds4,
+	"ds5": ds5,
+	"ds6": ds6,
+	"ds7": ds7,
+	"ds8": ds8,
+	"ds9": ds9,
+	"ds10": ds10,
+	"ds11": ds11,
+	"ds12": ds12,	
+	"even": deven,
+	"odd": dodd,
+	"dc1": dc1,
+	"dc2": dc2,
+	"dc3": dc3,
+	"dc4": dc4,
+	"dc5": dc5,
+	"dc6": dc6,
+	"dl3": dl3,
+	"dl4": dl4,
+	"dl5": dl5,
+	"dl6": dl6,
+	"dl7": dl7,
+	"dl8": dl8,
+	"dl9": dl9,
+	"dl10": dl10,
+	"dl11": dl11,
+	"dl12": dl12,
+	"dg11": dg11,
+	"dg10": dg10,
+	"dg9": dg9,
+	"dg8": dg8,
+	"dg7": dg7,
+	"dg6": dg6,
+	"dg5": dg5,
+	"dg4": dg4,
+	"dg3": dg3,
+	"dg2": dg2
+}
+
+function update_counts() {
+	var blue_num = 0;
+	var yellow_num = 0;
+	var green_num = 0;
+	var total_num = 0;
+
+	var all_dice = document.getElementsByClassName("die");
+	for (i = 0; i<all_dice.length; i++) {
+		if (all_dice[i].style.opacity != 0.0  && document.getElementById("blue" + all_dice[i].id.substring(3)).style.opacity != 0.0) {
+			blue_num = blue_num + 1;
+		}	
+		if (all_dice[i].style.opacity != 0.0 && document.getElementById("yellow" + all_dice[i].id.substring(3)).style.opacity != 0.0) {
+			yellow_num = yellow_num + 1;
+		}	
+		if (all_dice[i].style.opacity != 0.0 && document.getElementById("blue" + all_dice[i].id.substring(3)).style.opacity != 0.0 && document.getElementById("yellow" + all_dice[i].id.substring(3)).style.opacity != 0.0) {
+			green_num = green_num + 1;
+		}	
+		if (all_dice[i].style.opacity != 0.0) {
+			total_num = total_num + 1;
+		}
+
+
+
+	}
+	document.getElementById("blue_count").innerHTML = blue_num;
+	document.getElementById("yellow_count").innerHTML = yellow_num;
+	document.getElementById("green_count").innerHTML = green_num;
+	document.getElementById("total_count").innerHTML = total_num;	
+}
+
+
+function reset_buttons() {
+	var ele = document.getElementsByName("roll");
+	for(var i=0;i<ele.length;i++)
+		 ele[i].checked = false;
+
+
+	var ele = document.getElementsByName("rollb");
+	for(var i=0;i<ele.length;i++)
+		 ele[i].checked = false;
+
+
+	var ele = document.getElementsByName("rollc");
+	for(var i=0;i<ele.length;i++)
+		 ele[i].checked = false;
+
+
+
+}
+
+function select(div_id) {
+	var all_dice = document.getElementsByClassName("die");
+	for (i = 0; i<all_dice.length; i++) {
+		document.getElementById("blue" + all_dice[i].id.substring(3)).style.opacity = 0.0; 
+	}
+	
+	if (div_id == 'none') {
+		document.getElementById("event1").innerHTML = 'None';
+															} else {
+
+	document.getElementById("event1").innerHTML = id_to_string[div_id];
+
+	for (i = 0; i<id_to_var[div_id].length; i++) {
+		document.getElementById("blue" + id_to_var[div_id][i].id.substring(3)).style.opacity = 0.3; 
+	}
+															}
+	update_counts();
+
+}
+
+
+function select_y(div_id) {
+		var all_dice = document.getElementsByClassName("die");
+	for (i = 0; i<all_dice.length; i++) {
+		document.getElementById("yellow" + all_dice[i].id.substring(3)).style.opacity = 0.0; 
+	}
+	
+	if (div_id == 'none') {
+		document.getElementById("event2").innerHTML = 'None';
+	} else {
+
+	document.getElementById("event2").innerHTML = id_to_string[div_id];
+
+	for (i = 0; i<id_to_var[div_id].length; i++) {
+		document.getElementById("yellow" + id_to_var[div_id][i].id.substring(3)).style.opacity = 0.5; 
+	}
+															}
+	update_counts();
+}
+
+
+function select_c(div_id) {
+	var all_dice = document.getElementsByClassName("die");
+	for (i = 0; i<all_dice.length; i++) {
+		all_dice[i].style.opacity = 1.0;
+	}
+	
+	if (div_id == 'none') {
+		document.getElementById("condition").innerHTML = 'None';
+															} else {
+
+	document.getElementById("condition").innerHTML = id_to_string[div_id];
+	var all_dice = document.getElementsByClassName("die");
+	for (i = 0; i<all_dice.length; i++) {
+		all_dice[i].style.opacity = 0.0;
+	}
+	
+	for (i = 0; i<id_to_var[div_id].length; i++) {
+		id_to_var[div_id][i].style.opacity = 1.0;
+	}
+}
+	update_counts();
+}
+
+	var all_dice_outer = document.getElementsByClassName("die");
+	for (i = 0; i<all_dice_outer.length; i++) {
+		all_dice_outer[i].style.opacity = 1.0;
+	}
+	
+
+function given(div_id) {
+	var all_dice = document.getElementsByClassName("die");
+	for (i = 0; i<all_dice.length; i++) {
+		all_dice[i].style.opacity = 0.01;
+		all_dice[i].style.background = "white";
+	}
+	
+	for (i = 0; i<id_to_var[div_id].length; i++) {
+		id_to_var[div_id][i].style.opacity = 1.0;
+		//id_to_var[div_id][i].style.background = "blue";
+	}
+
+}
+
+
+//select("odd");
+
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction(dropid) {
+    document.getElementById(dropid).classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
+document.getElementById("roll11").onclick = function() {select('d11')};
+document.getElementById("roll12").onclick = function() {select('d12')};
+document.getElementById("roll13").onclick = function() {select('d13')};
+document.getElementById("roll14").onclick = function() {select('d14')};
+document.getElementById("roll15").onclick = function() {select('d15')};
+document.getElementById("roll16").onclick = function() {select('d16')};
+document.getElementById("roll21").onclick = function() {select('d21')};
+document.getElementById("roll22").onclick = function() {select('d22')};
+document.getElementById("roll23").onclick = function() {select('d23')};
+document.getElementById("roll24").onclick = function() {select('d24')};
+document.getElementById("roll25").onclick = function() {select('d25')};
+document.getElementById("roll26").onclick = function() {select('d26')};
+document.getElementById("roll31").onclick = function() {select('d31')};
+document.getElementById("roll32").onclick = function() {select('d32')};
+document.getElementById("roll33").onclick = function() {select('d33')};
+document.getElementById("roll34").onclick = function() {select('d34')};
+document.getElementById("roll35").onclick = function() {select('d35')};
+document.getElementById("roll36").onclick = function() {select('d36')};
+document.getElementById("roll41").onclick = function() {select('d41')};
+document.getElementById("roll42").onclick = function() {select('d42')};
+document.getElementById("roll43").onclick = function() {select('d43')};
+document.getElementById("roll44").onclick = function() {select('d44')};
+document.getElementById("roll45").onclick = function() {select('d45')};
+document.getElementById("roll46").onclick = function() {select('d46')};
+document.getElementById("roll51").onclick = function() {select('d51')};
+document.getElementById("roll52").onclick = function() {select('d52')};
+document.getElementById("roll53").onclick = function() {select('d53')};
+document.getElementById("roll54").onclick = function() {select('d54')};
+document.getElementById("roll55").onclick = function() {select('d55')};
+document.getElementById("roll56").onclick = function() {select('d56')};
+document.getElementById("roll61").onclick = function() {select('d61')};
+document.getElementById("roll62").onclick = function() {select('d62')};
+document.getElementById("roll63").onclick = function() {select('d63')};
+document.getElementById("roll64").onclick = function() {select('d64')};
+document.getElementById("roll65").onclick = function() {select('d65')};
+document.getElementById("roll66").onclick = function() {select('d66')};
+
+document.getElementById("rolls2").onclick = function() {select('ds2')};
+document.getElementById("rolls3").onclick = function() {select('ds3')};
+document.getElementById("rolls4").onclick = function() {select('ds4')};
+document.getElementById("rolls5").onclick = function() {select('ds5')};
+document.getElementById("rolls6").onclick = function() {select('ds6')};
+document.getElementById("rolls7").onclick = function() {select('ds7')};
+document.getElementById("rolls8").onclick = function() {select('ds8')};
+document.getElementById("rolls9").onclick = function() {select('ds9')};
+document.getElementById("rolls10").onclick = function() {select('ds10')};
+document.getElementById("rolls11").onclick = function() {select('ds11')};
+document.getElementById("rolls12").onclick = function() {select('ds12')};
+
+document.getElementById("rolll3").onclick = function() {select('dl3')};
+document.getElementById("rolll4").onclick = function() {select('dl4')};
+document.getElementById("rolll5").onclick = function() {select('dl5')};
+document.getElementById("rolll6").onclick = function() {select('dl6')};
+document.getElementById("rolll7").onclick = function() {select('dl7')};
+document.getElementById("rolll8").onclick = function() {select('dl8')};
+document.getElementById("rolll9").onclick = function() {select('dl9')};
+document.getElementById("rolll10").onclick = function() {select('dl10')};
+document.getElementById("rolll11").onclick = function() {select('dl11')};
+document.getElementById("rolll12").onclick = function() {select('dl12')};
+document.getElementById("rolll13").onclick = function() {select('dl13')};
+
+document.getElementById("rollg1").onclick = function() {select('dg1')};
+document.getElementById("rollg2").onclick = function() {select('dg2')};
+document.getElementById("rollg3").onclick = function() {select('dg3')};
+document.getElementById("rollg4").onclick = function() {select('dg4')};
+document.getElementById("rollg5").onclick = function() {select('dg5')};
+document.getElementById("rollg6").onclick = function() {select('dg6')};
+document.getElementById("rollg7").onclick = function() {select('dg7')};
+document.getElementById("rollg8").onclick = function() {select('dg8')};
+document.getElementById("rollg9").onclick = function() {select('dg9')};
+document.getElementById("rollg10").onclick = function() {select('dg10')};
+document.getElementById("rollg11").onclick = function() {select('dg11')};
+
+document.getElementById("rolleven").onclick = function() {select('even')};
+document.getElementById("rollodd").onclick = function() {select('odd')};
+
+document.getElementById("rollc1").onclick = function() {select('dc1')};
+document.getElementById("rollc2").onclick = function() {select('dc2')};
+document.getElementById("rollc3").onclick = function() {select('dc3')};
+document.getElementById("rollc4").onclick = function() {select('dc4')};
+document.getElementById("rollc5").onclick = function() {select('dc5')};
+document.getElementById("rollc6").onclick = function() {select('dc6')};
+
+
+
+document.getElementById("roll11b").onclick = function() {select_y('d11')};
+document.getElementById("roll12b").onclick = function() {select_y('d12')};
+document.getElementById("roll13b").onclick = function() {select_y('d13')};
+document.getElementById("roll14b").onclick = function() {select_y('d14')};
+document.getElementById("roll15b").onclick = function() {select_y('d15')};
+document.getElementById("roll16b").onclick = function() {select_y('d16')};
+document.getElementById("roll21b").onclick = function() {select_y('d21')};
+document.getElementById("roll22b").onclick = function() {select_y('d22')};
+document.getElementById("roll23b").onclick = function() {select_y('d23')};
+document.getElementById("roll24b").onclick = function() {select_y('d24')};
+document.getElementById("roll25b").onclick = function() {select_y('d25')};
+document.getElementById("roll26b").onclick = function() {select_y('d26')};
+document.getElementById("roll31b").onclick = function() {select_y('d31')};
+document.getElementById("roll32b").onclick = function() {select_y('d32')};
+document.getElementById("roll33b").onclick = function() {select_y('d33')};
+document.getElementById("roll34b").onclick = function() {select_y('d34')};
+document.getElementById("roll35b").onclick = function() {select_y('d35')};
+document.getElementById("roll36b").onclick = function() {select_y('d36')};
+document.getElementById("roll41b").onclick = function() {select_y('d41')};
+document.getElementById("roll42b").onclick = function() {select_y('d42')};
+document.getElementById("roll43b").onclick = function() {select_y('d43')};
+document.getElementById("roll44b").onclick = function() {select_y('d44')};
+document.getElementById("roll45b").onclick = function() {select_y('d45')};
+document.getElementById("roll46b").onclick = function() {select_y('d46')};
+document.getElementById("roll51b").onclick = function() {select_y('d51')};
+document.getElementById("roll52b").onclick = function() {select_y('d52')};
+document.getElementById("roll53b").onclick = function() {select_y('d53')};
+document.getElementById("roll54b").onclick = function() {select_y('d54')};
+document.getElementById("roll55b").onclick = function() {select_y('d55')};
+document.getElementById("roll56b").onclick = function() {select_y('d56')};
+document.getElementById("roll61b").onclick = function() {select_y('d61')};
+document.getElementById("roll62b").onclick = function() {select_y('d62')};
+document.getElementById("roll63b").onclick = function() {select_y('d63')};
+document.getElementById("roll64b").onclick = function() {select_y('d64')};
+document.getElementById("roll65b").onclick = function() {select_y('d65')};
+document.getElementById("roll66b").onclick = function() {select_y('d66')};
+
+document.getElementById("rolls2b").onclick = function() {select_y('ds2')};
+document.getElementById("rolls3b").onclick = function() {select_y('ds3')};
+document.getElementById("rolls4b").onclick = function() {select_y('ds4')};
+document.getElementById("rolls5b").onclick = function() {select_y('ds5')};
+document.getElementById("rolls6b").onclick = function() {select_y('ds6')};
+document.getElementById("rolls7b").onclick = function() {select_y('ds7')};
+document.getElementById("rolls8b").onclick = function() {select_y('ds8')};
+document.getElementById("rolls9b").onclick = function() {select_y('ds9')};
+document.getElementById("rolls10b").onclick = function() {select_y('ds10')};
+document.getElementById("rolls11b").onclick = function() {select_y('ds11')};
+document.getElementById("rolls12b").onclick = function() {select_y('ds12')};
+
+document.getElementById("rolll3b").onclick = function() {select_y('dl3')};
+document.getElementById("rolll4b").onclick = function() {select_y('dl4')};
+document.getElementById("rolll5b").onclick = function() {select_y('dl5')};
+document.getElementById("rolll6b").onclick = function() {select_y('dl6')};
+document.getElementById("rolll7b").onclick = function() {select_y('dl7')};
+document.getElementById("rolll8b").onclick = function() {select_y('dl8')};
+document.getElementById("rolll9b").onclick = function() {select_y('dl9')};
+document.getElementById("rolll10b").onclick = function() {select_y('dl10')};
+document.getElementById("rolll11b").onclick = function() {select_y('dl11')};
+document.getElementById("rolll12b").onclick = function() {select_y('dl12')};
+document.getElementById("rolll13b").onclick = function() {select_y('dl13')};
+
+document.getElementById("rollg1b").onclick = function() {select_y('dg1')};
+document.getElementById("rollg2b").onclick = function() {select_y('dg2')};
+document.getElementById("rollg3b").onclick = function() {select_y('dg3')};
+document.getElementById("rollg4b").onclick = function() {select_y('dg4')};
+document.getElementById("rollg5b").onclick = function() {select_y('dg5')};
+document.getElementById("rollg6b").onclick = function() {select_y('dg6')};
+document.getElementById("rollg7b").onclick = function() {select_y('dg7')};
+document.getElementById("rollg8b").onclick = function() {select_y('dg8')};
+document.getElementById("rollg9b").onclick = function() {select_y('dg9')};
+document.getElementById("rollg10b").onclick = function() {select_y('dg10')};
+document.getElementById("rollg11b").onclick = function() {select_y('dg11')};
+
+document.getElementById("rollevenb").onclick = function() {select_y('even')};
+document.getElementById("rolloddb").onclick = function() {select_y('odd')};
+
+document.getElementById("rollc1b").onclick = function() {select_y('dc1')};
+document.getElementById("rollc2b").onclick = function() {select_y('dc2')};
+document.getElementById("rollc3b").onclick = function() {select_y('dc3')};
+document.getElementById("rollc4b").onclick = function() {select_y('dc4')};
+document.getElementById("rollc5b").onclick = function() {select_y('dc5')};
+document.getElementById("rollc6b").onclick = function() {select_y('dc6')};
+
+
+
+
+document.getElementById("roll11c").onclick = function() {select_c('d11')};
+document.getElementById("roll12c").onclick = function() {select_c('d12')};
+document.getElementById("roll13c").onclick = function() {select_c('d13')};
+document.getElementById("roll14c").onclick = function() {select_c('d14')};
+document.getElementById("roll15c").onclick = function() {select_c('d15')};
+document.getElementById("roll16c").onclick = function() {select_c('d16')};
+document.getElementById("roll21c").onclick = function() {select_c('d21')};
+document.getElementById("roll22c").onclick = function() {select_c('d22')};
+document.getElementById("roll23c").onclick = function() {select_c('d23')};
+document.getElementById("roll24c").onclick = function() {select_c('d24')};
+document.getElementById("roll25c").onclick = function() {select_c('d25')};
+document.getElementById("roll26c").onclick = function() {select_c('d26')};
+document.getElementById("roll31c").onclick = function() {select_c('d31')};
+document.getElementById("roll32c").onclick = function() {select_c('d32')};
+document.getElementById("roll33c").onclick = function() {select_c('d33')};
+document.getElementById("roll34c").onclick = function() {select_c('d34')};
+document.getElementById("roll35c").onclick = function() {select_c('d35')};
+document.getElementById("roll36c").onclick = function() {select_c('d36')};
+document.getElementById("roll41c").onclick = function() {select_c('d41')};
+document.getElementById("roll42c").onclick = function() {select_c('d42')};
+document.getElementById("roll43c").onclick = function() {select_c('d43')};
+document.getElementById("roll44c").onclick = function() {select_c('d44')};
+document.getElementById("roll45c").onclick = function() {select_c('d45')};
+document.getElementById("roll46c").onclick = function() {select_c('d46')};
+document.getElementById("roll51c").onclick = function() {select_c('d51')};
+document.getElementById("roll52c").onclick = function() {select_c('d52')};
+document.getElementById("roll53c").onclick = function() {select_c('d53')};
+document.getElementById("roll54c").onclick = function() {select_c('d54')};
+document.getElementById("roll55c").onclick = function() {select_c('d55')};
+document.getElementById("roll56c").onclick = function() {select_c('d56')};
+document.getElementById("roll61c").onclick = function() {select_c('d61')};
+document.getElementById("roll62c").onclick = function() {select_c('d62')};
+document.getElementById("roll63c").onclick = function() {select_c('d63')};
+document.getElementById("roll64c").onclick = function() {select_c('d64')};
+document.getElementById("roll65c").onclick = function() {select_c('d65')};
+document.getElementById("roll66c").onclick = function() {select_c('d66')};
+
+document.getElementById("rolls2c").onclick = function() {select_c('ds2')};
+document.getElementById("rolls3c").onclick = function() {select_c('ds3')};
+document.getElementById("rolls4c").onclick = function() {select_c('ds4')};
+document.getElementById("rolls5c").onclick = function() {select_c('ds5')};
+document.getElementById("rolls6c").onclick = function() {select_c('ds6')};
+document.getElementById("rolls7c").onclick = function() {select_c('ds7')};
+document.getElementById("rolls8c").onclick = function() {select_c('ds8')};
+document.getElementById("rolls9c").onclick = function() {select_c('ds9')};
+document.getElementById("rolls10c").onclick = function() {select_c('ds10')};
+document.getElementById("rolls11c").onclick = function() {select_c('ds11')};
+document.getElementById("rolls12c").onclick = function() {select_c('ds12')};
+
+document.getElementById("rolll3c").onclick = function() {select_c('dl3')};
+document.getElementById("rolll4c").onclick = function() {select_c('dl4')};
+document.getElementById("rolll5c").onclick = function() {select_c('dl5')};
+document.getElementById("rolll6c").onclick = function() {select_c('dl6')};
+document.getElementById("rolll7c").onclick = function() {select_c('dl7')};
+document.getElementById("rolll8c").onclick = function() {select_c('dl8')};
+document.getElementById("rolll9c").onclick = function() {select_c('dl9')};
+document.getElementById("rolll10c").onclick = function() {select_c('dl10')};
+document.getElementById("rolll11c").onclick = function() {select_c('dl11')};
+document.getElementById("rolll12c").onclick = function() {select_c('dl12')};
+document.getElementById("rolll13c").onclick = function() {select_c('dl13')};
+
+document.getElementById("rollg1c").onclick = function() {select_c('dg1')};
+document.getElementById("rollg2c").onclick = function() {select_c('dg2')};
+document.getElementById("rollg3c").onclick = function() {select_c('dg3')};
+document.getElementById("rollg4c").onclick = function() {select_c('dg4')};
+document.getElementById("rollg5c").onclick = function() {select_c('dg5')};
+document.getElementById("rollg6c").onclick = function() {select_c('dg6')};
+document.getElementById("rollg7c").onclick = function() {select_c('dg7')};
+document.getElementById("rollg8c").onclick = function() {select_c('dg8')};
+document.getElementById("rollg9c").onclick = function() {select_c('dg9')};
+document.getElementById("rollg10c").onclick = function() {select_c('dg10')};
+document.getElementById("rollg11c").onclick = function() {select_c('dg11')};
+
+document.getElementById("rollevenc").onclick = function() {select_c('even')};
+document.getElementById("rolloddc").onclick = function() {select_c('odd')};
+
+document.getElementById("rollc1c").onclick = function() {select_c('dc1')};
+document.getElementById("rollc2c").onclick = function() {select_c('dc2')};
+document.getElementById("rollc3c").onclick = function() {select_c('dc3')};
+document.getElementById("rollc4c").onclick = function() {select_c('dc4')};
+document.getElementById("rollc5c").onclick = function() {select_c('dc5')};
+document.getElementById("rollc6c").onclick = function() {select_c('dc6')};
+
+
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+

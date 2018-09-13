@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Experiment: A Rotating Solid Cube</title>
+    
+        <script>
+
+		document.getElementById("hello_text").innerHTML = "blue";//.style.color = 'blue';
+	</script>
+
+    <script type="text/javascript">
+
+	var show = 1;
+	var show_2 = 1;
+	var show_3 = 1;
+
+        window.onload = startDemo;
+ 
+        function Point3D(x,y,z) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+ 
+            this.rotateX = function(angle) {
+                var rad, cosa, sina, y, z
+                rad = angle * Math.PI / 180
+                cosa = Math.cos(rad)
+                sina = Math.sin(rad)
+                y = this.y * cosa - this.z * sina
+                z = this.y * sina + this.z * cosa
+                return new Point3D(this.x, y, z)
+            }
+ 
+            this.rotateY = function(angle) {
+                var rad, cosa, sina, x, z
+                rad = angle * Math.PI / 180
+                cosa = Math.cos(rad)
+                sina = Math.sin(rad)
+                z = this.z * cosa - this.x * sina
+                x = this.z * sina + this.x * cosa
+                return new Point3D(x,this.y, z)
+            }
+ 
+            this.rotateZ = function(angle) {
+                var rad, cosa, sina, x, y
+                rad = angle * Math.PI / 180
+                cosa = Math.cos(rad)
+                sina = Math.sin(rad)
+                x = this.x * cosa - this.y * sina
+                y = this.x * sina + this.y * cosa
+                return new Point3D(x, y, this.z)
+            }
+ 
+            this.project = function(viewWidth, viewHeight, fov, viewDistance) {
+                var factor, x, y
+                factor = fov / (viewDistance)// + this.z)
+                x = this.x * factor + viewWidth / 2
+                y = this.y * factor + viewHeight / 2
+                return new Point3D(x, y, this.z)
+            }
+        }
+ 
+        var vertices = [
+            new Point3D(-1,1,-1),
+            new Point3D(1,1,-1),
+            new Point3D(1,-1,-1),
+            new Point3D(-1,-1,-1),
+            new Point3D(-1,1,1), //This is the back one!
+            new Point3D(1,1,1),
+            new Point3D(1,-1,1),
+            new Point3D(-1,-1,1)
+        ];
+ 
+        // Define the vertices that compose each of the 6 faces. These numbers are
+        // indices to the vertex list defined above.
+        var faces  = [[0,1,2,3],[1,5,6,2],[5,4,7,6],[4,0,3,7],[0,4,5,1],[3,2,6,7]];
+
+ 
+        var vertices_2 = [
+            new Point3D(-1,1,-1),
+            new Point3D(.3,.3,-.3),
+            new Point3D(1,-1,-1),
+            new Point3D(-1,-1,-1),
+            new Point3D(-1,1,1), //This is the back one!
+            new Point3D(1,1,1),
+            new Point3D(1,-1,1),
+            new Point3D(-1,-1,1)
+        ];
+ 
+        // Define the vertices that compose each of the 6 faces. These numbers are
+        // indices to the vertex list defined above.
+        var faces_2  = [[0,1,2,3],[1,5,6,2],[0,4,5,1]]; 
+        
+ 
+        var vertices_3 = [
+            new Point3D(-1,1,-1),
+            new Point3D(1,1,-1),
+            new Point3D(.5,-.5,-.5),
+            new Point3D(-1,-1,-1),
+            new Point3D(-2,3,2), //This is the back one!
+            new Point3D(1,1,1),
+            new Point3D(1,-1,1),
+            new Point3D(-1,-1,1)
+        ];
+ 
+        // Define the vertices that compose each of the 6 faces. These numbers are
+        // indices to the vertex list defined above.
+        var faces_3  = [[0,1,2,3],[1,5,6,2],[5,4,7,6],[4,0,3,7],[0,4,5,1],[3,2,6,7]];
+
+
+	// Define the colors for each face.
+        var colors = [[255,0,0],[255,0,0],[255,0,0],[255,0,0],[255,0,0],[255,0,0]];
+ 	var colors_edges = [[0,255,0], [0,255,0], [0,255,0], [0,255,0]];
+
+        var angleX = 45;
+	var angleY = 35.5;
+	var angleZ = 30;
+ 
+	var angleX_2 = 135;
+	var angleY_2 = -35.5;
+	var angleZ_2 = 30;
+ 
+	var angleX_3 = 45;
+	var angleY_3 = 35.5;
+	var angleZ_3 = 30;
+
+
+        /* Constructs a CSS RGB value from an array of 3 elements. */
+        function arrayToRGB(arr) {
+            if( arr.length == 3 ) {
+                return "rgb(" + arr[0] + "," + arr[1] + "," + arr[2] + ")";
+            }
+            return "rgb(0,0,0)";
+        }
+ 
+        function startDemo() {
+            canvas = document.getElementById("thecanvas");
+            if( canvas && canvas.getContext ) {
+                ctx = canvas.getContext("2d");
+            }
+	    
+	    canvas_2 = document.getElementById("thecanvas_2");
+	    if (canvas_2 && canvas.getContext ) {
+		ctx_2 = canvas_2.getContext("2d");
+	    }   
+            
+	    canvas_3 = document.getElementById("thecanvas_3");
+	    if (canvas_3 && canvas.getContext ) {
+		ctx_3 = canvas_3.getContext("2d");
+	    }   
+        
+	 
+	    
+            setInterval(loop,33);
+
+	}
+ 
+        function loop() {
+            var t = new Array();
+ 	    var t_2 = new Array();
+	    var t_3 = new Array();
+
+            ctx.fillStyle = "rgb(0,0,0)";
+            ctx.fillRect(0,0,400,250);
+ 	    
+	    ctx_2.fillStyle = "rgb(0,0,0)";
+            ctx_2.fillRect(0,0,400,250);
+ 
+	    ctx_3.fillStyle = "rgb(0,0,0)";
+            ctx_3.fillRect(0,0,400,250);
+ 
+            for( var i = 0; i < vertices.length; i++ ) {
+                var v = vertices[i];
+                var r = v.rotateX(angleX).rotateY(angleY).rotateZ(angleZ);
+                var p = r.project(400,250,200,4);
+                t.push(p)
+            }
+		
+		 
+            for( var i = 0; i < vertices_2.length; i++ ) {
+                var v = vertices_2[i];
+                var r = v.rotateX(angleX_2).rotateY(angleY_2).rotateZ(angleZ_2);
+                var p = r.project(400,250,200,4);
+                t_2.push(p)
+            }
+	 
+            for( var i = 0; i < vertices_3.length; i++ ) {
+                var v = vertices_3[i];
+                var r = v.rotateX(angleX_3).rotateY(angleY_3).rotateZ(angleZ_3);
+                var p = r.project(400,250,200,4);
+                t_3.push(p)
+            }
+	    
+ 
+            var avg_z = new Array();
+ 	    var avg_z_2 = new Array();
+	    var avg_z_3 = new Array();
+
+            for( var i = 0; i < faces.length; i++ ) {
+                var f = faces[i];
+                avg_z[i] = {"index":i, "z":(t[f[0]].z + t[f[1]].z + t[f[2]].z + t[f[3]].z) / 4.0};
+            }
+ 
+            avg_z.sort(function(a,b) {
+                return b.z - a.z;
+            });
+ 
+            for( var i = 0; i < faces.length; i++ ) {
+                var f = faces[avg_z[i].index]
+ 
+                ctx.fillStyle = arrayToRGB(colors[avg_z[i].index]);
+                ctx.strokeStyle="blue";
+		ctx.beginPath()
+                ctx.moveTo(t[f[0]].x,t[f[0]].y)
+                ctx.lineTo(t[f[1]].x,t[f[1]].y)
+                ctx.lineTo(t[f[2]].x,t[f[2]].y)
+                ctx.lineTo(t[f[3]].x,t[f[3]].y)
+                ctx.closePath()
+		if (show == 1) {
+                	ctx.fill()
+		}
+		ctx.stroke()
+            }
+  
+            for( var i = 0; i < faces_2.length; i++ ) {
+                var f = faces_2[i];
+                avg_z_2[i] = {"index":i, "z":(t_2[f[0]].z + t_2[f[1]].z + t_2[f[2]].z + t_2[f[3]].z) / 4.0};
+            }
+ 
+            avg_z_2.sort(function(a,b) {
+                return b.z - a.z;
+            });
+ 
+            for( var i = 0; i < faces_2.length; i++ ) {
+                var f_2 = faces_2[avg_z_2[i].index]
+ 
+                ctx_2.fillStyle = arrayToRGB(colors[avg_z_2[i].index]);
+                ctx_2.strokeStyle="blue";
+		ctx_2.beginPath()
+                ctx_2.moveTo(t_2[f_2[0]].x,t_2[f_2[0]].y)
+                ctx_2.lineTo(t_2[f_2[1]].x,t_2[f_2[1]].y)
+                ctx_2.lineTo(t_2[f_2[2]].x,t_2[f_2[2]].y)
+                ctx_2.lineTo(t_2[f_2[3]].x,t_2[f_2[3]].y)
+                ctx_2.closePath()
+		if (show_2 == 1) {
+                	ctx_2.fill()
+		}
+		ctx_2.stroke()
+            }
+ 
+            for( var i = 0; i < faces_3.length; i++ ) {
+                var f = faces_3[i];
+                avg_z_3[i] = {"index":i, "z":(t_3[f[0]].z + t_3[f[1]].z + t_3[f[2]].z + t_3[f[3]].z) / 4.0};
+            }
+ 
+            avg_z_3.sort(function(a,b) {
+                return b.z - a.z;
+            });
+ 
+            for( var i = 0; i < faces_3.length; i++ ) {
+                var f_3 = faces_3[avg_z_3[i].index]
+ 
+                ctx_3.fillStyle = arrayToRGB(colors[avg_z_3[i].index]);
+             	ctx_3.strokeStyle = "blue";
+		ctx_3.beginPath()
+                ctx_3.moveTo(t_3[f_3[0]].x,t_3[f_3[0]].y)
+                ctx_3.lineTo(t_3[f_3[1]].x,t_3[f_3[1]].y)
+                ctx_3.lineTo(t_3[f_3[2]].x,t_3[f_3[2]].y)
+                ctx_3.lineTo(t_3[f_3[3]].x,t_3[f_3[3]].y)
+                ctx_3.closePath()
+		if (show_3 == 1) {
+                	ctx_3.fill()
+		}
+		ctx_3.stroke()
+            }
+            //angle += 2
+        }
+
+
+
+    </script>
+</head>
+<body>
+
+	<p>You might be wondering how closely our simulation matches the facts about perception of the dress. In general, many studies (<a href="https://www.sciencedirect.com/science/article/pii/S0960982215005357">Lafer-Sousa et al. 2015</a>, <a href="https://jov.arvojournals.org/article.aspx?articleid=2598922">Toscani et al. 2017</a>, <a href="http://jov.arvojournals.org/article.aspx?articleid=2600950">Witzel et al. 2017</a>)) have shown that assumptions about the illumination in the picture are a crucial factor in determining how a given person will interpret it; in our simulation we encoded these assumptions through the likelihood term. Some studies, such as the one discussed earlier about early birds vs. night owls (<a href="http://jov.arvojournals.org/article.aspx?articleid=2617976&mbid=synd_msnlife#163158730">Wallisch 2017</a>) support our experience-based account for why different people make different assumptions about the illumination. However, other studies suggest that assumptions about the illumination are not just significantly associated with experience by also with innate biological factors such as pupil diameter (<a href="https://www.osapublishing.org/josaa/abstract.cfm?uri=josaa-33-3-A137">Vemuri et al. 2016</a>) or macular pigment optical density (<a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0161090">Rabin et al. 2016</a>). Thus, a more accurate model of the perception of the dress would also have to factor in these innate biological factors.</p>
+
+<p>All of the studies we've mentioned have focused on the likelihood term of our Bayesian framing of the problem; none have discussed the role of the prior probabilities. This is probably because most people have similar prior probabilities for white and gold vs. black and blue dresses; that is, people assume that it is equally likely for a dress to be white and gold as it is for it to be black and blue, since your experience with dresses usually teaches you that dresses can come in all sorts of colors. Thus, in this scenario, the prior probabilities end up being largely irrelevant.</p>
+
+
+<p>Are there cases where the prior probabilities do matter? Indeed there are! One example is the perception of 3D objects. All objects in the real world are three-dimensional, yet we only see them as two-dimensional projections of their three-dimensional shapes. For a given two-dimensional image, there are infinitely many three-dimensional shapes that could have generated that image. For example, all three images below look the same, but by dragging the shapes to rotate them you can see that they are in fact very different shapes:</p>
+        <canvas id="thecanvas" width="400" height="250">
+        Your browser does not support the HTML5 canvas element. <a href=#>Click here</a> to watch the video.
+    </canvas>
+        <canvas id="thecanvas_2" width="400" height="250">
+        Your browser does not support the HTML5 canvas element. <a href=#>Click here</a> to watch the video.
+    </canvas>
+        <canvas id="thecanvas_3" width="400" height="250">
+        Your browser does not support the HTML5 canvas element. <a href=#>Click here</a> to watch the video.
+    </canvas>
+
+<p>Bayesian methods can very successfully model the perception of 3D shapes from ambiguous 2D images such as these (<a href="http://vision.psych.umn.edu/users/kersten/kersten-lab/papers/KerstenYuilleApr2003.pdf">Kersten and Yuille (2003)</a>). In the examples above, all three shapes have equal likelihoods of generating this image (the likelihoods might actually be a bit different, since the one on the left has more possible orientations that lead to this image than the others, but we can ignore that fact for our purposes). However, most people would probably interpret this image as representing a cube rather than the two stranger images represented here. This fact can be attributed to the viewers' prior probabilities of different shapes: Viewers assume that cubes are more likely to exist in the world than the other two shapes are, so they view the image as a cube.</p>
+
+
+	<button onclick="show=0;">Show edges only</button>
+	<button onclick="show=1;">Show faces and edges</button>
+	<button onclick="show=1;angleX=45;angleY=35.5;angleZ=30;">Reset</button>
+	<button onclick="show_2=0;">Show edges only</button>
+	<button onclick="show_2=1;">Show faces and edges</button>
+	<button onclick="show_2=1; angleX_2=135;angleY_2=-35.5;angleZ_2=30;">Reset</button>
+	<button onclick="show_3=0;">Show edges only</button>
+	<button onclick="show_3=1;">Show faces and edges</button>
+	<button onclick="show_3=1;angleX_3=45;angleY_3=35.5;angleZ_3=30;">Reset</button>
+
+
+	<p>3D cube rendering based on this example: http://codentronix.com/2011/05/10/html5-experiment-a-rotating-solid-cube/</p>
+    </body>
+</html>
+
+<p>References</p>
+
+<p>Kersten, D., &amp; Yuille, A. (2003). Bayesian models of object perception. <i>Current opinion in neurobiology, 13</i>(2), 150-158.</p>
+
+<p>Lafer-Sousa, R., Hermann, K. L., &amp; Conway, B. R. (2015). Striking individual differences in color perception uncovered by ‘the dress’ photograph. <i>Current Biology, 25</i>(13), R545-R546.</p>
+
+<p>Rabin, J., Houser, B., Talbert, C., &amp; Patel, R. (2016). Blue-black or white-gold? Early stage processing and the color of'the dress'. <i>PloS one, 11</i>(8), e0161090.</p>
+
+<p>Toscani, M., Gegenfurtner, K. R., &amp; Doerschner, K. (2017). Differences in illumination estimation in# thedress. <i>Journal of Vision, 17</i>(1), 22-22.</p>
+
+<p>Vemuri, K., Bisla, K., Mulpuru, S., &amp; Varadharajan, S. (2016). Do normal pupil diameter differences in the population underlie the color selection of# thedress?. <i>JOSA A, 33</i>(3), A137-A142.</p>
+
+<p>Witzel, C., Racey, C., &amp; O'Regan, J. K. (2017). The most reasonable explanation of “the dress”: Implicit assumptions about illumination. <i>Journal of Vision, 17</i>(2), 1-1.</p>
+
+<p>Wallisch, P. (2017). Illumination assumptions account for individual differences in the perceptual interpretation of a profoundly ambiguous stimulus in the color domain:“The dress”. <i>Journal of Vision, 17</i>(4), 5-5.</p>
+
+<form action="dress_continue.html">
+	    <input id="prev" type="submit" value="Previous" />
+</form>
+
+<script>
+
+var x_down;
+var y_down;
+var now_clicked = 0;
+var angleX_old = angleX;
+var angleY_old = angleY;
+
+document.getElementById("thecanvas").addEventListener("mousedown", function(event){
+	x_down = event.clientX;
+	y_down = event.clientY;
+	now_clicked = 1;
+	angleX_old = angleX;
+	angleY_old = angleY;
+});
+
+document.getElementById("thecanvas").addEventListener("mouseup", function(event){
+	now_clicked = 0;
+});
+
+
+document.getElementById("thecanvas").addEventListener("mousemove", function(event){
+	if (now_clicked == 1) {
+		angleX = angleX_old + x_down - event.clientX;
+		angleY = angleY_old + y_down - event.clientY;
+		document.getElementById("hello_text").innerHTML = angleX + " " + angleY;
+	}
+});
+
+
+var x_down_2;
+var y_down_2;
+var now_clicked_2 = 0;
+var angleX_old_2 = angleX_2;
+var angleY_old_2 = angleY_2;
+
+document.getElementById("thecanvas_2").addEventListener("mousedown", function(event){
+	x_down_2 = event.clientX;
+	y_down_2 = event.clientY;
+	now_clicked_2 = 1;
+	angleX_old_2 = angleX_2;
+	angleY_old_2 = angleY_2;
+});
+
+document.getElementById("thecanvas_2").addEventListener("mouseup", function(event){
+	now_clicked_2 = 0;
+});
+
+
+document.getElementById("thecanvas_2").addEventListener("mousemove", function(event){
+	if (now_clicked_2 == 1) {
+		angleX_2 = angleX_old_2 + x_down_2 - event.clientX;
+		angleY_2 = angleY_old_2 + y_down_2 - event.clientY;
+		document.getElementById("hello_text").innerHTML = angleX_2 + " " + angleY_2;
+	}
+});
+
+
+
+var x_down_3;
+var y_down_3;
+var now_clicked_3 = 0;
+var angleX_old_3 = angleX_3;
+var angleY_old_3 = angleY_3;
+
+document.getElementById("thecanvas_3").addEventListener("mousedown", function(event){
+	x_down_3 = event.clientX;
+	y_down_3 = event.clientY;
+	now_clicked_3 = 1;
+	angleX_old_3 = angleX_3;
+	angleY_old_3 = angleY_3;
+});
+
+document.getElementById("thecanvas_3").addEventListener("mouseup", function(event){
+	now_clicked_3 = 0;
+});
+
+
+document.getElementById("thecanvas_3").addEventListener("mousemove", function(event){
+	if (now_clicked_3 == 1) {
+		angleX_3 = angleX_old_3 + x_down_3 - event.clientX;
+		angleY_3 = angleY_old_3 + y_down_3 - event.clientY;
+		document.getElementById("hello_text").innerHTML = angleX_3 + " " + angleY_3;
+	}
+});
+
+
+
+hello_text.style.opacity = 0.5;
+</script>

@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Shapes and Stuff</title>
+        <style>canvas { width: 100%; height: 100% }</style>
+    </head>
+    <body>
+        <script src="three.js"></script>
+        <script>
+            // create scene and camera
+            var scene = new THREE.Scene();
+            var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+ 
+            // create a renderer, set its size, append it to the document.
+            var renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+ 
+            // create the cube with dimensions 1x1x1 with MeshBasicMaterial (one of many materials available in three.js.
+            // we also set wireframe to true, this enables us to see the outlines of the 3d shape/structure, I just like it for no reason C:
+            var geometry = new THREE.CubeGeometry(1,1,1);
+            //var cubematerial = new THREE.MeshBasicMaterial({wireframe: true, color: 0xff0000});
+ 
+            // The mesh basically takes the geometry and material specified above and uses them to create the actual cube.
+            //var cube = new THREE.Mesh(cubegeometry, cubematerial);
+
+var material = new THREE.MeshPhongMaterial( {
+    color: 0xff0000,
+    polygonOffset: true,
+    polygonOffsetFactor: 1, // positive value pushes polygon further away
+    polygonOffsetUnits: 1
+} );
+var mesh = new THREE.Mesh( geometry, material );
+scene.add( mesh )
+
+// wireframe
+var geo = new THREE.EdgesGeometry( mesh.geometry ); // or WireframeGeometry
+var mat = new THREE.LineBasicMaterial( { color: 0xffffff, linewidth: 2 } );
+var wireframe = new THREE.LineSegments( geo, mat );
+mesh.add( wireframe );
+
+
+
+            // The cube is then added to the scene.
+            scene.add(cube);
+ 
+            // At this point, both the camera and the cube are at co-ordinates (0,0,0) or the origin.
+            // So the cube isn't visible yet. Hence, we move the camera towards 5 units along the +ve direction in z-axis.
+            camera.position.z = 5;
+ 
+ 
+            // The render loop that makes things visible and also contains the code for the rotational motion of the shapes.
+            var render = function () {
+                requestAnimationFrame(render);
+ 
+                // rotating the cube along the x, y and z axes by 0.01 radians. The value can be changed for faster rotations.
+                cube.rotation.y += 0.01;
+                cube.rotation.x += 0.01;
+                cube.rotation.z += 0.01;
+ 
+ 
+                renderer.render(scene, camera);
+            };
+ 
+            // Calling the render function
+            render();
+        </script>
+    </body>
+</html>

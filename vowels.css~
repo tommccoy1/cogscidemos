@@ -1,0 +1,136 @@
+
+
+#spectrogram, #spectrogram_2 {
+	height: 200px;
+}	
+
+#spectrogram_img, #spectrogram_img_2 {
+	height: 200px;
+	overflow: hidden;
+	clip: rect(16px,300px,200px,0px);
+	position: absolute;
+
+}
+
+.rl {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 1px;
+	z-index: 1;
+}
+
+.bl {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 1px;;
+	width: 100%;
+	z-index: 1;
+}
+
+.yb {
+	position: absolute;
+	top: 0;
+	left: 0px;
+	height: 100%;
+	width: 0px;
+	z-index: 10;
+	opacity: 0.3;
+}
+
+
+.spect_img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+
+.transparent_cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+
+}
+
+
+
+.img_box {
+	position: relative;
+	height: 100px;
+	width: 200px;
+
+}
+
+.praat {
+	border-style: solid;
+	display: inline-block;
+	width: 250px;
+	height: 200px;
+}
+
+
+.speaker {
+	display: inline-block;
+	width: 600px;
+	border-style: solid;
+}
+
+.name {
+	display: inline-block;
+	width: 80px;
+}
+
+
+.axis path,
+    .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+    /*.x.axis path {
+        display: none;
+    }*/
+    .line {
+        fill: none;
+        stroke: steelblue;
+        stroke-width: 1.5px;
+    }
+
+.graph {
+	width: 400px;
+	height: 300px;
+	display: inline-block;
+	border-style: solid;
+}
+
+.corpus {
+	width: 400px;
+	height: 400px;
+	display: inline-block;
+	border-style: solid;
+	overflow: scroll;
+
+
+}
+
+.posterior_box {
+	width: 300px;
+	height: 200px;
+	display: inline-block;
+	border-style: solid;
+}
+
+.time_slider {
+	height: 20px;
+	width: 200px;
+	position: relative;
+}
+

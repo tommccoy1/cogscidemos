@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="audio.css">
+
+<style>
+</style>
+</head>
+<body>
+
+	<h1>British Astronomers and American Ecologists</h1>
+
+	<p>Suppose you hear someone make the following utterance:</p>
+
+	<audio controls id="mystery" >
+		  <source src="a_plant_1.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>	
+	
+	<p>How would you interpret that utterance? We will use Bayes' Theorem to figure it out. There are two possibilities we will consider here: "planetary" and "plant a tree."</p>
+
+	<p>First we will compute the likelihoods of these two possibilities. That is, how likely is it that "planetary" would be pronounced as heard in the clip, and how likely is it that "plant a tree" would be pronounced as heard in the clip?</p>
+	
+	<p>A major factor in determining these likelihoods is your past experience. For example, British people and American people pronounce "planetary" differently. Brits generally reduce the final "a" so that it is very short or even unpronounced:</p>
+	<audio controls id="mystery2" >
+		  <source src="b_planet_3.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>	
+
+	<p>But Americans generally do have a full vowel in that context:</p>
+
+	<audio controls id="mystery3" >
+		  <source src="a_planet_2.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>	
+	
+	<p>Therefore, since our mystery recording does not have a clear vowel between the "t" and the "r", a Brit is relatively likely to hear it as "planetary," while an American would probably hear it unambiguously as "plant a tree."</p>
+	
+	<p>Because of these differences, we will compute likelihoods under two sets of conditions: For an American speaker and for a British speaker.</p>
+
+	<p>One way we could compute the likelihood would be to treat the presence or absence of the "a" as a binary variable - that is, this vowel either will (with some probability p) appear, or will (with some probability 1-p) not appear. However, a more realistic framing of the problem is that the vowel will have some duration and that, the longer the vowel is, the more likely the word is to be interpreted as "planetary". Therefore, we will instead base the likelihoods on the duration of this vowel. The vowel itself is difficult to measure properly, so as a proxy for its length we will instead use the duration of the portion of the utterance from the "t" onward.</p>
+
+	<p>Below we have collected utterances from American speakers and British speakers saying "planetary" and "plant a tree." For each one, measure the duration of the part of the word from "t" to the end of the word. We will then use these measurements to get a sense of the distribution of durations.</p>
+
+
+
+	<div>Speakers of American English</div>
+
+	<div id="am_speakers">
+	<div id="a_1" class="speaker">
+	
+	<div class="name">American speaker 1</div>
+	<div class="praat">
+		<audio  id="a_plant_1"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="a_plant_1.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>	
+	<div>"Plant a tree"</div>
+	<div id="a_plant_1_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'a_plant_1')" onmousemove="mod_yellow(event, 'a_plant_1')" onmouseup="end_yellow(event, 'a_plant_1')" onmouseout="end_yellow(event, 'a_plant_1')" ></div>
+	<img draggable="false" id="a_plant_1_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="a_plant_1_pic" src="a_plant_1.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="a_plant_1_yb">
+	</div>
+	<button onclick="play_selection('a_plant_1')">Play highlighted portion</button>
+	<button onclick="document.getElementById('a_plant_1').currentTime = 0;document.getElementById('a_plant_1').play();">Play entire clip</button>
+	<div>Duration of highlighted portion: <span id="a_plant_1_dur">0</span> seconds </div>
+	</div>
+	
+
+	<div class="praat">
+		<audio  id="a_planet_1"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="a_planet_1.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	
+	<div>"Planetary"</div>
+	<div id="a_planet_1_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'a_planet_1')" onmousemove="mod_yellow(event, 'a_planet_1')" onmouseup="end_yellow(event, 'a_planet_1')" onmouseout="end_yellow(event, 'a_planet_1')" ></div>
+	<img draggable="false" id="a_planet_1_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="a_planet_1_pic" src="a_planet_1.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="a_planet_1_yb">
+	</div>
+	<button onclick="play_selection('a_planet_1')">Play highlighted portion</button>
+	<button onclick="document.getElementById('a_planet_1').currentTime = 0;document.getElementById('a_planet_1').play();">Play entire clip</button>
+	<div>Duration of highlighted portion: <span id="a_planet_1_dur">0</span> seconds </div>
+	</div>
+	</div>
+	
+	<div id="a_2" class="speaker">
+	<div class="name">American speaker 2</div>
+	<div class="praat">
+		<audio  id="a_plant_2"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="a_plant_2.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+
+	<div>"Plant a tree"</div>
+	<div id="a_plant_2_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'a_plant_2')" onmousemove="mod_yellow(event, 'a_plant_2')" onmouseup="end_yellow(event, 'a_plant_2')" onmouseout="end_yellow(event, 'a_plant_2')" ></div>
+	<img draggable="false" id="a_plant_2_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="a_plant_2_pic" src="a_plant_2.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="a_plant_2_yb">
+	</div>
+	<button onclick="play_selection('a_plant_2')">Play highlighted portion</button>	
+	<button onclick="document.getElementById('a_plant_2').currentTime = 0;document.getElementById('a_plant_2').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="a_plant_2_dur">0</span> seconds </div>
+	</div>
+
+
+	<div class="praat">
+		<audio  id="a_planet_2"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="a_planet_2.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	
+	<div>"Planetary"</div>
+	<div id="a_planet_2_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'a_planet_2')" onmousemove="mod_yellow(event, 'a_planet_2')" onmouseup="end_yellow(event, 'a_planet_2')" onmouseout="end_yellow(event, 'a_planet_2')" ></div>
+	<img draggable="false" id="a_planet_2_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="a_planet_2_pic" src="a_planet_2.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="a_planet_2_yb">
+	</div>
+	<button onclick="play_selection('a_planet_2')">Play highlighted portion</button>
+	<button onclick="document.getElementById('a_planet_2').currentTime = 0;document.getElementById('a_planet_2').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="a_planet_2_dur">0</span> seconds </div>
+	</div>
+	</div>
+
+	<div id="a_3" class="speaker">
+	<div class="name">American speaker 3</div>
+	<div class="praat">
+		<audio  id="a_plant_3"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="a_plant_3.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	<div>"Plant a tree"</div>
+	<div id="a_plant_3_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'a_plant_3')" onmousemove="mod_yellow(event, 'a_plant_3')" onmouseup="end_yellow(event, 'a_plant_3')" onmouseout="end_yellow(event, 'a_plant_3')" ></div>
+	<img draggable="false" id="a_plant_3_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="a_plant_3_pic" src="a_plant_3.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="a_plant_3_yb">
+	</div>
+	<button onclick="play_selection('a_plant_3')">Play highlighted portion</button>
+	<button onclick="document.getElementById('a_plant_3').currentTime = 0;document.getElementById('a_plant_3').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="a_plant_3_dur">0</span> seconds </div>
+	</div>
+
+
+
+
+	<div class="praat">
+		<audio  id="a_planet_3"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="a_planet_3.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	
+	<div>"Planetary"</div>
+	<div id="a_planet_3_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'a_planet_3')" onmousemove="mod_yellow(event, 'a_planet_3')" onmouseup="end_yellow(event, 'a_planet_3')" onmouseout="end_yellow(event, 'a_planet_3')" ></div>
+	<img draggable="false" id="a_planet_3_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="a_planet_3_pic" src="a_planet_3.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="a_planet_3_yb">
+	</div>
+	<button onclick="play_selection('a_planet_3')">Play highlighted portion</button>
+	<button onclick="document.getElementById('a_planet_3').currentTime = 0;document.getElementById('a_planet_3').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="a_planet_3_dur">0</span> seconds </div>
+	</div>
+	</div>
+
+	<div id="a_4" class="speaker">
+	<div class="name">American speaker 4</div>
+	<div class="praat">
+		<audio  id="a_plant_4"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="a_plant_4.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	<div>"Plant a tree"</div>
+	<div id="a_plant_4_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'a_plant_4')" onmousemove="mod_yellow(event, 'a_plant_4')" onmouseup="end_yellow(event, 'a_plant_4')" onmouseout="end_yellow(event, 'a_plant_4')" ></div>
+	<img draggable="false" id="a_plant_4_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="a_plant_4_pic" src="a_plant_4.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="a_plant_4_yb">
+	</div>
+	<button onclick="play_selection('a_plant_4')">Play highlighted portion</button>
+	<button onclick="document.getElementById('a_plant_4').currentTime = 0;document.getElementById('a_plant_4').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="a_plant_4_dur">0</span> seconds </div>
+	</div>
+
+
+
+
+	<div class="praat">
+		<audio  id="a_planet_4"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="a_planet_4.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	
+	<div>"Planetary"</div>
+	<div id="a_planet_4_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'a_planet_4')" onmousemove="mod_yellow(event, 'a_planet_4')" onmouseup="end_yellow(event, 'a_planet_4')" onmouseout="end_yellow(event, 'a_planet_4')" ></div>
+	<img draggable="false" id="a_planet_4_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="a_planet_4_pic" src="a_planet_4.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="a_planet_4_yb">
+	</div>
+	<button onclick="play_selection('a_planet_4')">Play highlighted portion</button>
+	<button onclick="document.getElementById('a_planet_4').currentTime = 0;document.getElementById('a_planet_4').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="a_planet_4_dur">0</span> seconds </div>
+	</div>
+	</div>
+
+	<div id="a_5" class="speaker">
+	<div class="name">American speaker 5</div>
+	<div class="praat">
+		<audio  id="a_plant_5"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="a_plant_5.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	<div>"Plant a tree"</div>
+	<div id="a_plant_5_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'a_plant_5')" onmousemove="mod_yellow(event, 'a_plant_5')" onmouseup="end_yellow(event, 'a_plant_5')" onmouseout="end_yellow(event, 'a_plant_5')" ></div>
+	<img draggable="false" id="a_plant_5_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="a_plant_5_pic" src="a_plant_5.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="a_plant_5_yb">
+	</div>
+	<button onclick="play_selection('a_plant_5')">Play highlighted portion</button>
+	<button onclick="document.getElementById('a_plant_5').currentTime = 0;document.getElementById('a_plant_5').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="a_plant_5_dur">0</span> seconds </div>
+	</div>
+	
+
+
+
+	<div class="praat">
+		<audio  id="a_planet_5"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="a_planet_5.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	
+	<div>"Planetary"</div>
+	<div id="a_planet_5_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'a_planet_5')" onmousemove="mod_yellow(event, 'a_planet_5')" onmouseup="end_yellow(event, 'a_planet_5')" onmouseout="end_yellow(event, 'a_planet_5')" ></div>
+	<img draggable="false" id="a_planet_5_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="a_planet_5_pic" src="a_planet_5.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="a_planet_5_yb">
+	</div>
+	<button onclick="play_selection('a_planet_5')">Play highlighted portion</button>
+	<button onclick="document.getElementById('a_planet_5').currentTime = 0;document.getElementById('a_planet_5').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="a_planet_5_dur">0</span> seconds </div>
+	</div>
+	</div>
+
+	<div id="a_6" class="speaker">
+	<div class="name">American speaker 6</div>
+	<div class="praat">
+		<audio  id="a_plant_6"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="a_plant_6.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	<div>"Plant a tree"</div>
+	<div id="a_plant_6_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'a_plant_6')" onmousemove="mod_yellow(event, 'a_plant_6')" onmouseup="end_yellow(event, 'a_plant_6')" onmouseout="end_yellow(event, 'a_plant_6')" ></div>
+	<img draggable="false" id="a_plant_6_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="a_plant_6_pic" src="a_plant_6.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="a_plant_6_yb">
+	</div>
+	<button onclick="play_selection('a_plant_6')">Play highlighted portion</button>
+	<button onclick="document.getElementById('a_plant_6').currentTime = 0;document.getElementById('a_plant_6').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="a_plant_6_dur">0</span> seconds </div>
+	</div>
+
+
+
+
+	<div class="praat">
+		<audio  id="a_planet_6"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="a_planet_6.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	
+	<div>"Planetary"</div>
+	<div id="a_planet_6_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'a_planet_6')" onmousemove="mod_yellow(event, 'a_planet_6')" onmouseup="end_yellow(event, 'a_planet_6')" onmouseout="end_yellow(event, 'a_planet_6')" ></div>
+	<img draggable="false" id="a_planet_6_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="a_planet_6_pic" src="a_planet_6.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="a_planet_6_yb">
+	</div>
+	<button onclick="play_selection('a_planet_6')">Play highlighted portion</button>
+	<button onclick="document.getElementById('a_planet_6').currentTime = 0;document.getElementById('a_planet_6').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="a_planet_6_dur">0</span> seconds </div>
+	</div>
+	</div>
+
+
+	<div id="a_7" class="speaker">
+	<div class="name">American speaker 7</div>
+	<div class="praat">
+		<audio  id="a_plant_7"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="a_plant_7.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	<div>"Plant a tree"</div>
+	<div id="a_plant_7_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'a_plant_7')" onmousemove="mod_yellow(event, 'a_plant_7')" onmouseup="end_yellow(event, 'a_plant_7')" onmouseout="end_yellow(event, 'a_plant_7')" ></div>
+	<img draggable="false" id="a_plant_7_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="a_plant_7_pic" src="a_plant_7.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="a_plant_7_yb">
+	</div>
+	<button onclick="play_selection('a_plant_7')">Play highlighted portion</button>	<button onclick="document.getElementById('a_plant_7').currentTime = 0;document.getElementById('a_plant_7').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="a_plant_7_dur">0</span> seconds </div>
+	</div>
+
+
+
+	<div class="praat">
+		<audio  id="a_planet_7"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="a_planet_7.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	
+	<div>"Planetary"</div>
+	<div id="a_planet_7_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'a_planet_7')" onmousemove="mod_yellow(event, 'a_planet_7')" onmouseup="end_yellow(event, 'a_planet_7')" onmouseout="end_yellow(event, 'a_planet_7')" ></div>
+	<img draggable="false" id="a_planet_7_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="a_planet_7_pic" src="a_planet_7.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="a_planet_7_yb">
+	</div>
+	<button onclick="play_selection('a_planet_7')">Play highlighted portion</button>
+	<button onclick="document.getElementById('a_planet_7').currentTime = 0;document.getElementById('a_planet_7').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="a_planet_7_dur">0</span> seconds </div>
+	</div>
+	</div>
+
+	<div id="a_8" class="speaker">
+	<div class="name">American speaker 8</div>
+	
+	<div class="praat">
+		<audio  id="a_plant_8"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="a_plant_8.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	<div>"Plant a tree"</div>
+	<div id="a_plant_8_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'a_plant_8')" onmousemove="mod_yellow(event, 'a_plant_8')" onmouseup="end_yellow(event, 'a_plant_8')" onmouseout="end_yellow(event, 'a_plant_8')" ></div>
+	<img draggable="false" id="a_plant_8_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="a_plant_8_pic" src="a_plant_8.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="a_plant_8_yb">
+	</div>
+	<button onclick="play_selection('a_plant_8')">Play highlighted portion</button>	
+	<button onclick="document.getElementById('a_plant_8').currentTime = 0;document.getElementById('a_plant_8').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="a_plant_8_dur">0</span> seconds </div>
+	</div>
+
+
+
+	<div class="praat">
+		<audio  id="a_planet_8"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="a_planet_8.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	<div>"Planetary"</div>
+	<div id="a_planet_8_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'a_planet_8')" onmousemove="mod_yellow(event, 'a_planet_8')" onmouseup="end_yellow(event, 'a_planet_8')" onmouseout="end_yellow(event, 'a_planet_8')" ></div>
+	<img draggable="false" id="a_planet_8_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="a_planet_8_pic" src="a_planet_8.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="a_planet_8_yb">
+	</div>
+	<button onclick="play_selection('a_planet_8')">Play highlighted portion</button>
+	<button onclick="document.getElementById('a_planet_8').currentTime = 0;document.getElementById('a_planet_8').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="a_planet_8_dur">0</span> seconds </div>
+	</div>
+	</div>
+	</div>
+
+	<div>Speakers of British English</div>
+
+	<div id="b_1" class="speaker">
+	<div class="name">British speaker 1</div>
+	<div class="praat">
+		<audio  id="b_plant_1"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="b_plant_1.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	<div>"Plant a tree"</div>
+	<div id="b_plant_1_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'b_plant_1')" onmousemove="mod_yellow(event, 'b_plant_1')" onmouseup="end_yellow(event, 'b_plant_1')" onmouseout="end_yellow(event, 'b_plant_1')" ></div>
+	<img draggable="false" id="b_plant_1_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="b_plant_1_pic" src="b_plant_1.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="b_plant_1_yb">
+	</div>
+	<button onclick="play_selection('b_plant_1')">Play highlighted portion</button>	
+	<button onclick="document.getElementById('b_plant_1').currentTime = 0;document.getElementById('b_plant_1').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="b_plant_1_dur">0</span> seconds </div>
+	</div>
+
+
+
+	<div class="praat">
+		<audio  id="b_planet_1"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="b_planet_1.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	<div>"Planetary"</div>
+	<div id="b_planet_1_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'b_planet_1')" onmousemove="mod_yellow(event, 'b_planet_1')" onmouseup="end_yellow(event, 'b_planet_1')" onmouseout="end_yellow(event, 'b_planet_1')" ></div>
+	<img draggable="false" id="b_planet_1_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="b_planet_1_pic" src="b_planet_1.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="b_planet_1_yb">
+	</div>
+	<button onclick="play_selection('b_planet_1')">Play highlighted portion</button>
+	<button onclick="document.getElementById('b_planet_1').currentTime = 0;document.getElementById('b_planet_1').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="b_planet_1_dur">0</span> seconds </div>
+	</div>
+	</div>
+
+	<div id="b_2" class="speaker">
+	<div class="name">British speaker 2</div>
+	<div class="praat">
+		<audio  id="b_plant_2"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="b_plant_2.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	<div>"Plant a tree"</div>
+	<div id="b_plant_2_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'b_plant_2')" onmousemove="mod_yellow(event, 'b_plant_2')" onmouseup="end_yellow(event, 'b_plant_2')" onmouseout="end_yellow(event, 'b_plant_2')" ></div>
+	<img draggable="false" id="b_plant_2_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="b_plant_2_pic" src="b_plant_2.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="b_plant_2_yb">
+	</div>
+	<button onclick="play_selection('b_plant_2')">Play highlighted portion</button>
+	<button onclick="document.getElementById('b_plant_2').currentTime = 0;document.getElementById('b_plant_2').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="b_plant_2_dur">0</span> seconds </div>
+	</div>
+
+
+
+
+	<div class="praat">
+		<audio  id="b_planet_2"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="b_planet_2.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	<div>"Planetary"</div>
+	<div id="b_planet_2_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'b_planet_2')" onmousemove="mod_yellow(event, 'b_planet_2')" onmouseup="end_yellow(event, 'b_planet_2')" onmouseout="end_yellow(event, 'b_planet_2')" ></div>
+	<img draggable="false" id="b_planet_2_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="b_planet_2_pic" src="b_planet_2.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="b_planet_2_yb">
+	</div>
+	<button onclick="play_selection('b_planet_2')">Play highlighted portion</button>
+	<button onclick="document.getElementById('b_planet_2').currentTime = 0;document.getElementById('b_planet_2').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="b_planet_2_dur">0</span> seconds </div>
+	</div>
+	</div>
+
+	<div id="b_3" class="speaker">
+	<div class="name">British speaker 3</div>
+	<div class="praat">
+		<audio  id="b_plant_3"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="b_plant_3.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	<div>"Plant a tree"</div>
+	<div id="b_plant_3_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'b_plant_3')" onmousemove="mod_yellow(event, 'b_plant_3')" onmouseup="end_yellow(event, 'b_plant_3')" onmouseout="end_yellow(event, 'b_plant_3')" ></div>
+	<img draggable="false" id="b_plant_3_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="b_plant_3_pic" src="b_plant_3.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="b_plant_3_yb">
+	</div>
+	<button onclick="play_selection('b_plant_3')">Play highlighted portion</button>
+	<button onclick="document.getElementById('b_plant_3').currentTime = 0;document.getElementById('b_plant_3').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="b_plant_3_dur">0</span> seconds </div>
+	</div>
+
+
+
+
+	<div class="praat">
+		<audio  id="b_planet_3"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="b_planet_3.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	<div>"Planetary"</div>
+	<div id="b_planet_3_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'b_planet_3')" onmousemove="mod_yellow(event, 'b_planet_3')" onmouseup="end_yellow(event, 'b_planet_3')" onmouseout="end_yellow(event, 'b_planet_3')" ></div>
+	<img draggable="false" id="b_planet_3_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="b_planet_3_pic" src="b_planet_3.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="b_planet_3_yb">
+	</div>
+	<button onclick="play_selection('b_planet_3')">Play highlighted portion</button>
+	<button onclick="document.getElementById('b_planet_3').currentTime = 0;document.getElementById('b_planet_3').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="b_planet_3_dur">0</span> seconds </div>
+	</div>
+	</div>
+
+	<div id="b_4" class="speaker">
+	<div class="name">British speaker 4</div>
+	<div class="praat">
+		<audio  id="b_plant_4"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="b_plant_4.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	<div>"Plant a tree"</div>
+	<div id="b_plant_4_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'b_plant_4')" onmousemove="mod_yellow(event, 'b_plant_4')" onmouseup="end_yellow(event, 'b_plant_4')" onmouseout="end_yellow(event, 'b_plant_4')" ></div>
+	<img draggable="false" id="b_plant_4_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="b_plant_4_pic" src="b_plant_4.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="b_plant_4_yb">
+	</div>
+	<button onclick="play_selection('b_plant_4')">Play highlighted portion</button>
+	<button onclick="document.getElementById('b_plant_4').currentTime = 0;document.getElementById('b_plant_4').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="b_plant_4_dur">0</span> seconds </div>
+	</div>
+
+
+
+
+	<div class="praat">
+		<audio  id="b_planet_4"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="b_planet_4.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	<div>"Planetary"</div>
+	<div id="b_planet_4_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'b_planet_4')" onmousemove="mod_yellow(event, 'b_planet_4')" onmouseup="end_yellow(event, 'b_planet_4')" onmouseout="end_yellow(event, 'b_planet_4')" ></div>
+	<img draggable="false" id="b_planet_4_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="b_planet_4_pic" src="b_planet_4.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="b_planet_4_yb">
+	</div>
+	<button onclick="play_selection('b_planet_4')">Play highlighted portion</button>
+	<button onclick="document.getElementById('b_planet_4').currentTime = 0;document.getElementById('b_planet_4').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="b_planet_4_dur">0</span> seconds </div>
+	</div>
+	</div>
+
+	<div id="b_5" class="speaker">
+	<div class="name">British speaker 5</div>
+	<div class="praat">
+		<audio  id="b_plant_5"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="b_plant_5.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	<div>"Plant a tree"</div>
+	<div id="b_plant_5_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'b_plant_5')" onmousemove="mod_yellow(event, 'b_plant_5')" onmouseup="end_yellow(event, 'b_plant_5')" onmouseout="end_yellow(event, 'b_plant_5')" ></div>
+	<img draggable="false" id="b_plant_5_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="b_plant_5_pic" src="b_plant_5.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="b_plant_5_yb">
+	</div>
+	<button onclick="play_selection('b_plant_5')">Play highlighted portion</button>
+	<button onclick="document.getElementById('b_plant_5').currentTime = 0;document.getElementById('b_plant_5').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="b_plant_5_dur">0</span> seconds </div>
+	</div>
+
+
+
+	<div class="praat">
+		<audio  id="b_planet_5"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="b_planet_5.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	<div>"Planetary"</div>
+	<div id="b_planet_5_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'b_planet_5')" onmousemove="mod_yellow(event, 'b_planet_5')" onmouseup="end_yellow(event, 'b_planet_5')" onmouseout="end_yellow(event, 'b_planet_5')" ></div>
+	<img draggable="false" id="b_planet_5_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="b_planet_5_pic" src="b_planet_5.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="b_planet_5_yb">
+	</div>
+	<button onclick="play_selection('b_planet_5')">Play highlighted portion</button>
+	<button onclick="document.getElementById('b_planet_5').currentTime = 0;document.getElementById('b_planet_5').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="b_planet_5_dur">0</span> seconds </div>
+	</div>
+	</div>
+
+
+	<div id="b_6" class="speaker">
+	<div class="name">British speaker 6</div>
+	<div class="praat">
+		<audio  id="b_plant_6"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="b_plant_6.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	<div>"Plant a tree"</div>
+	<div id="b_plant_6_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'b_plant_6')" onmousemove="mod_yellow(event, 'b_plant_6')" onmouseup="end_yellow(event, 'b_plant_6')" onmouseout="end_yellow(event, 'b_plant_6')" ></div>
+	<img draggable="false" id="b_plant_6_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="b_plant_6_pic" src="b_plant_6.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="b_plant_6_yb">
+	</div>
+	<button onclick="play_selection('b_plant_6')">Play highlighted portion</button>
+	<button onclick="document.getElementById('b_plant_6').currentTime = 0;document.getElementById('b_plant_6').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="b_plant_6_dur">0</span> seconds </div>
+	</div>
+
+
+
+
+	<div class="praat">
+		<audio  id="b_planet_6"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="b_planet_6.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	<div>"Planetary"</div>
+	<div id="b_planet_6_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'b_planet_6')" onmousemove="mod_yellow(event, 'b_planet_6')" onmouseup="end_yellow(event, 'b_planet_6')" onmouseout="end_yellow(event, 'b_planet_6')" ></div>
+	<img draggable="false" id="b_planet_6_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="b_planet_6_pic" src="b_planet_6.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="b_planet_6_yb">
+	</div>
+	<button onclick="play_selection('b_planet_6')">Play highlighted portion</button>
+	<button onclick="document.getElementById('b_planet_6').currentTime = 0;document.getElementById('b_planet_6').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="b_planet_6_dur">0</span> seconds </div>
+	</div>
+	</div>
+
+	<div id="b_7" class="speaker">
+	<div class="name">British speaker 7</div>
+	<div class="praat">
+		<audio  id="b_plant_7"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="b_plant_7.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	<div>"Plant a tree"</div>
+	<div id="b_plant_7_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'b_plant_7')" onmousemove="mod_yellow(event, 'b_plant_7')" onmouseup="end_yellow(event, 'b_plant_7')" onmouseout="end_yellow(event, 'b_plant_7')" ></div>
+	<img draggable="false" id="b_plant_7_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="b_plant_7_pic" src="b_plant_7.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="b_plant_7_yb">
+	</div>
+	<button onclick="play_selection('b_plant_7')">Play highlighted portion</button>
+	<button onclick="document.getElementById('b_plant_7').currentTime = 0;document.getElementById('b_plant_7').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="b_plant_7_dur">0</span> seconds </div>
+	</div>
+
+
+
+	<div class="praat">
+		<audio  id="b_planet_7"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="b_planet_7.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>
+	<div>"Planetary"</div>
+	<div id="b_planet_7_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'b_planet_7')" onmousemove="mod_yellow(event, 'b_planet_7')" onmouseup="end_yellow(event, 'b_planet_7')" onmouseout="end_yellow(event, 'b_planet_7')" ></div>
+	<img draggable="false" id="b_planet_7_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="b_planet_7_pic" src="b_planet_7.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="b_planet_7_yb">
+	</div>
+	<button onclick="play_selection('b_planet_7')">Play highlighted portion</button>
+	<button onclick="document.getElementById('b_planet_7').currentTime = 0;document.getElementById('b_planet_7').play();">Play entire clip</button>
+	
+	<div>Duration of highlighted portion: <span id="b_planet_7_dur">0</span> seconds </div>
+	</div>
+	</div>
+
+	<div id="here1">Here ends the first chunk of audio</div>
+
+
+	<div>Now we need to figure out how to determine p(duration) based on these examples. To start out, just to get a feeling for the distribution of examples, let's try plotting histograms of the observed durations. Click "make histograms" to generate histograms for each of the four cases. </div>
+
+
+
+	<div id="a_plant_hist"></div>
+	<button onclick="make_histogram()">Make histograms</button>
+
+	<div></div>
+	<div class="graph" id="am_plant_holder"><div id="am_plant"></div></div>
+	<div class="graph" id="am_planet_holder"><div id="am_planet"></div></div>
+
+	<div></div>
+	<div class="graph" id="br_plant_holder"><div id="br_plant"></div></div>
+	<div class="graph" id="br_planet_holder"><div id="br_planet"></div></div>
+
+
+	<div>These histograms are almost enough. In fact we could use them. But better to use a probability density function:</div>
+
+	<div><button onclick="make_normal()">Make PDF</button></div>
+
+	<div class="graph" id="am_normal_holder"><div id="am_normal"></div></div>
+	<div class="graph" id="br_normal_holder"><div id="br_normal"></div></div>
+
+
+	<p>Now that we have these distributions, we can figure out the probability of the duration observed in our mystery clip arising from "planetary" or "plant a tree". Below is the spectrogram of our mystery clip. Use it to determine the duration of the relevant portion of the word.</p>
+
+	<div id="a_1" class="speaker">
+	
+	<div class="name">Mystery recording</div>
+	<div class="praat">
+		<audio  id="a_plant_1_m"  preload="metadata" onloadedmetadata="console.log(document.getElementById(this.id).duration)"  ontimeupdate="var ap1 = document.getElementById(this.id); document.getElementById(this.id + '_rl').style.left = (parseFloat(ap1.currentTime) / parseFloat(ap1.duration)) * parseFloat(document.getElementById(this.id + '_pic').width) + 'px'"   >
+		  <source src="a_plant_1.wav" type="audio/wav">
+		    Your browser does not support the audio element.
+	</audio>	
+	<div id="a_plant_1_m_img" class="img_box">
+	<div class="transparent_cover" onmousedown="change_yellow(event, 'a_plant_1_m')" onmousemove="mod_yellow(event, 'a_plant_1_m')" onmouseup="end_yellow(event, 'a_plant_1_m')" onmouseout="end_yellow(event, 'a_plant_1_m')" ></div>
+	<img draggable="false" id="a_plant_1_m_rl" class="rl" src="red_line.png">
+	<img draggable="false" class="spect_img" id="a_plant_1_m_pic" src="a_plant_1.png">
+	<img draggable="false" class="yb" src="yellow_box.png" id="a_plant_1_m_yb">
+	</div>
+	<button onclick="play_selection('a_plant_1_m')">Play highlighted portion</button>
+	<button onclick="document.getElementById('a_plant_1_m').currentTime = 0;document.getElementById('a_plant_1_m').play();">Play entire clip</button>
+	<div>Duration of highlighted portion: <span id="a_plant_1_m_dur">0</span> seconds </div>
+	</div>
+	</div>
+	
+	<p>Enter the duration that you measured:</p>
+	<div>Duration of relevant portion:<form id="mystery_dur" action="javascript:void(0);"><input type="text"></form></div>
+
+	<p>Now click this button to compute the relevant probabilities from the PDFs you generated above:</p>
+	<button onclick='document.getElementById("dur_planet_am").innerHTML = gaussian(parseFloat(mystery_dur.elements[0].value), [durations["a_planet_1"], durations["a_planet_2"], durations["a_planet_3"], durations["a_planet_4"], durations["a_planet_5"], durations["a_planet_6"], durations["a_planet_7"], durations["a_planet_8"]]);  document.getElementById("dur_plant_am").innerHTML = gaussian(parseFloat(mystery_dur.elements[0].value), [durations["a_plant_1"], durations["a_plant_2"], durations["a_plant_3"], durations["a_plant_4"], durations["a_plant_5"], durations["a_plant_6"], durations["a_plant_7"], durations["a_plant_8"]]);  document.getElementById("dur_planet_br").innerHTML = gaussian(parseFloat(mystery_dur.elements[0].value), [durations["b_planet_1"], durations["b_planet_2"], durations["b_planet_3"], durations["b_planet_4"], durations["b_planet_5"], durations["b_planet_6"], durations["b_planet_7"]]); document.getElementById("dur_plant_br").innerHTML = gaussian(parseFloat(mystery_dur.elements[0].value), [durations["b_plant_1"], durations["b_plant_2"], durations["b_plant_3"], durations["b_plant_4"], durations["b_plant_5"], durations["b_plant_6"], durations["b_plant_7"]]); '>Compute probabilities from PDF</button>
+
+
+	<div>Unnormalized p(duration | "planetary") for an American speaker: <span id="dur_planet_am"></span></div>
+
+	<div>Unnormalized p(duration | "plant a tree") for an American speaker: <span id="dur_plant_am"></span></div>
+
+	<div>Unnormalized p(duration | "planetary") for a British speaker: <span id="dur_planet_br"></span></div>
+
+	<div>Unnormalized p(duration | "plant a tree") for a British speaker: <span id="dur_plant_br"></span></div>
+
+
+
+
+
+
+	<p>There is one other aspect we will consider for computing the likelihood. Notice how, in the clip we are trying to figure out, there is no "t" sound at the end of the first syllable. If the utterance is "planetary", that is completely expected, since the word is "planetary", not "plantetary". However, if it is "plant a tree", then this utterance could only arise if the speaker had omitted the "t" sound from "plant", making the utterance sound more like "plan a tree." Therefore, if we wish to figure out the likelihood of the utterance being "plant a tree", we have to factor in the odds of the "t" being dropped from "plant".</p>
+
+	<p>As it turns out, speakers of English often do drop the "t" sound (or the "d" sound) from the ends of English words. It is a well-studied phenomenon known as t/d-deletion. Because there already exists literature on this subject, we will draw our estimates of p(t is omitted) from past research. </p>
+
+	<p><a href="http://gregoryrguy.com/wp-content/uploads/Guy1991_explanation_in_variable_phonology_exponential_model.pdf">Guy (1991)</a> studied t/d-deletion in American English; the table below summarizes his findings about the frequency of this deletion for various types of words:</p>
+	<table>
+		<tr>
+			<th>Class</th>
+			<th>N total</th>
+			<th>N deleted</th>
+			<th>% deleted</th>
+			<th>% retained</th>
+		</tr>
+		<tr>
+			<td>Monomorphemic words (e.g. mist, pact)</td>
+			<td>658</td>
+			<td>251</td>
+			<td>38.1</td>
+			<td>61.9</td>
+		</tr>
+		<tr>
+			<td>Past tense of semiweak verbs (e.g. left, told)</td>
+			<td>56</td>
+			<td>19</td>
+			<td>33.9</td>
+			<td>66.1</td>
+		</tr>
+		<tr>
+			<td>Past tense of regular verbs (e.g. missed, packed)</td>
+			<td>181</td>
+			<td>29</td>
+			<td>16.0</td>
+			<td>84.0</td>
+		</tr>
+
+	</table>
+
+	<p><a href="https://search.proquest.com/docview/218156304/fulltextPDF/88FD7D6DDFA04EDAPQ/1?accountid=11752">Tagliamonte and Temple (2005)</a> studied t/d-deletion in British English; their findings are reproduced below:</p>
+	<table>
+		<tr>
+			<th>Class</th>
+			<th>N total</th>
+			<th>% deleted</th>
+		</tr>
+		<tr>
+			<td>Monomorpheme (e.g. mist)</td>
+			<td>716</td>
+			<td>26</td>
+		</tr>
+		<tr>
+			<td>Irregular past (e.g. kept)</td>
+			<td>128</td>
+			<td>21</td>
+		</tr>
+		<tr>
+			<td>Regular past (e.g. missed)</td>
+			<td>388</td>
+			<td>19</td>
+		</tr>
+
+	</table>
+
+	<p>Using these tables, enter p(t is deleted | "plant") for British speakers and American speakers in the slots below. Make sure to choose the right numbers from these tables - you might want to look up "monomorpheme."</p>
+
+	<div>p(t is deleted | "plant") for an American speaker:<form id="p_del_am" action="javascript:void(0);"><input type="text"></form></div>
+	<div>p(t is deleted | "plant") for a British speaker:<form id="p_del_br" action="javascript:void(0);"><input type="text"></form></div>
+
+
+	<p>Now we can compute the full likelihoods. Enter them into the cells below. Your likelihoods should factor in both the length of the relevant portion of audio and the probability of deleting the 't'; assume that these two probabilities are independent.</p>
+	<div>p(observed audio clip | "planetary") for an American speaker:<form id="p_del_am" action="javascript:void(0);"><input type="text"></form></div>
+	<div>p(observed audio clip | "plant a tree") for an American speaker:<form id="p_del_am" action="javascript:void(0);"><input type="text"></form></div>
+	<div>p(observed audio clip | "planetary") for a British speaker:<form id="p_del_br" action="javascript:void(0);"><input type="text"></form></div>
+	<div>p(observed audio clip | "plant a tree") for a British speaker:<form id="p_del_br" action="javascript:void(0);"><input type="text"></form></div>
+
+
+
+
+	<p>Now that we have computed the likelihoods, the final ingredient we need for Bayes' Theorem is the prior probabilities. (Recall that we can ignore the normalizing factor). To estimate the prior probabilities, we will use corpora. We will state that p(planetary) is the proportion of sentences in the corpus in which the word "planetary" appears, while p(plant a tree) is the proportion of sentences in the corpus in which the phrase "plant a tree" appears. Much as whether the speaker is British or American affects how his or her likelihood estimate, the speaker's experience can also affect his or her prior probabilities; for example, an astronomer might have a high prior probability for "planetary" since astronomers often talk about planets, while an ecologist might have a high prior probability for "plant a tree" since ecologists often talk about planting trees.</p>
+
+	<p>To allow for such differences in experience, we have included two sets of sentences below. One is the type of sentences that an astronomer might be exposed to regularly, while the other is the type of sentences that an ecologist might be exposed to regularly. Use these corpora to estmate what the prior probabilities would be for the two different types of experience:</p>
+
+	<div class="corpus">Science fiction has long dreamt of sending humans to other planets. The prospect of colonies on Mars elicits feelings of hope and wonder, and indeed such colonies may be essential to the survival of our species. Though Mars is the most frequently discussed <span style="color:blue">planetary</span> system as a potential future home for humanity, it is far from ideal. The harsh soil, extreme temperatures, and dim sunlight mean that one cannot simply <span style="color:red">plant a tree</span> in its soil and live there in peace like the Little Prince. But Mars at least looks somewhat like Earth. Other <span style="color:blue">planetary</span> entities are too inhospitable to even be considered. There is little hope of creating a colony on a gas giant, Venus's atmosphere would kill a human in multiple ways in a matter of seconds, and Mercury has little atmosphere to speak of. Planetary motion must also be considered. Mercury and Venus are so hostile in large part because of their proximity to the Sun. Pluto's eccentric orbit takes it far beyond the regions we could hope to reach in a reasonable amount of time without major improvements in rocket technology. Of course Pluto is also not technically among the ranks of full-fledged <span style="color:blue">planetary</span> bodies being discussed here, but the category used to classify a heavenly body would not stop us from settling there. In fact, though the gas giants themselves are not welcoming hosts, their larger <span style="color:blue">planetary</span> systems do offer some potential for human habitation. Some of the moons of Jupiter and Saturn are among the most plausible candidates for preexisting extraterrestrial life. While this doesn't mean that we could immediately build a farm or <span style="color:red">plant a tree</span> on them, it would be encouraging to know that other life had already made a home in the place we sought to inhabit. Humanity's next home might not be the rust-red soil of Mars but rather the icy surface of Europa or the dense atmosphere of Titan. The prospect of navigating a shuttle though the <span style="color:blue">planetary</span> debris around Saturn to land in a spaceport on Titan is indeed an exciting one. Even closer to home, our own moon has the distinct advantage of proximity. It remains the only world other than Earth on which humanity has set foot. Perhaps it will become the gateway to a massive <span style="color:blue">planetary</span> network hosting a diverse array of human societies. The sky's the limit - but not for long.</div>
+
+	<div class="corpus">The most widely celebrated way to help our environment is to <span style="color:red">plant a tree</span>. There is an entire holiday, Arbor Day, devoted to the practice. Earth Day festivities often involve having people <span style="color:red">plant a tree</span> as well. Recycling may be important to our <span style="color:blue">planetary</span> well-being, but it doesn't have two holidays dedicated to it. To understand the importance of plants, one can look back into earlier moments during Earth's <span style="color:blue">planetary</span> history. Before the advent of photosynthetic life, there was essentially no oxygen in the atmosphere. When photosynthetic cyanobacteria arose, however, they began a long cycle of increasing the oxygen levels in the air such that now Earth's atmosphere is 21% oxygen. Rarely do living things have such a massive impact on the chemical composition of the planet. The one other case of such an impact is human-caused pollution, which is far less beneficial. If you don't want to <span style="color:red">plant a tree</span>, then consider raising some cyanobacteria. Beyond the atmospheric health of our <span style="color:blue">planetary</span> system, there are many other reasons to <span style="color:red">plant a tree</span>. Trees add welcome touches of nature to gray urban landscapes. Their calm, stately presence is a soothing respite from our often harsh artificial environment. Other animals will thank you as well. Trees provide the main habitat for many other organisms. The first that comes to mind is probably the squirrel, perhaps the animal most likely to <span style="color:red">plant a tree</span>, but there are many others as well. So go out and <span style="color:red">plant a tree</span>! As the saying goes: The best time to <span style="color:red">plant a tree</span> is twenty years ago. The second best time is now.
+	
+	</div>
+
+	<div>Total number of sentences: 20</div>
+	<div>Number of sentences containing "<span style="color:blue">planetary</span>": 6</div>
+	<div>Number of sentences containing "<span style="color:red">plant a tree</span>": 2</div>
+
+
+	<div>p("planetary") for an astronomer:<form id="p_planet_astro" action="javascript:void(0);"><input type="text"></form></div>
+	<div>p("plant a tree") for an astronomer:<form id="p_planet_astro" action="javascript:void(0);"><input type="text"></form></div>
+
+	<div>Total number of sentences: 20</div>
+	<div>Number of sentences containing "<span style="color:blue">planetary</span>": 3</div>
+	<div>Number of sentences containing "<span style="color:red">plant a tree</span>": 7</div>
+
+
+
+	<div>p("planetary") for an ecologist:<form id="p_planet_astro" action="javascript:void(0);"><input type="text"></form></div>
+	<div>p("plant a tree") for an ecologist:<form id="p_planet_astro" action="javascript:void(0);"><input type="text"></form></div>
+
+
+	<p>Now we can use the prior probabilities and the likelihoods from above to compute the posterior probabilities.</p>
+
+	<div class="posterior_box">
+	<div>For an American astronomer:</div>
+
+
+		<div>p("planetary" | observed audio clip) &prop; <form id="post_planet_am_astro" action="javascript:void(0);"><input type="text"></form></div>
+		<div>p("plant a tree" | observed audio clip) &prop; <form id="post_plant_am_astro" action="javascript:void(0);"><input type="text"></form></div>
+		<div>Will an American astronomer interpret this clip as "planetary" or "plant a tree"?</div>
+		<form action="">
+			<input type="radio" name="interp" value="planetary">Planetary<br>
+			<input type="radio" name="interp" value="plant">Plant a tree<br>
+		</form>
+	</div>
+
+	<div class="posterior_box">
+	<div>For an American ecologist:</div>
+
+
+		<div>p("planetary" | observed audio clip) &prop; <form id="post_planet_am_astro" action="javascript:void(0);"><input type="text"></form></div>
+		<div>p("plant a tree" | observed audio clip) &prop; <form id="post_plant_am_astro" action="javascript:void(0);"><input type="text"></form></div>
+		<div>Will an American ecologist interpret this clip as "planetary" or "plant a tree"?</div>
+		<form action="">
+			<input type="radio" name="interp" value="planetary">Planetary<br>
+			<input type="radio" name="interp" value="plant">Plant a tree<br>
+		</form>
+	</div>
+
+	<div class="posterior_box">
+	<div>For a British astronomer:</div>
+
+
+		<div>p("planetary" | observed audio clip) &prop; <form id="post_planet_am_astro" action="javascript:void(0);"><input type="text"></form></div>
+		<div>p("plant a tree" | observed audio clip) &prop; <form id="post_plant_am_astro" action="javascript:void(0);"><input type="text"></form></div>
+		<div>Will a British astronomer interpret this clip as "planetary" or "plant a tree"?</div>
+		<form action="">
+			<input type="radio" name="interp" value="planetary">Planetary<br>
+			<input type="radio" name="interp" value="plant">Plant a tree<br>
+		</form>
+	</div>
+
+	<div class="posterior_box">
+	<div>For a British ecologist:</div>
+
+
+		<div>p("planetary" | observed audio clip) &prop; <form id="post_planet_am_astro" action="javascript:void(0);"><input type="text"></form></div>
+		<div>p("plant a tree" | observed audio clip) &prop; <form id="post_plant_am_astro" action="javascript:void(0);"><input type="text"></form></div>
+		<div>Will a British ecologist interpret this clip as "planetary" or "plant a tree"?</div>
+		<form action="">
+			<input type="radio" name="interp" value="planetary">Planetary<br>
+			<input type="radio" name="interp" value="plant">Plant a tree<br>
+		</form>
+	</div>
+
+
+
+
+
+
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script>
+
+
+	var durations = {
+		"a_plant_1": 0,
+		"a_plant_2": 0,
+		"a_plant_3": 0,
+		"a_plant_4": 0,
+		"a_plant_5": 0,
+		"a_plant_6": 0,
+		"a_plant_7": 0,
+		"a_plant_8": 0,
+		"a_planet_1": 0,
+		"a_planet_2": 0,
+		"a_planet_3": 0,
+		"a_planet_4": 0,
+		"a_planet_5": 0,
+		"a_planet_6": 0,
+		"a_planet_7": 0,
+		"a_planet_8": 0,
+		"b_plant_1": 0,
+		"b_plant_2": 0,
+		"b_plant_3": 0,
+		"b_plant_4": 0,
+		"b_plant_5": 0,
+		"b_plant_6": 0,
+		"b_plant_7": 0,
+		"b_planet_1": 0,
+		"b_planet_2": 0,
+		"b_planet_3": 0,
+		"b_planet_4": 0,
+		"b_planet_5": 0,
+		"b_planet_6": 0,
+		"b_planet_7": 0,
+
+	};	
+
+
+
+
+	var phon_slider = document.getElementById("phonetics_slider");	
+
+
+	phon_slider.oninput = function() {
+		document.getElementById("phon_audio").src = "phon" + this.value + ".wav";
+		document.getElementById("spectrogram_img").src = "phon" + this.value + ".png";
+	}
+
+
+
+	function myFunct() {
+		document.getElementById("here1").innerHTML = "hello";
+	}
+	//a_planet_1_rl.style.left = "100px";
+	//a_planet_1.addEventListener("timeupdate", function() {a_planet_1_rl.style.left = 100 + "px";   };)
+
+	var mousedown = false;
+
+//The 200 values used below really shouldn't be hard coded but I can't get it workign otherwise
+
+	function change_yellow(event, obj_name) {
+		document.getElementById(obj_name + "_yb").style.width = '0px';
+		document.getElementById(obj_name + "_yb").style.left = event.clientX - document.getElementById(obj_name + "_img").offsetLeft + 'px';
+		mousedown = true;
+	}
+
+
+	function mod_yellow(event, obj_name) {
+		if (mousedown) {
+			document.getElementById(obj_name + "_yb").style.width = Math.min(event.clientX - document.getElementById(obj_name + "_img").offsetLeft - parseInt(document.getElementById(obj_name + "_yb").style.left), 200 - parseInt(document.getElementById(obj_name + "_yb").style.left)) + 'px';
+		}
+		
+
+	}
+
+	function end_yellow(event, obj_name) {
+		if (mousedown) {
+			document.getElementById(obj_name + "_yb").style.width = Math.min(event.clientX - document.getElementById(obj_name + "_img").offsetLeft - parseInt(document.getElementById(obj_name + "_yb").style.left),  200 - parseInt(document.getElementById(obj_name + "_yb").style.left) ) + 'px';
+		
+			mousedown = false;
+			document.getElementById(obj_name + "_dur").innerHTML = (parseFloat(document.getElementById(obj_name + "_yb").width) / parseFloat(document.getElementById(obj_name + "_pic").width) * document.getElementById(obj_name).duration).toFixed(3);
+			durations[obj_name] = (parseFloat(document.getElementById(obj_name + "_yb").width) / parseFloat(document.getElementById(obj_name + "_pic").width) * document.getElementById(obj_name).duration);	
+		}	
+	}
+
+	function play_selection(obj_name) {
+
+		var ap1 = document.getElementById(obj_name);
+
+		if (parseFloat(document.getElementById(obj_name + "_yb").width) == 0) {
+			ap1.play();
+		} else {
+			ap1.currentTime = (parseFloat(document.getElementById(obj_name + "_yb").style.left) / (parseFloat(document.getElementById(obj_name + "_pic").width))) * ap1.duration;
+			ap1.play();
+
+			setTimeout(function(){
+				ap1.pause();
+				document.getElementById(obj_name + "_rl").style.left = (parseInt(document.getElementById(obj_name + "_yb").style.width) + parseInt(document.getElementById(obj_name + "_yb").style.left)) + "px";
+			}, ((parseFloat(document.getElementById(obj_name + "_yb").width) / (parseFloat(document.getElementById(obj_name + "_pic").width))) * parseFloat(ap1.duration)) * 1000.0);
+	
+			setTimeout(function(){
+				document.getElementById(obj_name + "_rl").style.left = (parseInt(document.getElementById(obj_name + "_yb").style.width) + parseInt(document.getElementById(obj_name + "_yb").style.left)) + "px";
+			}, ((parseFloat(document.getElementById(obj_name + "_yb").width) / (parseFloat(document.getElementById(obj_name + "_pic").width))) * parseFloat(ap1.duration)) * 1000.0 + 15);
+			
+		
+
+		}
+
+
+
+
+	}
+
+
+function standardDeviation(values){
+  var avg = average(values);
+  
+  var squareDiffs = values.map(function(value){
+    var diff = value - avg;
+    var sqrDiff = diff * diff;
+    return sqrDiff;
+  });
+  
+  var avgSquareDiff = average(squareDiffs);
+
+  var stdDev = Math.sqrt(avgSquareDiff);
+  return stdDev;
+}
+
+function average(data){
+  var sum = data.reduce(function(sum, value){
+    return sum + value;
+  }, 0);
+
+  var avg = sum / data.length;
+  return avg;
+}
+
+
+	var made_normal = false;
+
+	function make_normal() {
+
+
+
+		var a_plant = [durations["a_plant_1"], durations["a_plant_2"], durations["a_plant_3"], durations["a_plant_4"], durations["a_plant_5"], durations["a_plant_6"], durations["a_plant_7"], durations["a_plant_8"]];
+		var b_plant = [durations["b_plant_1"], durations["b_plant_2"], durations["b_plant_3"], durations["b_plant_4"], durations["b_plant_5"], durations["b_plant_6"], durations["b_plant_7"]];
+		var a_planet = [durations["a_planet_1"], durations["a_planet_2"], durations["a_planet_3"], durations["a_planet_4"], durations["a_planet_5"], durations["a_planet_6"], durations["a_planet_7"], durations["a_planet_8"]];
+		var b_planet = [durations["b_planet_1"], durations["b_planet_2"], durations["b_planet_3"], durations["b_planet_4"], durations["b_planet_5"], durations["b_planet_6"], durations["b_planet_7"]];
+
+		if (made_normal) {
+			
+
+
+		d3.select("#am_normal").remove();	
+		d3.select("#am_normal_holder")
+			.append("div")
+				.attr("id", "am_normal");
+		d3.select("#br_normal").remove();	
+		d3.select("#br_normal_holder")
+			.append("div")
+				.attr("id", "br_normal");
+
+
+
+
+		} 
+			made_normal = true;
+
+var data = [];
+var datab = [];
+
+getData(); // popuate data 
+
+// line chart based on http://bl.ocks.org/mbostock/3883245
+var margin = {
+        top: 20,
+        right: 20,
+        bottom: 30,
+        left: 50
+    },
+    width = 400 - margin.left - margin.right,
+    height = 300 - margin.top - margin.bottom;
+
+var x = d3.scale.linear()
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+var line = d3.svg.line()
+    .x(function(d) {
+        return x(d.q);
+    })
+    .y(function(d) {
+        return y(d.p);
+    });
+
+var svg = d3.select("#am_normal").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+x.domain([0,1]);
+y.domain(d3.extent(datab, function(d) {
+    return d.p;
+}));
+
+ext_a = d3.extent(datab, function(d) {
+	    return d.p;
+})
+ext_b = d3.extent(data, function(d) {
+	    return d.p;
+})
+y.domain([Math.min(ext_a[0], ext_b[0]), Math.max(ext_a[1], ext_b[1])]);
+
+
+svg.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
+
+svg.append("g")
+    .attr("class", "y axis")
+    .call(yAxis);
+
+svg.append("path")
+    .datum(data)
+    .attr("class", "line")
+    .attr("d", line);
+
+svg.append("path")
+    .datum(datab)
+    .attr("class", "line")
+    .attr("d", line);
+
+
+function getData() {
+
+// loop to populate data array with 
+// probabily - quantile pairs
+for (var i = 0; i < 100000; i++) {
+    q = normal() // calc random draw from normal dist
+    p = gaussian(q, a_plant) // calc prob of rand draw
+    el = {
+        "q": q,
+        "p": p
+    }
+    data.push(el)
+};
+
+for (var i = 0; i < 100000; i++) {
+    q = normal() // calc random draw from normal dist
+    p = gaussian(q, a_planet) // calc prob of rand draw
+    el = {
+        "q": q,
+        "p": p
+    }
+    datab.push(el)
+};
+
+// need to sort for plotting
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+data.sort(function(x, y) {
+    return x.q - y.q;
+});	
+// need to sort for plotting
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+datab.sort(function(x, y) {
+    return x.q - y.q;
+});	
+}
+
+
+var data = [];
+var datab = [];
+
+getDataBr(); // popuate data 
+
+// line chart based on http://bl.ocks.org/mbostock/3883245
+var margin = {
+        top: 20,
+        right: 20,
+        bottom: 30,
+        left: 50
+    },
+    width = 400 - margin.left - margin.right,
+    height = 300 - margin.top - margin.bottom;
+
+var x = d3.scale.linear()
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+var line = d3.svg.line()
+    .x(function(d) {
+        return x(d.q);
+    })
+    .y(function(d) {
+        return y(d.p);
+    });
+
+var svg = d3.select("#br_normal").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+x.domain([0,1]);
+y.domain(d3.extent(datab, function(d) {
+    return d.p;
+}));
+
+ext_a = d3.extent(datab, function(d) {
+	    return d.p;
+})
+ext_b = d3.extent(data, function(d) {
+	    return d.p;
+})
+y.domain([Math.min(ext_a[0], ext_b[0]), Math.max(ext_a[1], ext_b[1])]);
+
+
+svg.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
+
+svg.append("g")
+    .attr("class", "y axis")
+    .call(yAxis);
+
+svg.append("path")
+    .datum(data)
+    .attr("class", "line")
+    .attr("d", line);
+
+svg.append("path")
+    .datum(datab)
+    .attr("class", "line")
+    .attr("d", line);
+
+
+function getDataBr() {
+
+// loop to populate data array with 
+// probabily - quantile pairs
+for (var i = 0; i < 100000; i++) {
+    q = normal() // calc random draw from normal dist
+    p = gaussian(q, b_plant) // calc prob of rand draw
+    el = {
+        "q": q,
+        "p": p
+    }
+    data.push(el)
+};
+
+for (var i = 0; i < 100000; i++) {
+    q = normal() // calc random draw from normal dist
+    p = gaussian(q, b_planet) // calc prob of rand draw
+    el = {
+        "q": q,
+        "p": p
+    }
+    datab.push(el)
+};
+
+// need to sort for plotting
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+data.sort(function(x, y) {
+    return x.q - y.q;
+});	
+// need to sort for plotting
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+datab.sort(function(x, y) {
+    return x.q - y.q;
+});	
+}
+
+
+	}
+
+
+	var made_histograms = false;
+
+	function make_histogram() {
+
+
+
+		var a_plant = [durations["a_plant_1"], durations["a_plant_2"], durations["a_plant_3"], durations["a_plant_4"], durations["a_plant_5"], durations["a_plant_6"], durations["a_plant_7"], durations["a_plant_8"]];
+		var b_plant = [durations["b_plant_1"], durations["b_plant_2"], durations["b_plant_3"], durations["b_plant_4"], durations["b_plant_5"], durations["b_plant_6"], durations["b_plant_7"]];
+		var a_planet = [durations["a_planet_1"], durations["a_planet_2"], durations["a_planet_3"], durations["a_planet_4"], durations["a_planet_5"], durations["a_planet_6"], durations["a_planet_7"], durations["a_planet_8"]];
+		var b_planet = [durations["b_planet_1"], durations["b_planet_2"], durations["b_planet_3"], durations["b_planet_4"], durations["b_planet_5"], durations["b_planet_6"], durations["b_planet_7"]];
+
+		if (made_histograms) {
+			
+		d3.select("#am_plant").remove();	
+		d3.select("#am_plant_holder")
+			.append("div")
+				.attr("id", "am_plant");
+
+		d3.select("#am_planet").remove();	
+		d3.select("#am_planet_holder")
+			.append("div")
+				.attr("id", "am_planet");
+	
+		d3.select("#br_plant").remove();	
+		d3.select("#br_plant_holder")
+			.append("div")
+				.attr("id", "br_plant");
+
+		d3.select("#br_planet").remove();	
+		d3.select("#br_planet_holder")
+			.append("div")
+				.attr("id", "br_planet");
+
+
+		} 
+			made_histograms = true;
+
+		var color = "red";
+		var formatCount = d3.format(",.0f");
+
+
+		
+		var margin = {top: 20, right: 30, bottom: 30, left: 30},
+		width = 400 - margin.left - margin.right,
+		height = 300 - margin.top - margin.bottom;
+
+		var max = 1; //d3.max(a_plant);
+		var min = 0; //d3.min(a_plant);
+		var x = d3.scale.linear()
+			.domain([min, max])
+			.range([0, width]);
+
+		var data = d3.layout.histogram()
+			 .bins(x.ticks(10))
+			 (a_plant);
+
+		var yMax = d3.max(data, function(d){return d.length});
+		var yMin = d3.min(data, function(d){return d.length});
+		var colorScale = d3.scale.linear()
+			.domain([yMin, yMax])
+			.range([d3.rgb(color).brighter(), d3.rgb(color).darker()]);
+
+		var y = d3.scale.linear()
+			.domain([0, yMax])
+			.range([height, 0]);
+
+		var xAxis = d3.svg.axis()
+			.scale(x)
+			.orient("bottom");
+
+		var svg = d3.select("#am_plant").append("svg")
+			.attr("width", width + margin.left + margin.right)
+			.attr("height", height + margin.top + margin.bottom)
+			.append("g")
+			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+		var bar = svg.selectAll(".bar")
+			.data(data)
+			.enter().append("g")
+			.attr("class", "bar")
+			.attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; });
+
+		bar.append("rect")
+			.attr("x", 1)
+			.attr("width", (x(data[0].dx) - x(0)) - 1)
+			.attr("height", function(d) { return height - y(d.y); })
+			.attr("fill", function(d) { return colorScale(d.y) });
+
+		bar.append("text")
+			.attr("dy", ".75em")
+			.attr("y", -12)
+			.attr("x", (x(data[0].dx) - x(0)) / 2)
+			.attr("text-anchor", "middle")
+			.text(function(d) { return formatCount(d.y); });
+
+		svg.append("g")
+			.attr("class", "x axis")
+			.attr("transform", "translate(0," + height + ")")
+			.call(xAxis);
+//BOUNDARY
+
+		var color = "blue";
+		
+
+		var data = d3.layout.histogram()
+			 .bins(x.ticks(10))
+			 (a_planet);
+
+		var yMax = d3.max(data, function(d){return d.length});
+		var yMin = d3.min(data, function(d){return d.length});
+		var colorScale = d3.scale.linear()
+			.domain([yMin, yMax])
+			.range([d3.rgb(color).brighter(), d3.rgb(color).darker()]);
+
+		var y = d3.scale.linear()
+			.domain([0, yMax])
+			.range([height, 0]);
+
+		var xAxis = d3.svg.axis()
+			.scale(x)
+			.orient("bottom");
+
+		var svg = d3.select("#am_planet").append("svg")
+			.attr("width", width + margin.left + margin.right)
+			.attr("height", height + margin.top + margin.bottom)
+			.append("g")
+			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+		var bar = svg.selectAll(".bar")
+			.data(data)
+			.enter().append("g")
+			.attr("class", "bar")
+			.attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; });
+
+		bar.append("rect")
+			.attr("x", 1)
+			.attr("width", (x(data[0].dx) - x(0)) - 1)
+			.attr("height", function(d) { return height - y(d.y); })
+			.attr("fill", function(d) { return colorScale(d.y) });
+
+		bar.append("text")
+			.attr("dy", ".75em")
+			.attr("y", -12)
+			.attr("x", (x(data[0].dx) - x(0)) / 2)
+			.attr("text-anchor", "middle")
+			.text(function(d) { return formatCount(d.y); });
+
+		svg.append("g")
+			.attr("class", "x axis")
+			.attr("transform", "translate(0," + height + ")")
+			.call(xAxis);
+
+
+
+		var color = "red";
+		var formatCount = d3.format(",.0f");
+
+
+		
+		var margin = {top: 20, right: 30, bottom: 30, left: 30},
+		width = 400 - margin.left - margin.right,
+		height = 300 - margin.top - margin.bottom;
+
+		var max = 1; 
+		var min = 0; 
+		var x = d3.scale.linear()
+			.domain([min, max])
+			.range([0, width]);
+
+		var data = d3.layout.histogram()
+			 .bins(x.ticks(10))
+			 (b_plant);
+
+		var yMax = d3.max(data, function(d){return d.length});
+		var yMin = d3.min(data, function(d){return d.length});
+		var colorScale = d3.scale.linear()
+			.domain([yMin, yMax])
+			.range([d3.rgb(color).brighter(), d3.rgb(color).darker()]);
+
+		var y = d3.scale.linear()
+			.domain([0, yMax])
+			.range([height, 0]);
+
+		var xAxis = d3.svg.axis()
+			.scale(x)
+			.orient("bottom");
+
+		var svg = d3.select("#br_plant").append("svg")
+			.attr("width", width + margin.left + margin.right)
+			.attr("height", height + margin.top + margin.bottom)
+			.append("g")
+			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+		var bar = svg.selectAll(".bar")
+			.data(data)
+			.enter().append("g")
+			.attr("class", "bar")
+			.attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; });
+
+		bar.append("rect")
+			.attr("x", 1)
+			.attr("width", (x(data[0].dx) - x(0)) - 1)
+			.attr("height", function(d) { return height - y(d.y); })
+			.attr("fill", function(d) { return colorScale(d.y) });
+
+		bar.append("text")
+			.attr("dy", ".75em")
+			.attr("y", -12)
+			.attr("x", (x(data[0].dx) - x(0)) / 2)
+			.attr("text-anchor", "middle")
+			.text(function(d) { return formatCount(d.y); });
+
+		svg.append("g")
+			.attr("class", "x axis")
+			.attr("transform", "translate(0," + height + ")")
+			.call(xAxis);
+//BOUNDARY
+
+		var color = "blue";
+		
+
+		var data = d3.layout.histogram()
+			 .bins(x.ticks(10))
+			 (b_planet);
+
+		var yMax = d3.max(data, function(d){return d.length});
+		var yMin = d3.min(data, function(d){return d.length});
+		var colorScale = d3.scale.linear()
+			.domain([yMin, yMax])
+			.range([d3.rgb(color).brighter(), d3.rgb(color).darker()]);
+
+		var y = d3.scale.linear()
+			.domain([0, yMax])
+			.range([height, 0]);
+
+		var xAxis = d3.svg.axis()
+			.scale(x)
+			.orient("bottom");
+
+		var svg = d3.select("#br_planet").append("svg")
+			.attr("width", width + margin.left + margin.right)
+			.attr("height", height + margin.top + margin.bottom)
+			.append("g")
+			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+		var bar = svg.selectAll(".bar")
+			.data(data)
+			.enter().append("g")
+			.attr("class", "bar")
+			.attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; });
+
+		bar.append("rect")
+			.attr("x", 1)
+			.attr("width", (x(data[0].dx) - x(0)) - 1)
+			.attr("height", function(d) { return height - y(d.y); })
+			.attr("fill", function(d) { return colorScale(d.y) });
+
+		bar.append("text")
+			.attr("dy", ".75em")
+			.attr("y", -12)
+			.attr("x", (x(data[0].dx) - x(0)) / 2)
+			.attr("text-anchor", "middle")
+			.text(function(d) { return formatCount(d.y); });
+
+		svg.append("g")
+			.attr("class", "x axis")
+			.attr("transform", "translate(0," + height + ")")
+			.call(xAxis);
+
+
+
+
+
+
+	}
+
+
+// from http://bl.ocks.org/mbostock/4349187
+// Sample from a normal distribution with mean 0, stddev 1.
+function normal() {
+    var x = 0,
+        y = 0,
+        rds, c;
+    do {
+        x = Math.random() * 2 - 1;
+        y = Math.random() * 2 - 1;
+        rds = x * x + y * y;
+    } while (rds == 0 || rds > 1);
+    c = Math.sqrt(-2 * Math.log(rds) / rds); // Box-Muller transform
+    return x * c; // throw away extra sample y * c
+}
+
+
+//taken from Jason Davies science library
+// https://github.com/jasondavies/science.js/
+function gaussian(x, vals) {
+	var gaussianConstant = 1 / Math.sqrt(2 * Math.PI),
+		mean = average(vals),
+    	sigma = standardDeviation(vals);
+
+    x = (x - mean) / sigma;
+    return gaussianConstant * Math.exp(-.5 * x * x) / sigma;
+};
+
+
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+

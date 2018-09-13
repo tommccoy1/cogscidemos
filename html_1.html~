@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:powderblue;">
+
+<h1>My First Heading</h1>
+<h2>My Second Heading</h2>
+<h3>My Third Heading</h3>
+<h4 style="font-family:arial;color:green;">My Fourth Heading</h4>
+<h5>My Fifth Heading</h5>
+<h6>My Sixth Heading</h6>
+<p>My first paragraph. Within this paragraph, I am including a link to <a href="https://tommccoy1.github.io">my personal webpage.</a></p>
+
+<img src="the_dress.jpeg" alt="Image of the dress" width=50 height=40>
+
+<p>And here's another paragraph</p>
+
+<button>Click this button!</button>
+
+<p>Back at it, with even more paragraphs!</p>
+
+<ol>
+	<li>Red</li>
+	<li>Orange</li>
+	<li>Yellow</li>
+	<li>Green</li>
+	<li>Blue</li>
+	<li>Indigo</li>
+	<li>Violet</li>
+</ol>
+
+<ul>
+	<li style="color:red">Red</li>
+	<li>Orange</li>
+	<li>Yellow</li>
+	<li>Green</li>
+	<li>Blue</li>
+	<li>Indigo</li>
+	<li>Violet</li>
+</ul>
+
+<p>Normal paragraph</p>
+<hr>
+<p>Another normal paragraph</p>
+<br>
+<p title="Mouseover text">Yet another normal paragraph, but after a line break.</p>
+
+
+<input type="range" min="1" max="100" value="50" width="200%">
+
+
+
+
+
+</body>
+</html>

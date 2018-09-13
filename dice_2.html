@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="dice.css">
+
+<style>
+</style>
+
+</head>
+<body>
+
+<div id="grid_container">
+
+	<div id="dice_grid">
+
+	</div>
+
+	<div id="prob_choices">
+
+		<div class="dropdown">
+		</div>
+	
+		<div class="dropdown">
+		</div>
+	
+		<div class="dropdown">
+		</div>
+	
+	</div>
+</div>	
+	<br>
+		Roll...
+Sum of two dice...
+Even
+Odd
+Roll contains...
+Roll is greater than...
+Roll is less than...
+</div>
+
+
+<div id="text_block">
+
+<p>Basic probability</p>
+
+<p>Event space: The set of all possible outcomes. In this case, there are 36 possible rolls of the two dice.</p>
+
+<p>Event: any subset of events from the event space. Here are some possible events: You roll (5,6). You roll (3,2). Your roll contains a 5. Your total roll is greater than 8.</p>
+
+<p>For this simulation, we will represent these events more concisely as 56, 32, contains a 5, > 8.</p>
+
+<p>The probability of an event is defined as follows: p(event) = # of outcomes where the event happens / total # of possible outcomes. For example, the probability of 56 is 1/36, because there is only one outcome where the roll is 56 (specifically, that outcome is the one where you roll 5 and 6!), while there are 36 total possible outcomes. We denote the probability of an event as p(event); thus, as a shorter way of saying "the probability of rolling 5,6 is 1/36", we would p(56) = 1/36.</p>
+
+<p>Based on this definition, fill in values for the following probabilities (remember that hovering over the name highlights the relevant region of the event space):</p>
+
+<p>p(<span onmouseover="select('d32');">32</span>), p(<span onmouseover="select('dc5');">contains a 5</span>), p(<span onmouseover="select('dg8');">> 8</span>)</p>
+</div>
+
+	<div id="test">Test text</div>
+<div id="choices">
+	<div class="dropdown">
+		<button onclick="myFunction()" class="dropbtn">Roll...</button>
+		<div id="myDropdown" class="dropdown-content">
+			<p>1,1</p>
+			<p>1,2</p>
+			<p>1,3</p>
+			<p>1,4</p>
+			<p>1,5</p>
+			<p>1,6</p>
+			<p>2,1</p>
+			<p>2,2</p>
+			<p>2,3</p>
+			<p>2,4</p>
+			<p>2,5</p>
+			<p>2,6</p>
+			<p>3,1</p>
+			<p>3,2</p>
+			<p>3,3</p>
+			<p>3,4</p>
+			<p>3,5</p>
+			<p>3,6</p>
+			<p>4,1</p>
+			<p>4,2</p>
+			<p>4,3</p>
+			<p>4,4</p>
+			<p>4,5</p>
+			<p>4,6</p>
+			<p>5,1</p>
+			<p>5,2</p>
+			<p>5,3</p>
+			<p>5,4</p>
+			<p>5,5</p>
+			<p>5,6</p>
+			<p>6,1</p>
+			<p>6,2</p>
+			<p>6,3</p>
+			<p>6,4</p>
+			<p>6,5</p>
+			<p>6,6</p>
+		</div>
+		<button onclick="myFunction()" class="dropbtn">Sum of roll...</button>
+		<div id="myDropdown" class="dropdown-content">
+			<p>2</p>
+			<p>3</p>
+			<p>4</p>
+			<p>5</p>
+			<p>6</p>
+			<p>7</p>
+			<p>8</p>
+			<p>9</p>
+			<p>10</p>
+			<p>11</p>
+			<p>12</p>
+		</div>
+		<button onclick="myFunction()" class="dropbtn">Even or odd...</button>
+		<div id="myDropdown" class="dropdown-content">
+			<p>Even</p>
+			<p>Odd</p>
+		</div>
+
+		<button onclick="myFunction()" class="dropbtn">Contains...</button> 
+                <div id="myDropdown" class="dropdown-content">
+                        <p>1</p>
+                        <p>2</p>
+			<p>3</p>
+			<p>4</p>
+			<p>5</p>
+			<p>6</p>
+                </div>
+
+		<button onclick="myFunction()" class="dropbtn">Sum is greater than...</button> 
+                <div id="myDropdown" class="dropdown-content">
+                        <p>1</p>
+                        <p>2</p>
+			<p>3</p>
+			<p>4</p>
+			<p>5</p>
+			<p>6</p>
+			<p>7</p>
+			<p>8</p>
+			<p>9</p>
+			<p>10</p>
+			<p>11</p>
+                </div>
+
+		<button onclick="myFunction()" class="dropbtn">Sum is less than...</button> 
+                <div id="myDropdown" class="dropdown-content">
+                        <p>2</p>
+			<p>3</p>
+			<p>4</p>
+			<p>5</p>
+			<p>6</p>
+			<p>7</p>
+			<p>8</p>
+			<p>9</p>
+			<p>10</p>
+			<p>11</p>
+			<p>12</p>
+			<p>13</p>
+                </div>
+
+
+
+
+	</div>
+
+
+<script>
+
+var d11 = [die11];
+var d12 = [die12];
+var d13 = [die13];
+var d14 = [die14];
+var d15 = [die15];
+var d16 = [die16];
+var d21 = [die21];
+var d22 = [die22];
+var d23 = [die23];
+var d24 = [die24];
+var d25 = [die25];
+var d26 = [die26];
+var d31 = [die31];
+var d32 = [die32];
+var d33 = [die33];
+var d34 = [die34];
+var d35 = [die35];
+var d36 = [die36];
+var d41 = [die41];
+var d42 = [die42];
+var d43 = [die43];
+var d44 = [die44];
+var d45 = [die45];
+var d46 = [die46];
+var d51 = [die51];
+var d52 = [die52];
+var d53 = [die53];
+var d54 = [die54];
+var d55 = [die55];
+var d56 = [die56];
+var d61 = [die61];
+var d62 = [die62];
+var d63 = [die63];
+var d64 = [die64];
+var d65 = [die65];
+var d66 = [die66];
+var ds2 = d11;
+var ds3 = d12.concat(d21); 
+var ds4 = d13.concat(d22, d31); 
+var ds5 = d14.concat(d23, d32, d41);
+var ds6 = d15.concat(d24, d33, d42, d51);
+var ds7 = d16.concat(d25, d34, d43, d52, d61);
+var ds8 = d26.concat(d35, d44, d53, d62);
+var ds9 = d36.concat(d45, d54, d63);
+var ds10 = d46.concat(d55, d64);
+var ds11 = d56.concat(d65);
+var ds12 = d66;
+var deven = ds2.concat(ds4, ds6, ds8, ds10, ds12);
+var dodd = ds3.concat(ds5, ds7, ds9, ds11);
+var dc1 = d11.concat(d12, d13, d14, d15, d16, d21, d31, d41, d51, d61); 
+var dc2 = d21.concat(d22, d23, d24, d25, d26, d12, d32, d42, d52, d62);
+var dc3 = d31.concat(d32, d33, d34, d35, d36, d13, d23, d43, d53, d63);
+var dc4 = d41.concat(d42, d43, d44, d45, d46, d14, d24, d34, d54, d64);
+var dc5 = d51.concat(d52, d53, d54, d55, d56, d15, d25, d35, d45, d65);
+var dc6 = d61.concat(d62, d63, d64, d65, d66, d16, d26, d36, d46, d56);
+var dl3 = d11;
+var dl4 = ds3.concat(dl3);
+var dl5 = ds4.concat(dl4);
+var dl6 = ds5.concat(dl5);
+var dl7 = ds6.concat(dl6);
+var dl8 = ds7.concat(dl7);
+var dl9 = ds8.concat(dl8);
+var dl10 = ds9.concat(dl9);
+var dl11 = ds10.concat(dl10);
+var dl12 = ds11.concat(dl11);
+var dg11 = d66;
+var dg10 = ds11.concat(dg11);
+var dg9 = ds10.concat(dg10);
+var dg8 = ds9.concat(dg9);
+var dg7 = ds8.concat(dg8);
+var dg6 = ds7.concat(dg7);
+var dg5 = ds6.concat(dg6);
+var dg4 = ds5.concat(dg5);
+var dg3 = ds4.concat(dg4);
+var dg2 = ds3.concat(dg3);
+
+
+var id_to_var = {
+	"d11": d11,
+	"d12": d12,
+	"d13": d13,
+	"d14": d14,
+	"d15": d15,
+	"d16": d16,
+	"d21": d21,
+	"d22": d22,
+	"d23": d23,
+	"d24": d24,
+	"d25": d25,
+	"d26": d26,
+	"d31": d31,
+	"d32": d32,
+	"d33": d33,
+	"d34": d34,
+	"d35": d35,
+	"d36": d36,
+	"d41": d41,
+	"d42": d42,
+	"d43": d43,
+	"d44": d44,
+	"d45": d45,
+	"d46": d46,
+	"d51": d51,
+	"d52": d52,
+	"d53": d53,
+	"d54": d54,
+	"d55": d55,
+	"d56": d56,
+	"d61": d61,
+	"d62": d62,
+	"d63": d63,
+	"d64": d64,
+	"d65": d65,
+	"d66": d66,
+	"ds2": ds2,
+	"ds3": ds3,
+	"ds4": ds4,
+	"ds5": ds5,
+	"ds6": ds6,
+	"ds7": ds7,
+	"ds8": ds8,
+	"ds9": ds9,
+	"ds10": ds10,
+	"ds11": ds11,
+	"ds12": ds12,	
+	"even": deven,
+	"odd": dodd,
+	"dc1": dc1,
+	"dc2": dc2,
+	"dc3": dc3,
+	"dc4": dc4,
+	"dc5": dc5,
+	"dc6": dc6,
+	"dl3": dl3,
+	"dl4": dl4,
+	"dl5": dl5,
+	"dl6": dl6,
+	"dl7": dl7,
+	"dl8": dl8,
+	"dl9": dl9,
+	"dl10": dl10,
+	"dl11": dl11,
+	"dl12": dl12,
+	"dg11": dg11,
+	"dg10": dg10,
+	"dg9": dg9,
+	"dg8": dg8,
+	"dg7": dg7,
+	"dg6": dg6,
+	"dg5": dg5,
+	"dg4": dg4,
+	"dg3": dg3,
+	"dg2": dg2
+}
+
+function select(div_id) {
+	var all_dice = document.getElementsByClassName("die");
+	for (i = 0; i<all_dice.length; i++) {
+		document.getElementById("blue" + all_dice[i].id.substring(3)).style.opacity = 0.0; 
+	}
+	
+	for (i = 0; i<id_to_var[div_id].length; i++) {
+		document.getElementById("blue" + id_to_var[div_id][i].id.substring(3)).style.opacity = 0.3; 
+	}
+
+}
+
+
+function select_y(div_id) {
+	var all_dice = document.getElementsByClassName("die");
+	for (i = 0; i<all_dice.length; i++) {
+		document.getElementById("yellow" + all_dice[i].id.substring(3)).style.opacity = 0.0; 
+	}
+	
+	for (i = 0; i<id_to_var[div_id].length; i++) {
+		document.getElementById("yellow" + id_to_var[div_id][i].id.substring(3)).style.opacity = 0.5; 
+	}
+}
+
+
+function select_c(div_id) {
+	var all_dice = document.getElementsByClassName("die");
+	for (i = 0; i<all_dice.length; i++) {
+		all_dice[i].style.opacity = 0.0;
+	}
+	
+	for (i = 0; i<id_to_var[div_id].length; i++) {
+		id_to_var[div_id][i].style.opacity = 1.0;
+	}
+}
+
+
+
+function given(div_id) {
+	var all_dice = document.getElementsByClassName("die");
+	for (i = 0; i<all_dice.length; i++) {
+		all_dice[i].style.opacity = 0.01;
+		all_dice[i].style.background = "white";
+	}
+	
+	for (i = 0; i<id_to_var[div_id].length; i++) {
+		id_to_var[div_id][i].style.opacity = 1.0;
+		//id_to_var[div_id][i].style.background = "blue";
+	}
+
+}
+
+
+//select("odd");
+
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction(dropid) {
+    document.getElementById(dropid).classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
+document.getElementById("roll11").onclick = function() {select('d11')};
+document.getElementById("roll12").onclick = function() {select('d12')};
+document.getElementById("roll13").onclick = function() {select('d13')};
+document.getElementById("roll14").onclick = function() {select('d14')};
+document.getElementById("roll15").onclick = function() {select('d15')};
+document.getElementById("roll16").onclick = function() {select('d16')};
+document.getElementById("roll21").onclick = function() {select('d21')};
+document.getElementById("roll22").onclick = function() {select('d22')};
+document.getElementById("roll23").onclick = function() {select('d23')};
+document.getElementById("roll24").onclick = function() {select('d24')};
+document.getElementById("roll25").onclick = function() {select('d25')};
+document.getElementById("roll26").onclick = function() {select('d26')};
+document.getElementById("roll31").onclick = function() {select('d31')};
+document.getElementById("roll32").onclick = function() {select('d32')};
+document.getElementById("roll33").onclick = function() {select('d33')};
+document.getElementById("roll34").onclick = function() {select('d34')};
+document.getElementById("roll35").onclick = function() {select('d35')};
+document.getElementById("roll36").onclick = function() {select('d36')};
+document.getElementById("roll41").onclick = function() {select('d41')};
+document.getElementById("roll42").onclick = function() {select('d42')};
+document.getElementById("roll43").onclick = function() {select('d43')};
+document.getElementById("roll44").onclick = function() {select('d44')};
+document.getElementById("roll45").onclick = function() {select('d45')};
+document.getElementById("roll46").onclick = function() {select('d46')};
+document.getElementById("roll51").onclick = function() {select('d51')};
+document.getElementById("roll52").onclick = function() {select('d52')};
+document.getElementById("roll53").onclick = function() {select('d53')};
+document.getElementById("roll54").onclick = function() {select('d54')};
+document.getElementById("roll55").onclick = function() {select('d55')};
+document.getElementById("roll56").onclick = function() {select('d56')};
+document.getElementById("roll61").onclick = function() {select('d61')};
+document.getElementById("roll62").onclick = function() {select('d62')};
+document.getElementById("roll63").onclick = function() {select('d63')};
+document.getElementById("roll64").onclick = function() {select('d64')};
+document.getElementById("roll65").onclick = function() {select('d65')};
+document.getElementById("roll66").onclick = function() {select('d66')};
+
+document.getElementById("rolls2").onclick = function() {select('ds2')};
+document.getElementById("rolls3").onclick = function() {select('ds3')};
+document.getElementById("rolls4").onclick = function() {select('ds4')};
+document.getElementById("rolls5").onclick = function() {select('ds5')};
+document.getElementById("rolls6").onclick = function() {select('ds6')};
+document.getElementById("rolls7").onclick = function() {select('ds7')};
+document.getElementById("rolls8").onclick = function() {select('ds8')};
+document.getElementById("rolls9").onclick = function() {select('ds9')};
+document.getElementById("rolls10").onclick = function() {select('ds10')};
+document.getElementById("rolls11").onclick = function() {select('ds11')};
+document.getElementById("rolls12").onclick = function() {select('ds12')};
+
+document.getElementById("rolll3").onclick = function() {select('dl3')};
+document.getElementById("rolll4").onclick = function() {select('dl4')};
+document.getElementById("rolll5").onclick = function() {select('dl5')};
+document.getElementById("rolll6").onclick = function() {select('dl6')};
+document.getElementById("rolll7").onclick = function() {select('dl7')};
+document.getElementById("rolll8").onclick = function() {select('dl8')};
+document.getElementById("rolll9").onclick = function() {select('dl9')};
+document.getElementById("rolll10").onclick = function() {select('dl10')};
+document.getElementById("rolll11").onclick = function() {select('dl11')};
+document.getElementById("rolll12").onclick = function() {select('dl12')};
+document.getElementById("rolll13").onclick = function() {select('dl13')};
+
+document.getElementById("rollg1").onclick = function() {select('dg1')};
+document.getElementById("rollg2").onclick = function() {select('dg2')};
+document.getElementById("rollg3").onclick = function() {select('dg3')};
+document.getElementById("rollg4").onclick = function() {select('dg4')};
+document.getElementById("rollg5").onclick = function() {select('dg5')};
+document.getElementById("rollg6").onclick = function() {select('dg6')};
+document.getElementById("rollg7").onclick = function() {select('dg7')};
+document.getElementById("rollg8").onclick = function() {select('dg8')};
+document.getElementById("rollg9").onclick = function() {select('dg9')};
+document.getElementById("rollg10").onclick = function() {select('dg10')};
+document.getElementById("rollg11").onclick = function() {select('dg11')};
+
+document.getElementById("rolleven").onclick = function() {select('even')};
+document.getElementById("rollodd").onclick = function() {select('odd')};
+
+document.getElementById("rollc1").onclick = function() {select('dc1')};
+document.getElementById("rollc2").onclick = function() {select('dc2')};
+document.getElementById("rollc3").onclick = function() {select('dc3')};
+document.getElementById("rollc4").onclick = function() {select('dc4')};
+document.getElementById("rollc5").onclick = function() {select('dc5')};
+document.getElementById("rollc6").onclick = function() {select('dc6')};
+
+
+
+document.getElementById("roll11b").onclick = function() {select_y('d11')};
+document.getElementById("roll12b").onclick = function() {select_y('d12')};
+document.getElementById("roll13b").onclick = function() {select_y('d13')};
+document.getElementById("roll14b").onclick = function() {select_y('d14')};
+document.getElementById("roll15b").onclick = function() {select_y('d15')};
+document.getElementById("roll16b").onclick = function() {select_y('d16')};
+document.getElementById("roll21b").onclick = function() {select_y('d21')};
+document.getElementById("roll22b").onclick = function() {select_y('d22')};
+document.getElementById("roll23b").onclick = function() {select_y('d23')};
+document.getElementById("roll24b").onclick = function() {select_y('d24')};
+document.getElementById("roll25b").onclick = function() {select_y('d25')};
+document.getElementById("roll26b").onclick = function() {select_y('d26')};
+document.getElementById("roll31b").onclick = function() {select_y('d31')};
+document.getElementById("roll32b").onclick = function() {select_y('d32')};
+document.getElementById("roll33b").onclick = function() {select_y('d33')};
+document.getElementById("roll34b").onclick = function() {select_y('d34')};
+document.getElementById("roll35b").onclick = function() {select_y('d35')};
+document.getElementById("roll36b").onclick = function() {select_y('d36')};
+document.getElementById("roll41b").onclick = function() {select_y('d41')};
+document.getElementById("roll42b").onclick = function() {select_y('d42')};
+document.getElementById("roll43b").onclick = function() {select_y('d43')};
+document.getElementById("roll44b").onclick = function() {select_y('d44')};
+document.getElementById("roll45b").onclick = function() {select_y('d45')};
+document.getElementById("roll46b").onclick = function() {select_y('d46')};
+document.getElementById("roll51b").onclick = function() {select_y('d51')};
+document.getElementById("roll52b").onclick = function() {select_y('d52')};
+document.getElementById("roll53b").onclick = function() {select_y('d53')};
+document.getElementById("roll54b").onclick = function() {select_y('d54')};
+document.getElementById("roll55b").onclick = function() {select_y('d55')};
+document.getElementById("roll56b").onclick = function() {select_y('d56')};
+document.getElementById("roll61b").onclick = function() {select_y('d61')};
+document.getElementById("roll62b").onclick = function() {select_y('d62')};
+document.getElementById("roll63b").onclick = function() {select_y('d63')};
+document.getElementById("roll64b").onclick = function() {select_y('d64')};
+document.getElementById("roll65b").onclick = function() {select_y('d65')};
+document.getElementById("roll66b").onclick = function() {select_y('d66')};
+
+document.getElementById("rolls2b").onclick = function() {select_y('ds2')};
+document.getElementById("rolls3b").onclick = function() {select_y('ds3')};
+document.getElementById("rolls4b").onclick = function() {select_y('ds4')};
+document.getElementById("rolls5b").onclick = function() {select_y('ds5')};
+document.getElementById("rolls6b").onclick = function() {select_y('ds6')};
+document.getElementById("rolls7b").onclick = function() {select_y('ds7')};
+document.getElementById("rolls8b").onclick = function() {select_y('ds8')};
+document.getElementById("rolls9b").onclick = function() {select_y('ds9')};
+document.getElementById("rolls10b").onclick = function() {select_y('ds10')};
+document.getElementById("rolls11b").onclick = function() {select_y('ds11')};
+document.getElementById("rolls12b").onclick = function() {select_y('ds12')};
+
+document.getElementById("rolll3b").onclick = function() {select_y('dl3')};
+document.getElementById("rolll4b").onclick = function() {select_y('dl4')};
+document.getElementById("rolll5b").onclick = function() {select_y('dl5')};
+document.getElementById("rolll6b").onclick = function() {select_y('dl6')};
+document.getElementById("rolll7b").onclick = function() {select_y('dl7')};
+document.getElementById("rolll8b").onclick = function() {select_y('dl8')};
+document.getElementById("rolll9b").onclick = function() {select_y('dl9')};
+document.getElementById("rolll10b").onclick = function() {select_y('dl10')};
+document.getElementById("rolll11b").onclick = function() {select_y('dl11')};
+document.getElementById("rolll12b").onclick = function() {select_y('dl12')};
+document.getElementById("rolll13b").onclick = function() {select_y('dl13')};
+
+document.getElementById("rollg1b").onclick = function() {select_y('dg1')};
+document.getElementById("rollg2b").onclick = function() {select_y('dg2')};
+document.getElementById("rollg3b").onclick = function() {select_y('dg3')};
+document.getElementById("rollg4b").onclick = function() {select_y('dg4')};
+document.getElementById("rollg5b").onclick = function() {select_y('dg5')};
+document.getElementById("rollg6b").onclick = function() {select_y('dg6')};
+document.getElementById("rollg7b").onclick = function() {select_y('dg7')};
+document.getElementById("rollg8b").onclick = function() {select_y('dg8')};
+document.getElementById("rollg9b").onclick = function() {select_y('dg9')};
+document.getElementById("rollg10b").onclick = function() {select_y('dg10')};
+document.getElementById("rollg11b").onclick = function() {select_y('dg11')};
+
+document.getElementById("rollevenb").onclick = function() {select_y('even')};
+document.getElementById("rolloddb").onclick = function() {select_y('odd')};
+
+document.getElementById("rollc1b").onclick = function() {select_y('dc1')};
+document.getElementById("rollc2b").onclick = function() {select_y('dc2')};
+document.getElementById("rollc3b").onclick = function() {select_y('dc3')};
+document.getElementById("rollc4b").onclick = function() {select_y('dc4')};
+document.getElementById("rollc5b").onclick = function() {select_y('dc5')};
+document.getElementById("rollc6b").onclick = function() {select_y('dc6')};
+
+
+
+
+document.getElementById("roll11c").onclick = function() {select_c('d11')};
+document.getElementById("roll12c").onclick = function() {select_c('d12')};
+document.getElementById("roll13c").onclick = function() {select_c('d13')};
+document.getElementById("roll14c").onclick = function() {select_c('d14')};
+document.getElementById("roll15c").onclick = function() {select_c('d15')};
+document.getElementById("roll16c").onclick = function() {select_c('d16')};
+document.getElementById("roll21c").onclick = function() {select_c('d21')};
+document.getElementById("roll22c").onclick = function() {select_c('d22')};
+document.getElementById("roll23c").onclick = function() {select_c('d23')};
+document.getElementById("roll24c").onclick = function() {select_c('d24')};
+document.getElementById("roll25c").onclick = function() {select_c('d25')};
+document.getElementById("roll26c").onclick = function() {select_c('d26')};
+document.getElementById("roll31c").onclick = function() {select_c('d31')};
+document.getElementById("roll32c").onclick = function() {select_c('d32')};
+document.getElementById("roll33c").onclick = function() {select_c('d33')};
+document.getElementById("roll34c").onclick = function() {select_c('d34')};
+document.getElementById("roll35c").onclick = function() {select_c('d35')};
+document.getElementById("roll36c").onclick = function() {select_c('d36')};
+document.getElementById("roll41c").onclick = function() {select_c('d41')};
+document.getElementById("roll42c").onclick = function() {select_c('d42')};
+document.getElementById("roll43c").onclick = function() {select_c('d43')};
+document.getElementById("roll44c").onclick = function() {select_c('d44')};
+document.getElementById("roll45c").onclick = function() {select_c('d45')};
+document.getElementById("roll46c").onclick = function() {select_c('d46')};
+document.getElementById("roll51c").onclick = function() {select_c('d51')};
+document.getElementById("roll52c").onclick = function() {select_c('d52')};
+document.getElementById("roll53c").onclick = function() {select_c('d53')};
+document.getElementById("roll54c").onclick = function() {select_c('d54')};
+document.getElementById("roll55c").onclick = function() {select_c('d55')};
+document.getElementById("roll56c").onclick = function() {select_c('d56')};
+document.getElementById("roll61c").onclick = function() {select_c('d61')};
+document.getElementById("roll62c").onclick = function() {select_c('d62')};
+document.getElementById("roll63c").onclick = function() {select_c('d63')};
+document.getElementById("roll64c").onclick = function() {select_c('d64')};
+document.getElementById("roll65c").onclick = function() {select_c('d65')};
+document.getElementById("roll66c").onclick = function() {select_c('d66')};
+
+document.getElementById("rolls2c").onclick = function() {select_c('ds2')};
+document.getElementById("rolls3c").onclick = function() {select_c('ds3')};
+document.getElementById("rolls4c").onclick = function() {select_c('ds4')};
+document.getElementById("rolls5c").onclick = function() {select_c('ds5')};
+document.getElementById("rolls6c").onclick = function() {select_c('ds6')};
+document.getElementById("rolls7c").onclick = function() {select_c('ds7')};
+document.getElementById("rolls8c").onclick = function() {select_c('ds8')};
+document.getElementById("rolls9c").onclick = function() {select_c('ds9')};
+document.getElementById("rolls10c").onclick = function() {select_c('ds10')};
+document.getElementById("rolls11c").onclick = function() {select_c('ds11')};
+document.getElementById("rolls12c").onclick = function() {select_c('ds12')};
+
+document.getElementById("rolll3c").onclick = function() {select_c('dl3')};
+document.getElementById("rolll4c").onclick = function() {select_c('dl4')};
+document.getElementById("rolll5c").onclick = function() {select_c('dl5')};
+document.getElementById("rolll6c").onclick = function() {select_c('dl6')};
+document.getElementById("rolll7c").onclick = function() {select_c('dl7')};
+document.getElementById("rolll8c").onclick = function() {select_c('dl8')};
+document.getElementById("rolll9c").onclick = function() {select_c('dl9')};
+document.getElementById("rolll10c").onclick = function() {select_c('dl10')};
+document.getElementById("rolll11c").onclick = function() {select_c('dl11')};
+document.getElementById("rolll12c").onclick = function() {select_c('dl12')};
+document.getElementById("rolll13c").onclick = function() {select_c('dl13')};
+
+document.getElementById("rollg1c").onclick = function() {select_c('dg1')};
+document.getElementById("rollg2c").onclick = function() {select_c('dg2')};
+document.getElementById("rollg3c").onclick = function() {select_c('dg3')};
+document.getElementById("rollg4c").onclick = function() {select_c('dg4')};
+document.getElementById("rollg5c").onclick = function() {select_c('dg5')};
+document.getElementById("rollg6c").onclick = function() {select_c('dg6')};
+document.getElementById("rollg7c").onclick = function() {select_c('dg7')};
+document.getElementById("rollg8c").onclick = function() {select_c('dg8')};
+document.getElementById("rollg9c").onclick = function() {select_c('dg9')};
+document.getElementById("rollg10c").onclick = function() {select_c('dg10')};
+document.getElementById("rollg11c").onclick = function() {select_c('dg11')};
+
+document.getElementById("rollevenc").onclick = function() {select_c('even')};
+document.getElementById("rolloddc").onclick = function() {select_c('odd')};
+
+document.getElementById("rollc1c").onclick = function() {select_c('dc1')};
+document.getElementById("rollc2c").onclick = function() {select_c('dc2')};
+document.getElementById("rollc3c").onclick = function() {select_c('dc3')};
+document.getElementById("rollc4c").onclick = function() {select_c('dc4')};
+document.getElementById("rollc5c").onclick = function() {select_c('dc5')};
+document.getElementById("rollc6c").onclick = function() {select_c('dc6')};
+
+
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+

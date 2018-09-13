@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="dress_slider.css">
+
+<style>
+canvas { width: 100%; height: 100% }
+</style>
+
+</head>
+<body>
+
+	<p>Let's take another look at Bayes' Theorem to recap its importance. Here it is again&mdash;as before, hover over any term in the equation for a summary of what that term means:</p>
+
+<div id="bayes_box">
+<div id="lhs" onmouseover="changeColor(this);reveal(posterior_explain)" onmouseout="normalColor(this);hide(posterior_explain)">
+<p>p(A|B)</p>
+</div>
+
+<div id="eq_sign">
+<p>=</p>
+</div>
+
+<div id="rhs">
+<div id="likelihood" onmouseover="changeColor(this);reveal(likelihood_explain)" onmouseout="normalColor(this);hide(likelihood_explain)">
+<p>p(B|A)</p>
+</div>
+
+<div id="prior" onmouseover="changeColor(this);reveal(prior_explain)" onmouseout="normalColor(this);hide(prior_explain)">
+<p>p(A)</p>
+</div>
+<div id="z" onmouseover="changeColor(this);reveal(z_explain)" onmouseout="normalColor(this);hide(z_explain)">
+<p>p(B)</p>
+</div>
+
+<div id="fraction_line">
+        <img src="black_line.png" width="100%" height="100%">
+</div>
+
+</div>
+</div>
+
+<div id="explain_boxes">
+<div id="posterior_explain" class="explain_box">
+        <p><strong>The posterior probability</strong>: The probability that A is true, based on some knowledge or observation B. It is called the "posterior" probability because posterior means later or after, and it is the probability of A after you have observed B.</p>
+</div>
+
+
+<div id="likelihood_explain" class="explain_box">
+        <p><strong>The likelihood</strong>: The probability of your observation B, assuming that A is true. </p>
+</div>
+
+
+<div id="prior_explain" class="explain_box">
+        <p><strong>The prior probability</strong>: The probability that A is true, without any other knowledge about the state of the world. It is called the "prior" probability because prior means before, and it is the probability of A before you have made your observation B.</p>
+</div>
+
+
+<div id="z_explain" class="explain_box">
+        <p>There is no special name for this term, but you could refer to it as the <em>normalizing constant</em>. It is the probability of the observation B.</p>
+</div>
+</div>
+
+<p>And here is Bayes' Theorem for our specific case:</p>
+
+<div id="bayes_box_dress">
+<div id="lhs_dress">
+<p>p(black and blue | image)</p>
+</div>
+
+<div id="eq_sign_dress">
+<p>=</p>
+</div>
+
+<div id="rhs_dress">
+<div id="likelihood_dress">
+<p>p(image | black and blue)</p>
+</div>
+
+<div id="prior_dress">
+<p>p(black and blue)</p>
+</div>
+<div id="z_dress">
+<p>p(image)</p>
+</div>
+
+<div id="fraction_line_dress">
+        <img src="black_line.png" width="100%" height="100%">
+</div>
+
+</div>
+</div>
+
+<div id="bayes_box_dress_2">
+<div id="lhs_dress_2">
+<p>p(white and gold | image)</p>
+</div>
+
+<div id="eq_sign_dress_2">
+<p>=</p>
+</div>
+
+<div id="rhs_dress_2">
+<div id="likelihood_dress_2">
+<p>p(image | white and gold)</p>
+</div>
+
+<div id="prior_dress_2">
+<p>p(white and gold)</p>
+</div>
+<div id="z_dress_2">
+<p>p(image)</p>
+</div>
+
+<div id="fraction_line_dress_2">
+        <img src="black_line.png" width="100%" height="100%">
+</div>
+
+</div>
+</div>
+
+<p>Bayes' Theorem is generally used to evaluate the probability of some hypothesis in light of some evidence. In this case, the hypothesis is that the dress is black and blue, and the evidence is the image, and the posterior probability, i.e. p(black and blue | image), expresses the probability of this hypothesis based on this evidence.</p>
+
+<p>This posterior probability is in a form that we cannot directly evaluate, however, and this is where Bayes' Theorem comes to the rescue: it expresses this posterior probability in terms of other expressions that we can evaluate.</p>
+
+<p>The two keys elements of our expanded expression are the likelihood, p(image | black and blue), and the prior probability, p(black and blue). The likelihood is the probability that we would observe our evidence (the image) assuming that our hypothesis is true, while the prior probability is the probability of our hypothesis being true without any evidence for or against it. Bayes' Theorem is useful in cases where we are able not able to directly model the posterior but are able to model the likelihood and the prior; and this turns out to cover many interesting areas of study in cognitive science as well as many other fields.</p>
+
+<p>The final term of the equation is the normalizing constant, p(image). This term is necessary to ensure that, if we sum across the probabilities of all hypotheses, the total probability is 1.0.</p>
+
+<p>To get more of a feel of how the prior probability, likelihood, and normalizing constant effect the posterior probability, play with the sliders below. (Technical note: We are acting as if, whenever you manually adjust the normalizing constant, the priors and likelihoods are scaled accordingly so as to preserve their ratios while generating the desired normalizing constant.) </p>
+
+<div id="pair_container">
+
+<div id="dress_lady_container">
+<img id="man" src="dress_lady.png" width="10%"></img>
+<div id="frame_2"><img src="frame.png" width="100%" height=100%></div>
+<div id="dress_pic_2"><img src="the_dress.jpeg" width="100%"></div>
+
+<div id="curtain_2">
+<div id="l_curtain_2"><img src="curtain_left.png" width="100%" height="100%"></div>
+<div id="r_curtain_2"><img src="curtain_right.png" width="100%" height="100%"></div>
+</div>
+
+<div id="bubble"><img src="thought_bubble.png" width="100%" height="100%"></div>
+
+<div id="blue_bubble"><img src="blue_dress_straight.png" width="100%"></div>
+<div id="white_bubble"><img src="white_dress_straight.png" width="100%"></div>
+<div id="thought"></div>
+
+</div>
+
+
+<div id="piechart"></div>
+
+
+
+<div id="all_sliders">
+<div id="prior_sliders">
+	<p style="bottom:0;left:0;border-style:solid;width:100px;position:absolute;"><b>Priors</b></p>
+	<div class="left_slider">
+	<p>p(black and blue)</p>
+        <input type="range" min="0" max="100" value="50" class="slider" id="prior_blue">
+	</div>
+
+	<div class="right_slider">
+	<p>p(white and gold)</p>
+        <input type="range" min="0" max="100" value="50" class="slider" id="prior_white">
+	</div>
+
+</div>
+<br>
+<div id="lik_sliders">
+	<p style="bottom:0;left:0;border-style:solid;width:100px;position:absolute;"><b>Likelihoods</b></p>
+	<div class="left_slider">
+	<p>p(image | black and blue)</p>
+        <input type="range" min="0" max="100" value="50" class="slider" id="lik_blue">
+	</div>
+
+	<div class="right_slider">
+	<p>p(image | white and gold)</p>
+        <input type="range" min="0" max="100" value="50" class="slider" id="lik_white">
+	</div>
+
+</div>
+
+<br>
+<div id="norm_slider">
+	<p style="bottom:0;left:0;border-style:solid;width:100px;position:absolute;"><b>Normalizing constant</b></p>
+	<div class="center_slider">
+	<p>p(image)</p>
+        <input type="range" min="1" max="100" value="50" class="slider" id="norm">
+	</div>
+
+</div>
+</div>
+
+</div>
+
+
+<p>Did you notice how, when you crossed the posterior probability threshold between white/gold and black/blue, the woman's perception of the dress changed instantly? This is an example of <i>categorical perception</i>, a phenomenon where people automatically place continuous inputs into discrete bins.</p>
+
+<p>Another thing you should have noticed is that changing the normalizing constant had no effect on the posterior probabilities. (If you didn't notice that, try it out with the sliders!) This makes sense if you look back at our versions of Bayes' Theorem expressed for the case of the dress: Both equations (the one for p(black and blue | image) and the one for p(white and gold | image)) have p(image) in their denominators. But for purposes of determining whether black/blue or white/gold has a higher posterior probability, we don't care about the <i>absolute</i> values of the posterior probabilities but rather about their <i>relative</i> values&mdash;i.e. which one is larger. This ranking is not affected by the value of the normalizing constant, because if we know that p(black and blue | image) &gt; p(white and gold | image), it is also the case that c * p(black and blue | image) &gt; p(white and gold | image) for any positive constant c. 1/p(image) is such a constant, so we can simply ignore it as long as all we care about is the relative ranking of the various posterior probabilities.</p> 
+
+<p>With this fact in mind, we can now rewrite Bayes' Theorem as follows:</p>
+
+
+<div id="bayes_box_2">
+<div id="lhs_2" onmouseover="changeColor(this);reveal(posterior_explain_2)" onmouseout="normalColor(this);hide(posterior_explain_2)">
+<p>p(A|B)</p>
+</div>
+
+<div id="eq_sign_2" onmouseover="changeColor(this);reveal(alpha_explain)" onmouseout="normalColor(this);hide(alpha_explain)">
+<p>&prop;</p>
+</div>
+
+<div id="rhs_2">
+<div id="likelihood_2" onmouseover="changeColor(this);reveal(likelihood_explain_2)" onmouseout="normalColor(this);hide(likelihood_explain_2)">
+<p>p(B|A)</p>
+</div>
+
+<div id="prior_2" onmouseover="changeColor(this);reveal(prior_explain_2)" onmouseout="normalColor(this);hide(prior_explain_2)">
+<p>p(A)</p>
+</div>
+
+
+</div>
+</div>
+
+<div id="explain_boxes_2">
+<div id="posterior_explain_2" class="explain_box_2">
+        <p><strong>The posterior probability</strong>: The probability that A is true, based on some knowledge or observation B. It is called the "posterior" probability because posterior means later or after, and it is the probability of A after you have observed B.</p>
+</div>
+
+
+<div id="likelihood_explain_2" class="explain_box_2">
+        <p><strong>The likelihood</strong>: The probability of your observation B, assuming that A is true. </p>
+</div>
+
+
+<div id="prior_explain_2" class="explain_box_2">
+        <p><strong>The prior probability</strong>: The probability that A is true, without any other knowledge about the state of the world. It is called the "prior" probability because prior means before, and it is the probability of A before you have made your observation B.</p>
+</div>
+
+<div id="alpha_explain" class="explain_box_2">
+        <p>This symbol means "is proportional to," indicating that the left hand side is equal to the right hand side times some constant. In our case, the constant is 1/p(B)</p>
+</div>
+</div>
+
+<p>You can paraphrase this version of the formula as "the posterior is proportional to the likelihood times the prior." If you remember from the first simulation, the normalizing constant was the most difficult thing to calculate because it involved summing over both possible scenarios (black/blue and white/gold). In more realistic problems, there are far more than just two possibilities to consider, so the calculation of the normalizing constant can go from being merely annoying to being completely untractable. For example, <a href="https://www.sciencedirect.com/science/article/pii/S0960982215004947">Gegenfurtner et al. 2015</a> found that there are not only two possible ways of interpreting the dress (black/blue vs. white/gold) but rather that, within these two broad categories, there are many distinct possibilities corresponding to different wavelengths of blue and gold, so to calculate the normalizing constant with this information we would have to sum across all these possible wavelengths. Therefore, this modified version of Bayes' Theorem is very useful as it eliminates the need to compute the potentially expensive normalizing constant. In the later simulations we will make use of this version of the formula.</p>
+
+
+<p>References</p>
+<p>Gegenfurtner, K. R., Bloj, M., &amp; Toscani, M. (2015). The many colours of ‘the dress’. <i>Current Biology, 25</i>(13), R543-R544.</p>
+
+
+<form action="cube_final.html">
+	<input id="next" type="submit" value="Next" />
+</form>
+
+<form action="dress_full_sim.html">
+	<input id="prev" type="submit" value="Previous" />
+</form>
+
+<p>Image sources: The image of the woman is from Microsoft PowerPoint's free image gallery. The curtain image and the frame image are from openclipart.com, whose images are all free for commercial use: https://openclipart.org/detail/267170/curtains-2 https://openclipart.org/detail/183498/cool-asian-frame</p>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script>
+
+
+
+
+var pr_b = .5;
+var pr_w = .5;
+var lik_b = .5;
+var lik_y = .5
+var norm_val = .5;
+var post_b = .5;
+var post_w = .5;
+
+function changeColor(elt) {
+        elt.style.color = "blue";
+}
+
+function normalColor(elt) {
+        elt.style.color = "black";
+}
+
+function reveal(elt) {
+        elt.style.opacity = 1.0;
+        elt.style.zIndex = 100;
+}
+
+function hide(elt) {
+        elt.style.opacity = 0.0;
+        elt.style.zIndex = -10;
+}
+
+
+l_curtain_2.style.width = "10px";
+r_curtain_2.style.width = "10px";
+
+
+
+function think_blue() {
+	blue_bubble.style.opacity = 1;
+	white_bubble.style.opacity = 0;	
+	document.getElementById("thought").innerHTML = "";
+}
+
+function think_yellow() {
+	blue_bubble.style.opacity = 0;
+	white_bubble.style.opacity = 1;	
+	document.getElementById("thought").innerHTML = "";
+}
+
+function think_confused() {
+	blue_bubble.style.opacity = 0;
+	white_bubble.style.opacity =0;
+	document.getElementById("thought").innerHTML = "How does this image exist???";
+}
+
+prior_blue.oninput = function() {
+	pr_b = this.value * 1.0 / 100.0;
+	pr_w = 1.0 - pr_b;
+	prior_white.value = parseInt(pr_w * 100);
+	
+	norm_val = pr_b * lik_b * 1.0 + pr_w * lik_y * 1.0;
+	norm.value = parseInt(norm_val * 100);
+
+
+	post_b = pr_b * lik_b * 1.0 / norm_val;
+	post_w = pr_w * lik_y * 1.0 / norm_val;
+	
+
+	if (post_b > post_w) {
+                think_blue();
+        } else if (post_w >= post_b && post_w != 0) {
+		think_yellow();
+	} else {
+                think_confused();
+        }
+
+	drawChart();
+
+}
+
+
+prior_white.oninput = function() {
+	pr_w = this.value * 1.0/ 100.0;
+	pr_b = 1.0 - pr_w;
+	prior_blue.value = parseInt(pr_b * 100);
+	
+	norm_val = pr_b * lik_b * 1.0 + pr_w * lik_y * 1.0;
+	norm.value = parseInt(norm_val * 100);
+
+	post_b = pr_b * lik_b * 1.0 / norm_val;
+        post_w = pr_w * lik_y * 1.0 / norm_val;
+        if (post_b > post_w) {
+                think_blue();
+        } else if (post_w >= post_b && post_w != 0) {
+		think_yellow();
+	} else {
+                think_confused();
+        }
+
+	
+	drawChart();
+
+}
+
+lik_blue.oninput = function() {
+	lik_b = this.value * 1.0/ 100.0;
+	lik_y = 1.0 - lik_b;
+	lik_white.value = parseInt(lik_y * 100);
+
+	norm_val = pr_b * lik_b * 1.0 + pr_w * lik_y * 1.0;
+	norm.value = parseInt(norm_val * 100);
+
+
+	post_b = pr_b * lik_b * 1.0 / norm_val;
+        post_w = pr_w * lik_y * 1.0 / norm_val;
+        if (post_b > post_w) {
+                think_blue();
+        } else if (post_w >= post_b && post_w != 0 ) {
+		think_yellow();
+	} else {
+                think_confused();
+        }
+
+	drawChart();
+
+}
+
+
+lik_white.oninput = function() {
+	lik_y = this.value * 1.0 / 100.0;
+	lik_b = 1.0 - lik_y;
+	lik_blue.value = parseInt(lik_b * 100);
+
+	norm_val = pr_b * lik_b * 1.0 + pr_w * lik_y * 1.0;
+	norm.value = parseInt(norm_val * 100);
+
+	post_b = pr_b * lik_b * 1.0 / norm_val;
+        post_w = pr_w * lik_y * 1.0 / norm_val;
+        if (post_b > post_w) {
+                think_blue();
+        } else if (post_w >= post_b && post_w != 0 ) {
+		think_yellow();
+	} else {
+                think_confused();
+        }
+
+
+	drawChart();
+}
+
+
+norm.oninput = function() {
+	norm_val = this.value * 1.0 / 100.0;
+
+
+	post_b = pr_b * lik_b * 1.0 / norm_val;
+        post_w = pr_w * lik_y * 1.0 / norm_val;
+        if (post_b > post_w) {
+                think_blue();
+        } else if (post_w >= post_b && post_w != 0) {
+		think_yellow();
+	} else {
+                think_confused();
+        }
+
+	drawChart();
+}
+
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Dress Color', 'Posterior Probability'],
+  ['Black and Blue', post_b],
+  ['White and Gold', post_w]
+]);
+
+// Optional; add a title and set the width and height of the chart
+  var options = {
+	'title':'Posterior Probabilities', 
+	'width':'100%', 
+	'height':'100%', 
+	'chartArea':{'width':'70%', 'height':'80%'}, 
+	'legend':{'position':'bottom'},  
+	'colors': ['blue', 'gold']
+};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+

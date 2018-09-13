@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="birds.css">
+
+<style>
+</style>
+
+</head>
+<body>
+
+
+<div id="bird_grid">
+
+<div id="horse_1" class="horse"><img height="100%" width="100%" src="horse_1.jpg"></div>
+<div id="horse_2" class="horse"><img height="100%" width="100%" src="horse_2.jpg"></div>
+<div id="horse_3" class="horse"><img height="100%" width="100%" src="horse_3.jpg"></div>
+<div id="horse_4" class="horse"><img height="100%" width="100%" src="horse_4.jpg"></div>
+<div id="snake_1" class="snake"><img height="100%" width="100%" src="snake_1.jpg"></div>
+<div id="snake_2" class="snake"><img height="100%" width="100%" src="snake_2.jpg"></div>
+<div id="goldfinch_1" class="goldfinch"><img height="100%" width="100%" src="goldfinch_1.jpg"></div>
+<div id="owl_1" class="owl"><img height="100%" width="100%" src="owl_1.jpg"></div>
+<div id="owl_2" class="owl"><img height="100%" width="100%" src="owl_2.jpg"></div>
+<div id="owl_3" class="owl"><img height="100%" width="100%" src="owl_3.jpg"></div>
+
+<div id="horse_5" class="horse"><img height="100%" width="100%" src="horse_5.jpg"></div>
+<div id="horse_6" class="horse"><img height="100%" width="100%" src="horse_6.jpg"></div>
+<div id="horse_7" class="horse"><img height="100%" width="100%" src="horse_7.jpg"></div>
+<div id="horse_8" class="horse"><img height="100%" width="100%" src="horse_8.jpg"></div>
+<div id="snake_3" class="snake"><img height="100%" width="100%" src="snake_3.jpg"></div>
+<div id="snake_4" class="snake"><img height="100%" width="100%" src="snake_4.jpg"></div>
+<div id="goldfinch_2" class="goldfinch"><img height="100%" width="100%" src="goldfinch_2.jpg"></div>
+<div id="owl_4" class="owl"><img height="100%" width="100%" src="owl_4.jpg"></div>
+<div id="owl_5" class="owl"><img height="100%" width="100%" src="owl_5.jpg"></div>
+<div id="owl_6" class="owl"><img height="100%" width="100%" src="owl_6.jpg"></div>
+
+
+<div id="horse_9" class="horse"><img height="100%" width="100%" src="horse_9.jpg"></div>
+<div id="horse_10" class="horse"><img height="100%" width="100%" src="horse_10.jpg"></div>
+<div id="horse_11" class="horse"><img height="100%" width="100%" src="horse_11.jpg"></div>
+<div id="horse_12" class="horse"><img height="100%" width="100%" src="horse_12.jpg"></div>
+<div id="snake_5" class="snake"><img height="100%" width="100%" src="snake_5.jpg"></div>
+<div id="snake_6" class="snake"><img height="100%" width="100%" src="snake_6.jpg"></div>
+<div id="goldfinch_3" class="goldfinch"><img height="100%" width="100%" src="goldfinch_3.jpg"></div>
+<div id="goldfinch_4" class="goldfinch"><img height="100%" width="100%" src="goldfinch_4.jpg"></div>
+<div id="owl_7" class="owl"><img height="100%" width="100%" src="owl_7.jpg"></div>
+<div id="owl_8" class="owl"><img height="100%" width="100%" src="owl_8.jpg"></div>
+
+
+
+<div id="wolf_1" class="wolf"><img height="100%" width="100%" src="wolf_1.jpg"></div>
+<div id="wolf_2" class="wolf"><img height="100%" width="100%" src="wolf_2.jpg"></div>
+<div id="wolf_3" class="wolf"><img height="100%" width="100%" src="wolf_3.jpg"></div>
+<div id="wolf_4" class="wolf"><img height="100%" width="100%" src="wolf_4.jpg"></div>
+<div id="snake_7" class="snake"><img height="100%" width="100%" src="snake_7.jpg"></div>
+<div id="snake_8" class="snake"><img height="100%" width="100%" src="snake_8.jpg"></div>
+<div id="goldfinch_5" class="goldfinch"><img height="100%" width="100%" src="goldfinch_5.jpg"></div>
+<div id="goldfinch_6" class="goldfinch"><img height="100%" width="100%" src="goldfinch_6.jpg"></div>
+<div id="roadrunner_1" class="roadrunner"><img height="100%" width="100%" src="roadrunner_1.jpg"></div>
+<div id="owl_9" class="owl"><img height="100%" width="100%" src="owl_9.jpg"></div>
+
+
+<div id="wolf_5" class="wolf"><img height="100%" width="100%" src="wolf_5.jpg"></div>
+<div id="wolf_6" class="wolf"><img height="100%" width="100%" src="wolf_6.jpg"></div>
+<div id="wolf_7" class="wolf"><img height="100%" width="100%" src="wolf_7.jpg"></div>
+<div id="tortoise_1" class="tortoise"><img height="100%" width="100%" src="tortoise_1.jpg"></div>
+<div id="tortoise_2" class="tortoise"><img height="100%" width="100%" src="tortoise_2.jpg"></div>
+<div id="snake_9" class="snake"><img height="100%" width="100%" src="snake_9.jpg"></div>
+<div id="raven_1" class="raven"><img height="100%" width="100%" src="raven_1.jpg"></div>
+<div id="raven_2" class="raven"><img height="100%" width="100%" src="raven_2.jpg"></div>
+<div id="roadrunner_2" class="roadrunner"><img height="100%" width="100%" src="roadrunner_2.jpg"></div>
+<div id="ant_1" class="ant"><img height="100%" width="100%" src="ant_1.jpg"></div>
+
+<div id="rhino_1" class="rhino"><img height="100%" width="100%" src="rhino_1.jpg"></div>
+<div id="rhino_2" class="rhino"><img height="100%" width="100%" src="rhino_2.jpg"></div>
+<div id="rhino_3" class="rhino"><img height="100%" width="100%" src="rhino_3.jpg"></div>
+<div id="tortoise_3" class="tortoise"><img height="100%" width="100%" src="tortoise_3.jpg"></div>
+<div id="tortoise_4" class="tortoise"><img height="100%" width="100%" src="tortoise_4.jpg"></div>
+<div id="tortoise_5" class="tortoise"><img height="100%" width="100%" src="tortoise_5.jpg"></div>
+<div id="raven_3" class="raven"><img height="100%" width="100%" src="raven_3.jpg"></div>
+<div id="raven_4" class="raven"><img height="100%" width="100%" src="raven_4.jpg"></div>
+<div id="ant_2" class="ant"><img height="100%" width="100%" src="ant_2.jpg"></div>
+<div id="ant_3" class="ant"><img height="100%" width="100%" src="ant_3.jpg"></div>
+
+
+<div id="rhino_4" class="rhino"><img height="100%" width="100%" src="rhino_4.jpg"></div>
+<div id="rhino_5" class="rhino"><img height="100%" width="100%" src="rhino_5.jpg"></div>
+<div id="frog_1" class="frog"><img height="100%" width="100%" src="frog_1.jpg"></div>
+<div id="frog_2" class="frog"><img height="100%" width="100%" src="frog_2.jpg"></div>
+<div id="frog_3" class="frog"><img height="100%" width="100%" src="frog_3.jpg"></div>
+<div id="frog_4" class="frog"><img height="100%" width="100%" src="frog_4.jpg"></div>
+<div id="raven_5" class="raven"><img height="100%" width="100%" src="raven_5.jpg"></div>
+<div id="grasshopper_1" class="grasshopper"><img height="100%" width="100%" src="grasshopper_1.jpg"></div>
+<div id="beetle_1" class="beetle"><img height="100%" width="100%" src="beetle_1.jpg"></div>
+<div id="beetle_2" class="beetle"><img height="100%" width="100%" src="beetle_2.jpg"></div>
+
+
+
+
+
+<div id="shark_1" class="shark"><img height="100%" width="100%" src="shark_1.jpg"></div>
+<div id="shark_2" class="shark"><img height="100%" width="100%" src="shark_2.jpg"></div>
+<div id="frog_5" class="frog"><img height="100%" width="100%" src="frog_5.jpg"></div>
+<div id="frog_6" class="frog"><img height="100%" width="100%" src="frog_6.jpg"></div>
+<div id="frog_7" class="frog"><img height="100%" width="100%" src="frog_7.jpg"></div>
+<div id="clam_1" class="clam"><img height="100%" width="100%" src="clam_1.jpg"></div>
+<div id="grasshopper_2" class="grasshopper"><img height="100%" width="100%" src="grasshopper_2.jpg"></div>
+<div id="grasshopper_3" class="grasshopper"><img height="100%" width="100%" src="grasshopper_3.jpg"></div>
+<div id="beetle_3" class="beetle"><img height="100%" width="100%" src="beetle_3.jpg"></div>
+<div id="beetle_4" class="beetle"><img height="100%" width="100%" src="beetle_4.jpg"></div>
+
+
+
+
+
+
+
+<div id="shark_3" class="shark"><img height="100%" width="100%" src="shark_3.jpg"></div>
+<div id="clownfish_1" class="clownfish"><img height="100%" width="100%" src="clownfish_1.jpg"></div>
+<div id="clownfish_2" class="clownfish"><img height="100%" width="100%" src="clownfish_2.jpg"></div>
+<div id="tuna_1" class="tuna"><img height="100%" width="100%" src="tuna_1.jpg"></div>
+<div id="octopus_1" class="octopus"><img height="100%" width="100%" src="octopus_1.jpg"></div>
+<div id="clam_2" class="clam"><img height="100%" width="100%" src="clam_2.jpg"></div>
+<div id="spider_1" class="spider"><img height="100%" width="100%" src="spider_1.jpg"></div>
+<div id="spider_2" class="spider"><img height="100%" width="100%" src="spider_2.jpg"></div>
+<div id="spider_3" class="spider"><img height="100%" width="100%" src="spider_3.jpg"></div>
+<div id="spider_4" class="spider"><img height="100%" width="100%" src="spider_4.jpg"></div>
+
+
+
+<div id="clownfish_3" class="clownfish"><img height="100%" width="100%" src="clownfish_3.jpg"></div>
+<div id="clownfish_4" class="clownfish"><img height="100%" width="100%" src="clownfish_4.jpg"></div>
+<div id="clownfish_5" class="clownfish"><img height="100%" width="100%" src="clownfish_5.jpg"></div>
+
+
+<div id="octopus_2" class="octopus"><img height="100%" width="100%" src="octopus_2.jpg"></div>
+<div id="octopus_3" class="octopus"><img height="100%" width="100%" src="octopus_3.jpg"></div>
+
+<div id="clam_3" class="clam"><img height="100%" width="100%" src="clam_3.jpg"></div>
+
+
+
+
+
+
+<div id="spider_5" class="spider"><img height="100%" width="100%" src="spider_5.jpg"></div>
+<div id="spider_6" class="spider"><img height="100%" width="100%" src="spider_6.jpg"></div>
+<div id="spider_7" class="spider"><img height="100%" width="100%" src="spider_7.jpg"></div>
+<div id="spider_8" class="spider"><img height="100%" width="100%" src="spider_8.jpg"></div>
+
+
+
+
+
+</div>
+
+
+<div id="demo_container">
+
+	<div id="be_the_learner">
+	<button onclick="demo('implant');">Implant</button>
+	<button onclick="demo('noninvertible');">Noninvertible</button>
+	<button onclick="demo('spineless');">Spineless</button>
+	<button onclick="demo('gotmilk');">Gotmilk</button>
+	<button onclick="demo('wingbearer');">Wingbearer</button>
+	<button onclick="demo('ghoti');">Ghoti</button>
+	<button onclick="demo('tessellation');">Tessellation</button>
+	<button onclick="demo('heebiejeebie');">Heebie-jeebie</button>
+	<button onclick="demo('virginia');">Virginia</button>
+	<button onclick="demo('pokerface');">Pokerface</button>
+	<button onclick="demo('wiseguy');">Wiseguy</button>
+	<button onclick="demo('atticus');">Atticus</button>
+	<button onclick="demo('nevermore');">Nevermore</button>
+	<button onclick="demo('nemo');">Nemo</button>
+	<button onclick="demo('backpointer');">Backpointer</button>
+	<button onclick="demo('halpert');">Halpert</button>
+	<button onclick="demo('legolas');">Legolas</button>
+	<button onclick="demo('esiotrot');">Esiotrot</button>
+	<button onclick="demo('jeremiah');">Jeremiah</button>
+	<button onclick="demo('webdesigner');">Webdesigner</button>
+	<button onclick="demo('petunia');">Petunia</button>
+	<button onclick="demo('ringo');">Ringo</button>
+	<button onclick="demo('gracehopper');">Gracehopper</button>
+	<button onclick="demo('armyintelligence');">Armyintelligence</button>
+	<button onclick="demo('shelly');">Shelly</button>
+	<button onclick="demo('naysayer');">Naysayer</button>
+	<button onclick="demo('beepbeep');">Beepbeep</button>
+	<button onclick="show_image_learner();">View example</button>
+
+	
+	<div id="learner_images">
+		<div class="learner_image_choice"><img id="learner_image_1" src="clownfish_1.jpg" width="90%" height="90%"></div>
+		<div class="learner_image_choice"><img id="learner_image_2" src="clownfish_1.jpg" width="90%" height="90%"></div>
+		<div class="learner_image_choice"><img id="learner_image_3" src="tuna_1.jpg" width="90%" height="90%"> </div>
+		<div class="learner_image_choice"><img id="learner_image_4" src="shark_2.jpg" width="90%" height="90%">  </div> 
+		<div class="learner_image_choice"> <img id="learner_image_5" src="clownfish_3.jpg" width="90%" height="90%"> </div>
+
+	</div>
+
+	<div id="learner_possibilities">
+		<div id="learner_possibility_1" class="learner_possibility">
+			<div id="learner_pos_1_1" onmouseover="blank();highlight('clownfish');" onmouseout="unhighlight();">Clownfish</div>	
+		
+			<div id="learner_pos_1_2"><span onmouseover="blank();light('clownfish_1');" onmouseout="unhighlight();">Clownfish 1</span></div>	
+			<div id="learner_pos_1_3" onmouseover="blank();highlight('clownfish');highlight('shark');highlight('tuna');" onmouseout="unhighlight();">Fish</div>
+
+			<div id="learner_pos_1_4" onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');" onmouseout="unhighlight();">Vertebrate</div>
+
+			<div id="learner_pos_1_5" onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');highlight('spider');highlight('ant');highlight('beetle');highlight('grasshopper');highlight('octopus');highlight('clam');" onmouseout="unhighlight();">Animal</div>
+
+		</div>
+		<div id="learner_possibility_2" class="learner_possibility">
+
+
+
+						                        <div><span onmouseover="blank();light('clownfish_1');" onmouseout="unhighlight();">Clownfish 1</span></div>      
+
+			<div onmouseover="blank();highlight('clownfish');" onmouseout="unhighlight();">Clownfish</div>          
+			                
+			                        <div onmouseover="blank();highlight('clownfish');highlight('shark');highlight('tuna');" onmouseout="unhighlight();">Fish</div> 
+
+									                        <div onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');" onmouseout="unhighlight();">Vertebrate</div>
+
+												                        <div onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');highlight('spider');highlight('ant');highlight('beetle');highlight('grasshopper');highlight('octopus');highlight('clam');" onmouseout="unhighlight();">Animal</div>
+		
+		
+		</div>
+		<div id="learner_possibility_3" class="learner_possibility">
+			<div onmouseover="blank();highlight('clownfish');highlight('shark');highlight('tuna');" onmouseout="unhighlight();">Fish</div>
+
+
+			                <div onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');" onmouseout="unhighlight();">Vertebrate</div>
+
+					                                                                                                                        <div onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');highlight('spider');highlight('ant');highlight('beetle');highlight('grasshopper');highlight('octopus');highlight('clam');" onmouseout="unhighlight();">Animal</div>
+
+
+		
+		
+		
+		
+		</div>
+		<div id="learner_possibility_4" class="learner_possibility">
+			<div onmouseover="blank();highlight('clownfish');highlight('shark');highlight('tuna');" onmouseout="unhighlight();">Fish</div>
+
+
+		                <div onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');" onmouseout="unhighlight();">Vertebrate</div>
+
+			                                                                                                                        <div onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');highlight('spider');highlight('ant');highlight('beetle');highlight('grasshopper');highlight('octopus');highlight('clam');" onmouseout="unhighlight();">Animal</div>
+
+
+		
+		</div>
+		<div id="learner_possibility_5" class="learner_possibility">
+		
+			<div onmouseover="blank();highlight('clownfish');highlight('shark');highlight('tuna');" onmouseout="unhighlight();">Fish</div>
+
+
+	                <div onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');" onmouseout="unhighlight();">Vertebrate</div>
+
+	                                                                                                                        <div onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');highlight('spider');highlight('ant');highlight('beetle');highlight('grasshopper');highlight('octopus');highlight('clam');" onmouseout="unhighlight();">Animal</div>
+
+
+		</div>
+	</div>
+
+	<div><img id="learner_image" src="clownfish_5.jpg"></div>
+
+	</div>
+
+
+	<div id="taxonomy">
+
+<div onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');highlight('spider');highlight('ant');highlight('beetle');highlight('grasshopper');highlight('octopus');highlight('clam');" onmouseout="unhighlight();" style="text-indent:0em">Animal</div>
+	
+<div onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');" onmouseout="unhighlight();" style="text-indent:2em">Vertebrate</div>
+
+<div onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');" onmouseout="unhighlight();" style="text-indent:4em">Mammal</div>
+	
+	<div style="text-indent:6em"><span onmouseover="blank();highlight('wolf');" onmouseout="unhighlight();" style="text-indent:6em">Wolf</span>
+	<span style="text-indent:8em"><span onmouseover="blank();light('wolf_1');" onmouseout="unhighlight();">1</span><span onmouseover="blank();light('wolf_2');" onmouseout="unhighlight();">2</span><span onmouseover="blank();light('wolf_3');" onmouseout="unhighlight();">3</span><span onmouseover="blank();light('wolf_4');" onmouseout="unhighlight();">4</span><span onmouseover="blank();light('wolf_5');" onmouseout="unhighlight();">5</span><span onmouseover="blank();light('wolf_6');" onmouseout="unhighlight();">6</span><span onmouseover="blank();light('wolf_7');" onmouseout="unhighlight();">7</span></span></div>
+<div style="text-indent:6em"><span onmouseover="blank();highlight('rhino');" onmouseout="unhighlight();" style="text-indent:6em">Rhino</span>
+	<span style="text-indent:8em">
+		<span onmouseover="blank();light('rhino_1');" onmouseout="unhighlight();">1</span><span onmouseover="blank();light('rhino_2');" onmouseout="unhighlight();">2</span><span onmouseover="blank();light('rhino_3');" onmouseout="unhighlight();">3</span><span onmouseover="blank();light('rhino_4');" onmouseout="unhighlight();">4</span><span onmouseover="blank();light('rhino_5');" onmouseout="unhighlight();">5</span>
+	</span></div>
+
+<div style="text-indent:6em"><span onmouseover="blank();highlight('horse');" onmouseout="unhighlight();" style="text-indent:6em">Horse</span>
+        <span style="text-indent:8em">
+                <span onmouseover="blank();light('horse_1');" onmouseout="unhighlight();">1</span><span onmouseover="blank();light('horse_2');" onmouseout="unhighlight();">2</span><span onmouseover="blank();light('horse_3');" onmouseout="unhighlight();">3</span><span onmouseover="blank();light('horse_4');" onmouseout="unhighlight();">4</span><span onmouseover="blank();light('horse_5');" onmouseout="unhighlight();">5</span><span onmouseover="blank();light('horse_6');" onmouseout="unhighlight();">6</span><span onmouseover="blank();light('horse_7');" onmouseout="unhighlight();">7</span><span onmouseover="blank();light('horse_8');" onmouseout="unhighlight();">8</span><span onmouseover="blank();light('horse_9');" onmouseout="unhighlight();">9</span><span onmouseover="blank();light('horse_10');" onmouseout="unhighlight();">10</span><span onmouseover="blank();light('horse_11');" onmouseout="unhighlight();">11</span><span onmouseover="blank();light('horse_12');" onmouseout="unhighlight();">12</span></span>
+	</div>
+
+<div onmouseover="blank();highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');" onmouseout="unhighlight();" style="text-indent:4em">Bird</div>
+<div style="text-indent:6em"><span onmouseover="blank();highlight('roadrunner');" onmouseout="unhighlight();" style="text-indent:6em">Roadrunner</span>
+<span style="text-indent:8em">
+                <span onmouseover="blank();light('roadrunner_1');" onmouseout="unhighlight();">1</span><span onmouseover="blank();light('roadrunner_2');" onmouseout="unhighlight();">2</span></span>
+</div>
+
+
+<div style="text-indent:6em"><span onmouseover="blank();highlight('owl');" onmouseout="unhighlight();" style="text-indent:6em">Owl</span>
+<span style="text-indent:8em">
+                <span onmouseover="blank();light('owl_1');" onmouseout="unhighlight();">1</span><span onmouseover="blank();light('owl_2');" onmouseout="unhighlight();">2</span><span onmouseover="blank();light('owl_3');" onmouseout="unhighlight();">3</span><span onmouseover="blank();light('owl_4');" onmouseout="unhighlight();">4</span><span onmouseover="blank();light('owl_5');" onmouseout="unhighlight();">5</span><span onmouseover="blank();light('owl_6');" onmouseout="unhighlight();">6</span><span onmouseover="blank();light('owl_7');" onmouseout="unhighlight();">7</span><span onmouseover="blank();light('owl_8');" onmouseout="unhighlight();">8</span><span onmouseover="blank();light('owl_9');" onmouseout="unhighlight();">9</span></span>
+</div>
+
+
+<div style="text-indent:6em"><span onmouseover="blank();highlight('goldfinch');" onmouseout="unhighlight();" style="text-indent:6em">Goldfinch</span>
+
+<span style="text-indent:8em">
+                <span onmouseover="blank();light('goldfinch_1');" onmouseout="unhighlight();">1</span><span onmouseover="blank();light('goldfinch_2');" onmouseout="unhighlight();">2</span><span onmouseover="blank();light('goldfinch_3');" onmouseout="unhighlight();">3</span><span onmouseover="blank();light('goldfinch_4');" onmouseout="unhighlight();">4</span><span onmouseover="blank();light('goldfinch_5');" onmouseout="unhighlight();">5</span><span onmouseover="blank();light('goldfinch_6');" onmouseout="unhighlight();">6</span></span>
+</div>
+
+<div style="text-indent:6em"><span onmouseover="blank();highlight('raven');" onmouseout="unhighlight();" style="text-indent:6em">Raven</span>
+<span style="text-indent:8em">
+	<span onmouseover="blank();light('raven_1');" onmouseout="unhighlight();">1</span><span onmouseover="blank();light('raven_2');" onmouseout="unhighlight();">2</span><span onmouseover="blank();light('raven_3');" onmouseout="unhighlight();">3</span><span onmouseover="blank();light('raven_4');" onmouseout="unhighlight();">4</span><span onmouseover="blank();light('raven_5');" onmouseout="unhighlight();">5</span></span>
+</div>
+
+
+<div onmouseover="blank();highlight('clownfish');highlight('shark');highlight('tuna');" onmouseout="unhighlight();" style="text-indent:4em">Fish</div>
+<div style="text-indent:6em"><span onmouseover="blank();highlight('clownfish');" onmouseout="unhighlight();" style="text-indent:6em">Clownfish</span>
+
+<span style="text-indent:8em">
+                <span onmouseover="blank();light('clownfish_1');" onmouseout="unhighlight();">1</span><span onmouseover="blank();light('clownfish_2');" onmouseout="unhighlight();">2</span><span onmouseover="blank();light('clownfish_3');" onmouseout="unhighlight();">3</span><span onmouseover="blank();light('clownfish_4');" onmouseout="unhighlight();">4</span><span onmouseover="blank();light('clownfish_5');" onmouseout="unhighlight();">5</span></span>
+</div>
+
+<div style="text-indent:6em"><span onmouseover="blank();highlight('shark');" onmouseout="unhighlight();" style="text-indent:6em">Shark</span>
+
+<span style="text-indent:8em">
+                <span onmouseover="blank();light('shark_1');" onmouseout="unhighlight();">1</span><span onmouseover="blank();light('shark_2');" onmouseout="unhighlight();">2</span><span onmouseover="blank();light('shark_3');" onmouseout="unhighlight();">3</span></span>
+</div>
+
+<div style="text-indent:6em"><span onmouseover="blank();highlight('tuna');" onmouseout="unhighlight();" style="text-indent:6em">Tuna</span>
+<span style="text-indent:8em">
+                <span onmouseover="blank();light('tuna_1');" onmouseout="unhighlight();">1</span></span>
+</div>
+
+<div onmouseover="blank();highlight('snake');highlight('tortoise');" onmouseout="unhighlight();" style="text-indent:4em">Reptile</div>
+<div style="text-indent:6em"><span onmouseover="blank();highlight('snake');" onmouseout="unhighlight();" style="text-indent:6em">Snake</span>
+<span style="text-indent:8em">
+                <span onmouseover="blank();light('snake_1');" onmouseout="unhighlight();">1</span><span onmouseover="blank();light('snake_2');" onmouseout="unhighlight();">2</span><span onmouseover="blank();light('snake_3');" onmouseout="unhighlight();">3</span><span onmouseover="blank();light('snake_4');" onmouseout="unhighlight();">4</span><span onmouseover="blank();light('snake_5');" onmouseout="unhighlight();">5</span><span onmouseover="blank();light('snake_6');" onmouseout="unhighlight();">6</span><span onmouseover="blank();light('snake_7');" onmouseout="unhighlight();">7</span><span onmouseover="blank();light('snake_8');" onmouseout="unhighlight();">8</span><span onmouseover="blank();light('snake_9');" onmouseout="unhighlight();">9</span></span>
+</div>
+
+
+
+<div style="text-indent:6em"><span onmouseover="blank();highlight('tortoise');" onmouseout="unhighlight();" style="text-indent:6em">Tortoise</span>
+<span style="text-indent:8em">
+                <span onmouseover="blank();light('tortoise_1');" onmouseout="unhighlight();">1</span><span onmouseover="blank();light('tortoise_2');" onmouseout="unhighlight();">2</span><span onmouseover="blank();light('tortoise_3');" onmouseout="unhighlight();">3</span><span onmouseover="blank();light('tortoise_4');" onmouseout="unhighlight();">4</span><span onmouseover="blank();light('tortoise_5');" onmouseout="unhighlight();">5</span></span>
+</div>
+
+<div onmouseover="blank();highlight('frog');" onmouseout="unhighlight();" style="text-indent:4em">Amphibian</div>
+<div style="text-indent:6em"><span onmouseover="blank();highlight('frog');" onmouseout="unhighlight();" style="text-indent:6em">Frog</span>
+<span style="text-indent:8em">
+                <span onmouseover="blank();light('frog_1');" onmouseout="unhighlight();">1</span><span onmouseover="blank();light('frog_2');" onmouseout="unhighlight();">2</span><span onmouseover="blank();light('frog_3');" onmouseout="unhighlight();">3</span><span onmouseover="blank();light('frog_4');" onmouseout="unhighlight();">4</span><span onmouseover="blank();light('frog_5');" onmouseout="unhighlight();">5</span><span onmouseover="blank();light('frog_6');" onmouseout="unhighlight();">6</span><span onmouseover="blank();light('frog_7');" onmouseout="unhighlight();">7</span></span>
+</div>
+
+
+
+<div onmouseover="blank();highlight('spider');highlight('ant');highlight('beetle');highlight('grasshopper');highlight('octopus');highlight('clam');" onmouseout="unhighlight();" style="text-indent:2em">Invertebrate</div>
+
+<div onmouseover="blank();highlight('spider');highlight('ant');highlight('beetle');highlight('grasshopper');" onmouseout="unhighlight();" style="text-indent:4em">Arthropod</div>
+<div style="text-indent:6em"><span onmouseover="blank();highlight('spider');" onmouseout="unhighlight();" style="text-indent:6em">Spider</span>
+
+<span style="text-indent:8em">
+                <span onmouseover="blank();light('spider_1');" onmouseout="unhighlight();">1</span><span onmouseover="blank();light('spider_2');" onmouseout="unhighlight();">2</span><span onmouseover="blank();light('spider_3');" onmouseout="unhighlight();">3</span><span onmouseover="blank();light('spider_4');" onmouseout="unhighlight();">4</span><span onmouseover="blank();light('spider_5');" onmouseout="unhighlight();">5</span><span onmouseover="blank();light('spider_6');" onmouseout="unhighlight();">6</span><span onmouseover="blank();light('spider_7');" onmouseout="unhighlight();">7</span><span onmouseover="blank();light('spider_8');" onmouseout="unhighlight();">8</span></span>
+</div>
+
+
+<div style="text-indent:6em"><span onmouseover="blank();highlight('ant');" onmouseout="unhighlight();" style="text-indent:6em">Ant</span>
+<span style="text-indent:8em">
+                <span onmouseover="blank();light('ant_1');" onmouseout="unhighlight();">1</span><span onmouseover="blank();light('ant_2');" onmouseout="unhighlight();">2</span><span onmouseover="blank();light('ant_3');" onmouseout="unhighlight();">3</span></span>
+</div>
+
+
+<div style="text-indent:6em"><span onmouseover="blank();highlight('beetle');" onmouseout="unhighlight();" style="text-indent:6em">Beetle</span>
+<span style="text-indent:8em">
+                <span onmouseover="blank();light('beetle_1');" onmouseout="unhighlight();">1</span><span onmouseover="blank();light('beetle_2');" onmouseout="unhighlight();">2</span><span onmouseover="blank();light('beetle_3');" onmouseout="unhighlight();">3</span><span onmouseover="blank();light('beetle_4');" onmouseout="unhighlight();">4</span></span>
+</div>
+
+<div style="text-indent:6em"><span onmouseover="blank();highlight('grasshopper');" onmouseout="unhighlight();" style="text-indent:6em">Grasshopper</span>
+<span style="text-indent:8em">
+                <span onmouseover="blank();light('grasshopper_1');" onmouseout="unhighlight();">1</span><span onmouseover="blank();light('grasshopper_2');" onmouseout="unhighlight();">2</span><span onmouseover="blank();light('grasshopper_3');" onmouseout="unhighlight();">3</span></span>
+</div>
+
+<div onmouseover="blank();highlight('octopus');highlight('clam');" onmouseout="unhighlight();" style="text-indent:4em">Mollusc</div>
+
+<div style="text-indent:6em"><span onmouseover="blank();highlight('octopus');" onmouseout="unhighlight();" style="text-indent:6em">Octopus</span>
+<span style="text-indent:8em">
+                <span onmouseover="blank();light('octopus_1');" onmouseout="unhighlight();">1</span><span onmouseover="blank();light('octopus_2');" onmouseout="unhighlight();">2</span><span onmouseover="blank();light('octopus_3');" onmouseout="unhighlight();">3</span></span>
+</div>
+
+<div style="text-indent:6em"><span onmouseover="blank();highlight('clam');" onmouseout="unhighlight();" style="text-indent:6em">Clam</span>
+<span style="text-indent:8em">
+                <span onmouseover="blank();light('clam_1');" onmouseout="unhighlight();">1</span><span onmouseover="blank();light('clam_2');" onmouseout="unhighlight();">2</span><span onmouseover="blank();light('clam_3');" onmouseout="unhighlight();">3</span></span>
+</div>
+
+
+<div id="next1"><button onclick="word_learning_demo.style.opacity = 1.0;word_learning_demo.style.zIndex = 10;taxonomy.style.opacity = 0.0;taxonomy.style.zIndex=-10;">Next</button></div>
+
+	</div>
+
+<div id="word_learning_demo">
+
+
+
+	<div id="images">
+		<div id="image_1" class="image_choice"><img src="clownfish_1.jpg" width="90%" height="90%"></div>
+		<div id="image_2" class="image_choice"><img src="clownfish_1.jpg" width="90%" height="90%"></div>
+		<div id="image_3" class="image_choice"><img src="tuna_1.jpg" width="90%" height="90%"> </div>
+		<div id="image_4" class="image_choice"><img src="shark_2.jpg" width="90%" height="90%">  </div> 
+		<div id="image_5" class="image_choice"> <img src="clownfish_3.jpg" width="90%" height="90%"> </div>
+
+	</div>
+
+	<div id="possibilities">
+		<div id="possibility_1" class="possibility">
+			<div id="pos_1_1" onmouseover="blank();highlight('clownfish');" onmouseout="unhighlight();">Clownfish</div>	
+		
+			<div id="pos_1_2"><span onmouseover="blank();light('clownfish_1');" onmouseout="unhighlight();">Clownfish 1</span></div>	
+			<div id="pos_1_3" onmouseover="blank();highlight('clownfish');highlight('shark');highlight('tuna');" onmouseout="unhighlight();">Fish</div>
+
+			<div id="pos_1_4" onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');" onmouseout="unhighlight();">Vertebrate</div>
+
+			<div id="pos_1_5" onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');highlight('spider');highlight('ant');highlight('beetle');highlight('grasshopper');highlight('octopus');highlight('clam');" onmouseout="unhighlight();">Animal</div>
+
+		</div>
+		<div id="possibility_2" class="possibility">
+
+
+
+						                        <div><span onmouseover="blank();light('clownfish_1');" onmouseout="unhighlight();">Clownfish 1</span></div>      
+
+			<div onmouseover="blank();highlight('clownfish');" onmouseout="unhighlight();">Clownfish</div>          
+			                
+			                        <div onmouseover="blank();highlight('clownfish');highlight('shark');highlight('tuna');" onmouseout="unhighlight();">Fish</div> 
+
+									                        <div onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');" onmouseout="unhighlight();">Vertebrate</div>
+
+												                        <div onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');highlight('spider');highlight('ant');highlight('beetle');highlight('grasshopper');highlight('octopus');highlight('clam');" onmouseout="unhighlight();">Animal</div>
+		
+		
+		</div>
+		<div id="possibility_3" class="possibility">
+			<div onmouseover="blank();highlight('clownfish');highlight('shark');highlight('tuna');" onmouseout="unhighlight();">Fish</div>
+
+
+			                <div onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');" onmouseout="unhighlight();">Vertebrate</div>
+
+					                                                                                                                        <div onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');highlight('spider');highlight('ant');highlight('beetle');highlight('grasshopper');highlight('octopus');highlight('clam');" onmouseout="unhighlight();">Animal</div>
+
+
+		
+		
+		
+		
+		</div>
+		<div id="possibility_4" class="possibility">
+			<div onmouseover="blank();highlight('clownfish');highlight('shark');highlight('tuna');" onmouseout="unhighlight();">Fish</div>
+
+
+		                <div onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');" onmouseout="unhighlight();">Vertebrate</div>
+
+			                                                                                                                        <div onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');highlight('spider');highlight('ant');highlight('beetle');highlight('grasshopper');highlight('octopus');highlight('clam');" onmouseout="unhighlight();">Animal</div>
+
+
+		
+		</div>
+		<div id="possibility_5" class="possibility">
+		
+			<div onmouseover="blank();highlight('clownfish');highlight('shark');highlight('tuna');" onmouseout="unhighlight();">Fish</div>
+
+
+	                <div onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');" onmouseout="unhighlight();">Vertebrate</div>
+
+	                                                                                                                        <div onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');highlight('spider');highlight('ant');highlight('beetle');highlight('grasshopper');highlight('octopus');highlight('clam');" onmouseout="unhighlight();">Animal</div>
+
+
+		</div>
+	</div>
+
+
+	<div id="next_buttons">
+	The unknown word is: Ghoti
+
+	<div><button onclick="show_next_panel();">Give example of word</button></div>
+	<div><button onclick="put_in_order();">Rank the possibilities</button></div>	
+
+	</div>
+
+
+
+	<div id="poss">
+		Possibilities:
+
+			<div id="poss_1"><span onmouseover="blank();light('clownfish_1');" onmouseout="unhighlight();">Clownfish 1</span></div>	
+	
+		<div id="poss_2" onmouseover="blank();highlight('clownfish');" onmouseout="unhighlight();">Clownfish</div>	
+		
+			<div id="poss_3" onmouseover="blank();highlight('clownfish');highlight('shark');highlight('tuna');" onmouseout="unhighlight();">Fish</div>
+
+			<div id="poss_4" onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');" onmouseout="unhighlight();">Vertebrate</div>
+
+			<div id="poss_5" onmouseover="blank();highlight('wolf');highlight('rhino');highlight('horse');highlight('roadrunner');highlight('owl');highlight('goldfinch');highlight('raven');highlight('clownfish');highlight('shark');highlight('tuna');highlight('snake');highlight('tortoise');highlight('frog');highlight('spider');highlight('ant');highlight('beetle');highlight('grasshopper');highlight('octopus');highlight('clam');" onmouseout="unhighlight();">Animal</div>
+
+
+	</div>
+
+
+	<div id="prior">
+		Priors:
+		<div id="prior_1">0.1</div>
+		<div id="prior_2">0.6</div>
+		<div id="prior_3">0.2</div>
+		<div id="prior_4">0.05</div>
+		<div id="prior_5">0.05</div>
+
+	</div>
+
+	<div id="lik">
+		Likelihoods:
+		<div id="lik_1">1.0</div>
+		<div id="lik_2">0.200</div>
+		<div id="lik_3">0.111</div>
+		<div id="lik_4">0.013</div>
+		<div id="lik_5">0.010</div>
+	</div>
+
+	<div id="post">
+		Prior * likelihood:
+		<div id="post_1">0.100</div>
+		<div id="post_2">0.120</div>
+		<div id="post_3">0.022</div>
+		<div id="post_4">0.001</div>
+		<div id="post_5">0.001</div>
+	</div>
+
+
+
+</div>
+
+</div>
+
+
+
+<div id="class_buttons">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<script>
+
+	var ghoti_demo = ["clownfish_1.jpg", "clownfish_1.jpg", "tuna_1.jpg", "shark_2.jpg", "clownfish_3.jpg"];
+	var nevermore_demo = ["raven_4.jpg", "raven_4.jpg", "raven_4.jpg", "raven_4.jpg", "raven_4.jpg"];
+	var pokerface_demo = ["rhino_3.jpg", "rhino_2.jpg", "rhino_5.jpg", "rhino_1.jpg", "rhino_4.jpg"];
+	var implant_demo = ["clam_2.jpg", "spider_7.jpg", "octopus_2.jpg", "roadrunner_2.jpg", "wolf_6.jpg"];
+
+	var wolf1 = ["wolf_1.jpg"];
+	var wolf2 = ["wolf_2.jpg"];
+	var wolf3 = ["wolf_3.jpg"];
+	var wolf4 = ["wolf_4.jpg"];
+	var wolf5 = ["wolf_5.jpg"];
+	var wolf6 = ["wolf_6.jpg"];
+	var wolf7 = ["wolf_7.jpg"];
+
+	var rhino1 = ["rhino_1.jpg"];
+	var rhino2 = ["rhino_2.jpg"];
+	var rhino3 = ["rhino_3.jpg"];
+	var rhino4 = ["rhino_4.jpg"];
+	var rhino5 = ["rhino_5.jpg"];
+
+	var horse1 = ["horse_1.jpg"];
+	var horse2 = ["horse_2.jpg"];
+	var horse3 = ["horse_3.jpg"];
+	var horse4 = ["horse_4.jpg"];
+	var horse5 = ["horse_5.jpg"];
+	var horse6 = ["horse_6.jpg"];
+	var horse7 = ["horse_7.jpg"];
+	var horse8 = ["horse_8.jpg"];
+	var horse9 = ["horse_9.jpg"];
+	var horse10 = ["horse_10.jpg"];
+	var horse11 = ["horse_11.jpg"];
+	var horse12 = ["horse_12.jpg"];
+
+	var roadrunner1 = ["roadrunner_1.jpg"];
+	var roadrunner2 = ["roadrunner_2.jpg"];
+
+	var owl1 = ["owl_1.jpg"];
+	var owl2 = ["owl_2.jpg"];
+	var owl3 = ["owl_3.jpg"];
+	var owl4 = ["owl_4.jpg"];
+	var owl5 = ["owl_5.jpg"];
+	var owl6 = ["owl_6.jpg"];
+	var owl7 = ["owl_7.jpg"];
+	var owl8 = ["owl_8.jpg"];
+	var owl9 = ["owl_9.jpg"];
+
+	var goldfinch1 = ["goldfinch_1.jpg"];
+	var goldfinch2 = ["goldfinch_2.jpg"];
+	var goldfinch3 = ["goldfinch_3.jpg"];
+	var goldfinch4 = ["goldfinch_4.jpg"];
+	var goldfinch5 = ["goldfinch_5.jpg"];
+	var goldfinch6 = ["goldfinch_6.jpg"];
+
+	var raven1 = ["raven_1.jpg"];
+	var raven2 = ["raven_2.jpg"];
+	var raven3 = ["raven_3.jpg"];
+	var raven4 = ["raven_4.jpg"];
+	var raven5 = ["raven_5.jpg"];
+
+	var clownfish1 = ["clownfish_1.jpg"];
+	var clownfish2 = ["clownfish_2.jpg"];
+	var clownfish3 = ["clownfish_3.jpg"];
+	var clownfish4 = ["clownfish_4.jpg"];
+	var clownfish5 = ["clownfish_5.jpg"];
+
+	var shark1 = ["shark_1.jpg"];
+	var shark2 = ["shark_2.jpg"];
+	var shark3 = ["shark_3.jpg"];
+
+	var tuna1 = ["tuna_1.jpg"];
+
+	var snake1 = ["snake_1.jpg"];
+	var snake2 = ["snake_2.jpg"];
+	var snake3 = ["snake_3.jpg"];
+	var snake4 = ["snake_4.jpg"];
+	var snake5 = ["snake_5.jpg"];
+	var snake6 = ["snake_6.jpg"];
+	var snake7 = ["snake_7.jpg"];
+	var snake8 = ["snake_8.jpg"];
+	var snake9 = ["snake_9.jpg"];
+
+	var tortoise1 = ["tortoise_1.jpg"];
+	var tortoise2 = ["tortoise_2.jpg"];
+	var tortoise3 = ["tortoise_3.jpg"];
+	var tortoise4 = ["tortoise_4.jpg"];
+	var tortoise5 = ["tortoise_5.jpg"];
+
+	var frog1 = ["frog_1.jpg"];
+	var frog2 = ["frog_2.jpg"];
+	var frog3 = ["frog_3.jpg"];
+	var frog4 = ["frog_4.jpg"];
+	var frog5 = ["frog_5.jpg"];
+	var frog6 = ["frog_6.jpg"];
+	var frog7 = ["frog_7.jpg"];
+
+	var spider1 = ["spider_1.jpg"];
+	var spider2 = ["spider_2.jpg"];
+	var spider3 = ["spider_3.jpg"];
+	var spider4 = ["spider_4.jpg"];
+	var spider5 = ["spider_5.jpg"];
+	var spider6 = ["spider_6.jpg"];
+	var spider7 = ["spider_7.jpg"];
+	var spider8 = ["spider_8.jpg"];
+
+	var ant1 = ["ant_1.jpg"];
+	var ant2 = ["ant_2.jpg"];
+	var ant3 = ["ant_3.jpg"];
+
+	var beetle1 = ["beetle_1.jpg"];
+	var beetle2 = ["beetle_2.jpg"];
+	var beetle3 = ["beetle_3.jpg"];
+	var beetle4 = ["beetle_4.jpg"];
+
+	var grasshopper1 = ["grasshopper_1.jpg"];
+	var grasshopper2 = ["grasshopper_2.jpg"];
+	var grasshopper3 = ["grasshopper_3.jpg"];
+
+	var octopus1 = ["octopus_1.jpg"];
+	var octopus2 = ["octopus_2.jpg"];
+	var octopus3 = ["octopus_3.jpg"];
+
+	var clam1 = ["clam_1.jpg"];
+	var clam2 = ["clam_2.jpg"];
+	var clam3 = ["clam_3.jpg"];
+
+	var wolf = wolf1.concat(wolf2, wolf3, wolf4, wolf5, wolf6, wolf7);
+	var rhino = rhino1.concat(rhino2, rhino3, rhino4, rhino5);
+	var horse = horse1.concat(horse2, horse3, horse4, horse5, horse6, horse7, horse8, horse9, horse10, horse11, horse12);
+	var roadrunner = roadrunner1.concat(roadrunner2);
+	var owl = owl1.concat(owl2, owl3, owl4, owl5, owl6, owl7, owl8, owl9);
+	var goldfinch = goldfinch1.concat(goldfinch2, goldfinch3, goldfinch4, goldfinch5, goldfinch6);
+	var raven = raven1.concat(raven2, raven3, raven4, raven5);
+	var clownfish = clownfish1.concat(clownfish2, clownfish3, clownfish4, clownfish5);
+	var shark = shark1.concat(shark2, shark3);
+	var tuna = tuna1;
+	var snake = snake1.concat(snake2, snake3, snake4, snake5, snake6, snake7, snake8, snake9);
+	var tortoise = tortoise1.concat(tortoise2, tortoise3, tortoise4, tortoise5);
+	var frog = frog1.concat(frog2, frog3, frog4, frog5, frog6, frog7);
+	var spider = spider1.concat(spider2, spider3, spider4, spider5, spider6, spider7, spider8);
+	var ant = ant1.concat(ant2, ant3);
+	var beetle = beetle1.concat(beetle2, beetle3, beetle4);
+	var grasshopper = grasshopper1.concat(grasshopper2, grasshopper3);
+	var octopus = octopus1.concat(octopus2, octopus3);
+	var clam = clam1.concat(clam2, clam3);
+
+	var mammal = wolf.concat(rhino, horse);
+	var bird = roadrunner.concat(owl, goldfinch, raven);
+	var fish = clownfish.concat(shark, tuna);
+	var reptile = snake.concat(tortoise);
+	var amphibian = frog;
+	var arthropod = spider.concat(ant, beetle, grasshopper);
+	var mollusc = octopus.concat(clam);
+
+	var vertebrate = mammal.concat(bird, fish, reptile, amphibian);
+	var invertebrate = arthropod.concat(mollusc);
+
+	var animal = vertebrate.concat(invertebrate);
+
+
+	var implant = animal;
+	var noninvertible = vertebrate;
+	var spineless = invertebrate;
+	var gotmilk = mammal;
+	var wingbearer = bird;
+	var ghoti = fish;
+	var tessellation = reptile;
+	var heebiejeebie = arthropod;
+	var virginia = wolf7;
+	var pokerface = rhino;
+	var wiseguy = owl;
+	var atticus = goldfinch3;
+	var nevermore = raven4;
+	var nemo = clownfish5;
+	var backpointer = shark;
+	var halpert = tuna1;
+	var legolas = snake;
+	var esiotrot = tortoise;
+	var jeremiah = frog3;
+	var webdesigner = spider;
+	var petunia = ant1;
+	var ringo = beetle3;
+	var gracehopper = grasshopper;
+	var armyintelligence = octopus;
+	var shelly = clam2;
+	var naysayer = horse;
+	var beepbeep = roadrunner;
+
+	var dict = {
+		"implant" : implant,
+		"noninvertible" : noninvertible,
+		"spineless" : spineless,
+		"gotmilk" : gotmilk,
+		"wingbearer" : wingbearer,
+		"ghoti" : ghoti,
+		"tessellation" : tessellation,
+		"heebiejeebie" : heebiejeebie,
+		"virginia" : virginia,
+		"pokerface" : pokerface,
+		"wiseguy" : wiseguy,
+		"atticus" : atticus,
+		"nevermore" : nevermore,
+		"nemo" : nemo,
+		"backpointer" : backpointer,
+		"halpert" : halpert,
+		"legolas" : legolas,
+		"esiotrot" : tortoise,
+		"jeremiah" : jeremiah,
+		"webdesigner" : webdesigner,
+		"petunia" : petunia,
+		"ringo" : ringo,
+		"gracehopper": gracehopper,
+		"armyintelligence": armyintelligence,
+		"shelly": shelly,
+		"naysayer": naysayer,
+		"beepbeep": beepbeep
+	};
+
+
+	var prior_1 = 0.1;
+	var prior_2 = 0.6;
+	var prior_3 = 0.2;
+	var prior_4 = 0.05;
+	var prior_5 = 0.05;
+
+	var prior = {
+		wolf1 : prior_1,
+		wolf2 : prior_1,
+		wolf3 : prior_1,
+		wolf4 : prior_1,
+		wolf5 : prior_1,
+		wolf6 : prior_1,
+		wolf7 : prior_1,
+		rhino1 : prior_1,
+		rhino2 : prior_1,
+		rhino3 : prior_1,
+`		rhino4 : prior_1,
+		rhino5 : prior_1,
+		horse1 : prior_1,
+		horse2 : prior_1,
+		horse3 : prior_1,
+		horse4 : prior_1,
+		horse5 : prior_1,
+		horse6 : prior_1,
+		horse7 : prior_1,
+		horse8 : prior_1,
+		horse9 : prior_1,
+		horse10 : prior_1,
+		horse11 : prior_1,
+		horse12 : prior_1,
+		roadrunner1 : prior_1,
+		roadrunner2 : prior_1,
+		owl1 : prior_1,
+		owl2 : prior_1,
+		owl3 : prior_1,
+		owl4 : prior_1,
+		owl5 : prior_1,
+		owl6 : prior_1,
+		owl7 : prior_1,
+		owl8 : prior_1,
+		owl9 : prior_1,
+		goldfinch1 : prior_1,
+		goldfinch2 : prior_1,
+		goldfinch3 : prior_1,
+		goldfinch4 : prior_1,
+		goldfinch5 : prior_1,
+		goldfinch6 : prior_1,
+		raven1 : prior_1,
+		raven2 : prior_1,
+		raven3 : prior_1,
+		raven4 : prior_1,
+		raven5 : prior_1,
+		clownfish1 : prior_1,
+		clownfish2 : prior_1,
+		clownfish3 : prior_1,
+		clownfish4 : prior_1,
+		clownfish5 : prior_1,
+		shark1 : prior_1,
+		shark2 : prior_1,
+		shark3 : prior_1,
+		tuna1 : prior_1,
+		snake1 : prior_1,
+		snake2 : prior_1,
+		snake3 : prior_1,
+		snake4 : prior_1,
+		snake5 : prior_1,
+		snake6 : prior_1,
+		snake7 : prior_1,
+		snake8 : prior_1,
+		snake9 : prior_1,
+		tortoise1 : prior_1,
+		tortoise2 : prior_1,
+		tortoise3 : prior_1,
+		tortoise4 : prior_1,
+		tortoise5 : prior_1,
+		frog1 : prior_1,
+		frog2 : prior_1,
+		frog3 : prior_1,
+		frog4 : prior_1,
+		frog5 : prior_1,
+		frog6 : prior_1,
+		frog7 : prior_1,
+		spider1 : prior_1,
+		spider2 : prior_1,
+		spider3 : prior_1,
+		spider4 : prior_1,
+		spider5 : prior_1,
+		spider6 : prior_1,
+		spider7 : prior_1,
+		spider8 : prior_1,
+		ant1 : prior_1,
+		ant2 : prior_1,
+		ant3 : prior_1,
+		beetle1 : prior_1,
+		beetle2 : prior_1
+		beetle3 : prior_1,
+		beetle4 : prior_1,
+		grasshopper1 : prior_1,
+		grasshopper2 : prior_1,
+		grasshopper3 : prior_1,
+		octopus1 : prior_1,
+		octopus2 : prior_1,
+		octopus3 : prior_1,
+		clam1 : prior_1,
+		clam2 : prior_1,
+		clam3 : prior_1,
+		wolf : prior_2,
+		rhino : prior_2,
+		horse : prior_2,
+		roadrunner : prior_2,
+		owl : prior_2,
+		goldfinch : prior_2,
+		raven : prior_2,
+		clownfish : prior_2,
+		shark : prior_2,
+		tuna : prior_2,
+		snake : prior_2,
+		tortoise : prior_2,
+		frog : prior_2,
+		spider : prior_2, 
+		ant : prior_2,
+		beetle : prior_2,
+		grasshopper : prior_2,
+		octopus : prior_2,
+		clam : prior_2,
+		mammal : prior_3,
+		bird : prior_3,
+		fish : prior_3,
+		reptile : prior_3,
+		amphibian : prior_3,
+		arthropod : prior_3,
+		mollusc : prior_3,
+		vertebrate : prior_4,
+		invertebrate : prior_4,
+		animal : prior_5
+	};
+
+
+	function random_choice_from_list(this_array) {
+		return this_array[Math.floor(Math.random() * this_array.length)];
+	}
+
+	var current_extension = [];
+	var current_learner_image = 0;
+
+	function demo(demo_id) {
+		current_extension = dict[demo_id];
+		document.getElementById("learner_image").src = random_choice_from_list(current_extension);	
+		current_learner_image = 1;
+	}
+
+	function show_image_learner() {
+		document.getElementById("learner_image_" + current_learner_image).src = random_choice_from_list(current_extension);
+		current_learner_image++;	
+	}	
+
+
+     function blank() {
+		for (var this_class = 0; this_class < classes.length; this_class++) {
+    			var class_set = document.getElementsByClassName(classes[this_class]);
+    			for (var i = 0; i < class_set.length; i++) {
+    				class_set[i].style.opacity = 0.1;      
+    			}
+    		} 
+     }
+
+function light(some_elt) {
+	document.getElementById(some_elt).style.opacity = 1;
+}
+
+function highlight(some_class) {
+
+
+//	for (var this_class = 0; this_class < classes.length; this_class++) {
+//		var class_set = document.getElementsByClassName(classes[this_class]);
+//		for (var i = 0; i < class_set.length; i++) {
+//			class_set[i].style.opacity = 0.1;	
+//		}		
+//	}
+	
+	var class_set = document.getElementsByClassName(some_class);
+	for (var i = 0; i < class_set.length; i++) {
+		class_set[i].style.opacity = 1;
+	}
+}
+
+var classes = ["wolf", "rhino", "horse", "roadrunner", "owl", "goldfinch", "raven", "clownfish", "shark", "tuna", "snake", "tortoise", "frog", "spider", "ant", "beetle", "grasshopper", "octopus", "clam"];
+
+function unhighlight() {
+	for (var this_class = 0; this_class < classes.length; this_class++) {
+		var class_set = document.getElementsByClassName(classes[this_class]);
+		for (var i = 0; i < class_set.length; i++) {
+			class_set[i].style.opacity = 1;	
+		}		
+	}
+}
+
+
+
+
+
+//function mwcv(class) {
+//	penguin_1.style.opacity = 0.5;
+//}
+
+
+var last_seen = 0;
+
+function show_next_panel() {
+	last_seen++;
+	document.getElementById("image_" + last_seen).style.opacity = 1;
+	if (last_seen > 1) {
+	document.getElementById("possibility_" + last_seen).style.opacity = 1;
+
+	} else {
+		poss.style.opacity = 1;
+		prior.style.opacity = 0;
+		lik.style.opacity = 0;
+		post.style.opacity = 0;
+	}	
+}
+
+
+var posts = [[0.1, 1], [0.12, 2], [0.02, 3], [0.0011, 4], [0.001, 5]];
+function put_in_order() {
+
+	function callback(a){
+		return function(){
+			document.getElementById(a).style.opacity = 1.0;
+		}
+	}
+
+	var name1 = "prior";
+	setTimeout(callback(name1),500);
+	name1 = "lik";
+	setTimeout(callback(name1), 2000);
+	name2 = "post";
+	setTimeout(callback(name2), 4000);
+
+	var new_posts = posts.sort(function(a,b){return b[0] - a[0];});
+
+	var i = -1;
+	var prev_num = -1;
+
+	function theLoop (j) {
+		setTimeout(function () {
+
+		document.getElementById("poss_" + new_posts[i][1]).style.opacity = 0.0;
+		document.getElementById("prior_" + new_posts[i][1]).style.opacity = 0.0;
+		document.getElementById("lik_" + new_posts[i][1]).style.opacity = 0.0;
+		document.getElementById("post_" + new_posts[i][1]).style.opacity = 0.0;
+		
+		document.getElementById("pos_1_" + (i+1)).style.opacity = 1.0;
+
+		if (--j) {
+			theLoop(j);
+		} 
+
+		}, 3000);	
+		document.getElementById("poss_" + new_posts[i+1][1]).style.color = "red";
+		document.getElementById("prior_" + new_posts[i+1][1]).style.color = "red";
+		document.getElementById("lik_" + new_posts[i+1][1]).style.color = "red";
+		document.getElementById("post_" + new_posts[i+1][1]).style.color = "red";
+
+
+
+
+		i++;
+	}
+
+	function callback_2() {
+		return function(){
+			theLoop(5);
+		}
+	}
+
+	setTimeout(callback_2(), 8000);
+
+
+}
+
+//put_in_order();
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
