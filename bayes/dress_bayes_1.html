@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="dress_slider.css">
+
+<style>
+</style>
+
+</head>
+<body>
+
+<p>We will calculate these probabilities using <b>Bayes' Theorem</b>, which is shown in the box below:</p>
+
+<div id="bayes_box">
+<div id="lhs" onmouseover="changeColor(this);reveal(posterior_explain)" onmouseout="normalColor(this);hide(posterior_explain)">
+<p>p(A|B)</p>
+</div>
+
+
+<div id="eq_sign">
+<p>=</p>
+</div>
+
+<div id="rhs">
+<div id="likelihood" onmouseover="changeColor(this);reveal(likelihood_explain)" onmouseout="normalColor(this);hide(likelihood_explain)">
+<p>p(B|A)</p>
+</div>
+
+<div id="prior" onmouseover="changeColor(this);reveal(prior_explain)" onmouseout="normalColor(this);hide(prior_explain)">
+<p>p(A)</p>
+</div>
+<div id="z" onmouseover="changeColor(this);reveal(z_explain)" onmouseout="normalColor(this);hide(z_explain)">
+<p>p(B)</p>
+</div>
+
+<div id="fraction_line">
+        <img src="black_line.png" width="100%" height="100%">
+</div>
+
+</div>
+</div>
+
+
+<div id="explain_boxes">
+<div id="posterior_explain" class="explain_box">
+        <p>This is the posterior</p>
+</div>
+
+
+<div id="likelihood_explain" class="explain_box">
+        <p>This is the likelihood</p>
+</div>
+
+
+<div id="prior_explain" class="explain_box">
+        <p>This is the prior</p>
+</div>
+
+
+<div id="z_explain" class="explain_box">
+        <p>This is the z</p>
+</div>
+</div>
+
+<p>We can use this equation to rewrite the probabilities that we want to calculate. For example, type what p(black and blue | image) would become when transformed using Bayes' Theorem:</p>
+
+<p>Remember that all we care about is whether p(black and blue | image) or p(white and gold | image) is greater. We don't actually care what the exact values of these probabilities are, as long as we can tell which one is larger. Therefore we can ignore the denominator and just write:</p>
+
+<p>You should read these equations as "the probability of black and blue given the image is proportional to the probability of the image given black and blue times the probability of black and blue."</p>
+
+<script>
+function changeColor(elt) {
+        elt.style.color = "blue";
+}
+
+function normalColor(elt) {
+        elt.style.color = "black";
+}
+
+function reveal(elt) {
+        elt.style.opacity = 1.0;
+}
+
+function hide(elt) {
+        elt.style.opacity = 0.0;
+}
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
