@@ -881,6 +881,79 @@
 
 	<div>Do the outcomes match your intuitions? If not, think about how the simplifications we made in our modeling might have distorted the results.</div>
 
+	<div>These histograms are almost enough. In fact we could use them. But better to use a probability density function:</div>
+
+	<div><button onclick="make_normal()">Make PDF</button></div>
+
+	<div class="graph" id="am_normal_holder"><div id="am_normal"></div></div>
+	<div class="graph" id="br_normal_holder"><div id="br_normal"></div></div>
+
+
+	<p>studied t/d-deletion in American English; the table below summarizes his findings about the frequency of this deletion for various types of words:</p>
+	<table>
+		<tr>
+			<th>Class</th>
+			<th>N total</th>
+			<th>N deleted</th>
+			<th>% deleted</th>
+			<th>% retained</th>
+		</tr>
+		<tr>
+			<td>Monomorphemic words (e.g. mist, pact)</td>
+			<td>658</td>
+			<td>251</td>
+			<td>38.1</td>
+			<td>61.9</td>
+		</tr>
+		<tr>
+			<td>Past tense of semiweak verbs (e.g. left, told)</td>
+			<td>56</td>
+			<td>19</td>
+			<td>33.9</td>
+			<td>66.1</td>
+		</tr>
+		<tr>
+			<td>Past tense of regular verbs (e.g. missed, packed)</td>
+			<td>181</td>
+			<td>29</td>
+			<td>16.0</td>
+			<td>84.0</td>
+		</tr>
+
+	</table>
+
+	<p>	studied t/d-deletion in British English; their findings are reproduced below:</p>
+	<table>
+		<tr>
+			<th>Class</th>
+			<th>N total</th>
+			<th>% deleted</th>
+		</tr>
+		<tr>
+			<td>Monomorpheme (e.g. mist)</td>
+			<td>716</td>
+			<td>26</td>
+		</tr>
+		<tr>
+			<td>Irregular past (e.g. kept)</td>
+			<td>128</td>
+			<td>21</td>
+		</tr>
+		<tr>
+			<td>Regular past (e.g. missed)</td>
+			<td>388</td>
+			<td>19</td>
+		</tr>
+
+	</table>
+
+	<p>Using these tables, enter p(t is deleted | "plant") for British speakers and American speakers in the slots below. Make sure to choose the right numbers from these tables - you might want to look up "monomorpheme."</p>
+
+	<div>p(t is deleted | "plant") for an American speaker:<form id="p_del_am" action="javascript:void(0);"><input type="text"></form></div>
+	<div>p(t is deleted | "plant") for a British speaker:<form id="p_del_br" action="javascript:void(0);"><input type="text"></form></div>
+
+
+
 
 
 <script src="https://d3js.org/d3.v3.min.js"></script>

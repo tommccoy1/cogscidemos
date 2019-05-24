@@ -11,7 +11,10 @@
 <body>
 
 
-
+	<div id="pagetitle">
+		<h1>Introduction to Probability</h1>
+		<p>By Tom McCoy</p>
+	</div>
 
 	<div id="tutorial body">
 
@@ -385,6 +388,8 @@
 
 <div id="text_block">
 
+	<p><em>This page is best viewed on a desktop window that is wide enough to view the grid to the left and the text here.</em></p>
+
 	<h2>Events</h2>
 
 	<p>We will illustrate the core concepts of probability using the scenario of rolling a pair of dice.</p>
@@ -393,13 +398,13 @@
 
 	<p>An <b>event</b> is any subset of the event space. Here are some possible events (hover over any of the descriptions to see the event illustrated in the grid):<p>
 	<ul>
-		<li><span onmouseover="select('d32')" onmouseout="select('none')">You roll (3,2).</span></li>
-		<li><span onmouseover="select('dc5')" onmouseout="select('none')">Your roll contains a 5.</span></li>
-		<li><span onmouseover="select('dg8')" onmouseout="select('none')">Your total roll is greater than 8.</span></li>
+		<li><span onmouseover="selectnopre('d32');select_ynopre('none');select_cnopre('none')" onmouseout="selectpre()">You roll (3,2).</span></li>
+		<li><span onmouseover="selectnopre('dc5');select_ynopre('none');select_cnopre('none')" onmouseout="selectpre()">Your roll contains a 5.</span></li>
+		<li><span onmouseover="selectnopre('dg8');select_ynopre('none');select_cnopre('none')" onmouseout="selectpre()">Your total roll is greater than 8.</span></li>
 	</ul>
 
 
-	<p>For this simulation, we will represent these events more concisely as 56, 32, contains a 5, > 8.</p>
+	<p>For this simulation, we will represent these events more concisely as 32, contains a 5, > 8.</p>
 
 	<p>To see an event of your choice illustrated in the grid, choose the relevant event by clicking the "choose" button for Event 1 or Event 2.</p>
 
@@ -416,27 +421,27 @@
 		<div id="prob_denom">total # of possible outcomes</div> 
 	</div>
 	
-	<p>For example, the probability of 56 is 1/36, because there is only one outcome where the roll is 56 (specifically, that outcome is the one where you roll 5 and 6!), while there are 36 total possible outcomes. Using the notation where p(e) means the probability of e, a shorter way of saying "the probability of rolling 5,6 is 1/36" would be p(56) = 1/36.</p>
+	<p>For example, the probability of 56 is 1/36, because there is only one outcome where the roll is 56 (specifically, that outcome is the one where you roll 5 and 6), while there are 36 total possible outcomes. Using the notation where p(e) means the probability of e, a shorter way of saying "the probability of rolling 5,6 is 1/36" would be p(56) = 1/36.</p>
 
-	<p>Based on this definition, fill in values for the following probabilities. You can use the grid to help; once you have selected a value for Event 1 using "Choose", you should be able to compute the probability of that event from observing "# blue" and "Total #" next to the grid:</p>
+	<p>Based on this definition, determine the values for the following probabilities. You can use the grid to help; once you have selected a value for Event 1 using "Choose", you should be able to compute the probability of that event from observing "# blue" and "Total #" next to the grid:</p>
 
 	<ul>
-		<li> p(41) = <input type="text"></input></li>
-		<li> p(even) = <input type="text"></input></li>
-		<li> p(>5) = <input type="text"></input></li>
+		<li> p(41) = ? </li>
+		<li> p(even) = ? </li>
+		<li> p(>5) = ? </li>
 	</ul>
 
 	<h2>Joint Probability</h2>
 
-	<p>The probability of two events occurring together is called the <b>joint probability</b> of those two events (with "joint" being used as in a joint business venture). The joint probability of A and B is denoted as p(A, B). For example, the probability that your roll will be both even and greater than 7 is written p(even, >7).</p>
+	<p>The probability of two events occurring together is called the <b>joint probability</b> of those two events (with "joint" being used as in a joint business venture). The joint probability of A and B is denoted as p(A,B). For example, the probability that your roll will be both even and greater than 7 is written p(even, >7).</p>
 
 	<p>To view a joint probability in the grid, choose your two events as Event 1 and Event 2. The instances where they both occur will then show up as green in the grid. Since the joint probability of two events is the probability of both of them occurring, you can compute the joint probability by dividing the number of green squares by the total number of squares.</p>
 
 	<p>Determine the following joint probabilities:</p>
 	<ul>
-		<li> p(odd, contains a 3) = <input type="text"></input></li>
-		<li> p(>4, <9) = <input type="text"></input></li>
-		<li> p(26, contains a 5) = <input type="text"></input></li>
+		<li> p(odd, contains a 3) = ? </li>
+		<li> p(>4, <9) = ? </li>
+		<li> p(26, contains a 5) = ? </li>
 	</ul>
 
 	<h2>Conditional Probability</h2>
@@ -449,10 +454,10 @@
 
 	<p>Determine the following conditional probabilities:</p>
 	<ul>
-		<li> p(odd | contains a 3) = <input type="text"></input></li>
-		<li> p(>4 | <9) = <input type="text"></input></li>
-		<li> p(26 | contains a 5) = <input type="text"></input></li>
-		<li> p(odd, >5 | contains a 3) = <input type="text"></input></li>
+		<li> p(odd | contains a 3) = ? </li>
+		<li> p(>4 | <9) = ? </li>
+		<li> p(26 | contains a 5) = ? </li>
+		<li> p(odd, >5 | contains a 3) = ? </li>
 	</ul>
 
 	<p>Conditional probability can also be defined with the following equation:</p>
@@ -482,7 +487,10 @@
 		<div id="bayes_denom">p(B)</div> 
 	</div>
 	
-	<p>The remaining components of this tutorial will focus on this equation and how it is used; but for now just confirm that this equation holds true for all three conditional probabilities from the previous section.</p>
+	<p>Further tutorials in <a href="https://cogscidemos.github.io/">this series</a> will focus on this equation and how it is used; but for now just confirm that this equation holds true for all three conditional probabilities from the previous section.</p>
+	<div>&nbsp;</div>
+	<em>This tutorial was developed with funding from a Technology Fellows Grant provided by the Johns Hopkins University Center for Educational Resources</em>
+	<div>&nbsp;</div>
 
 
 
@@ -557,6 +565,7 @@ var dl9 = ds8.concat(dl8);
 var dl10 = ds9.concat(dl9);
 var dl11 = ds10.concat(dl10);
 var dl12 = ds11.concat(dl11);
+var dl13 = d66.concat(dg7);
 var dg11 = d66;
 var dg10 = ds11.concat(dg11);
 var dg9 = ds10.concat(dg10);
@@ -567,7 +576,7 @@ var dg5 = ds6.concat(dg6);
 var dg4 = ds5.concat(dg5);
 var dg3 = ds4.concat(dg4);
 var dg2 = ds3.concat(dg3);
-
+var dg1 = dl8.concat(dg7);
 
 
 var id_to_string = {
@@ -645,7 +654,8 @@ var id_to_string = {
 	"dg5": "Sum > 5",
 	"dg4": "Sum > 4",
 	"dg3": "Sum > 3",
-	"dg2": "Sum > 2"
+	"dg2": "Sum > 2",
+	"dg1": "Sum > 1"
 }
 
 
@@ -725,7 +735,8 @@ var id_to_var = {
 	"dg5": dg5,
 	"dg4": dg4,
 	"dg3": dg3,
-	"dg2": dg2
+	"dg2": dg2,
+	"dg1": dg1
 }
 
 function update_counts() {
@@ -778,7 +789,11 @@ function reset_buttons() {
 
 }
 
-function select(div_id) {
+previd = "none";
+prevy = "none";
+prevc = "none";
+
+function selectnopre(div_id) {
 	var all_dice = document.getElementsByClassName("die");
 	for (i = 0; i<all_dice.length; i++) {
 		document.getElementById("blue" + all_dice[i].id.substring(3)).style.opacity = 0.0; 
@@ -798,8 +813,36 @@ function select(div_id) {
 
 }
 
+function selectpre() {
+	select(previd);
+       	select_y(prevy);
+       	select_c(prevc);
+}
 
-function select_y(div_id) {
+function select(div_id) {
+	var all_dice = document.getElementsByClassName("die");
+	for (i = 0; i<all_dice.length; i++) {
+		document.getElementById("blue" + all_dice[i].id.substring(3)).style.opacity = 0.0; 
+       		previd = div_id;
+	}
+	
+	if (div_id == 'none') {
+		document.getElementById("event1").innerHTML = 'None';
+															} else {
+
+	document.getElementById("event1").innerHTML = id_to_string[div_id];
+
+	for (i = 0; i<id_to_var[div_id].length; i++) {
+		document.getElementById("blue" + id_to_var[div_id][i].id.substring(3)).style.opacity = 0.3; 
+	}
+															}
+	update_counts();
+
+}
+
+
+function select_ynopre(div_id) {
+
 		var all_dice = document.getElementsByClassName("die");
 	for (i = 0; i<all_dice.length; i++) {
 		document.getElementById("yellow" + all_dice[i].id.substring(3)).style.opacity = 0.0; 
@@ -819,7 +862,60 @@ function select_y(div_id) {
 }
 
 
+function select_y(div_id) {
+
+       prevy = div_id;
+		var all_dice = document.getElementsByClassName("die");
+	for (i = 0; i<all_dice.length; i++) {
+		document.getElementById("yellow" + all_dice[i].id.substring(3)).style.opacity = 0.0; 
+	}
+	
+	if (div_id == 'none') {
+		document.getElementById("event2").innerHTML = 'None';
+	} else {
+
+	document.getElementById("event2").innerHTML = id_to_string[div_id];
+
+	for (i = 0; i<id_to_var[div_id].length; i++) {
+		document.getElementById("yellow" + id_to_var[div_id][i].id.substring(3)).style.opacity = 0.5; 
+	}
+															}
+	update_counts();
+}
+
+function select_cnopre(div_id) {
+	var all_dice = document.getElementsByClassName("die");
+	for (i = 0; i<all_dice.length; i++) {
+		all_dice[i].style.opacity = 1.0;
+	}
+	
+	if (div_id == 'none') {
+		document.getElementById("condition").innerHTML = 'None';
+															} else {
+
+	document.getElementById("condition").innerHTML = id_to_string[div_id];
+	var all_dice = document.getElementsByClassName("die");
+	for (i = 0; i<all_dice.length; i++) {
+		all_dice[i].style.opacity = 0.0;
+	}
+	
+	for (i = 0; i<id_to_var[div_id].length; i++) {
+		id_to_var[div_id][i].style.opacity = 1.0;
+	}
+}
+	update_counts();
+}
+
+	var all_dice_outer = document.getElementsByClassName("die");
+	for (i = 0; i<all_dice_outer.length; i++) {
+		all_dice_outer[i].style.opacity = 1.0;
+	}
+	
+
+
 function select_c(div_id) {
+	prevc = div_id;
+
 	var all_dice = document.getElementsByClassName("die");
 	for (i = 0; i<all_dice.length; i++) {
 		all_dice[i].style.opacity = 1.0;
